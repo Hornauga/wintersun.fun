@@ -30,7 +30,7 @@ jobs:
       # Upload files to Cloud Storage bucket
       - name: Upload to Cloud Storage
         run: |
-          gsutil -h "Authorization: Bearer $(gcloud auth print-access-token)" cp -r build/* gs://${{ vars.GOOGLE_CLOUD_BUCKET }}/
+          gsutil -h "Authorization: Bearer $(gcloud auth print-access-token)" cp -r dist/* gs://${{ vars.GOOGLE_CLOUD_BUCKET }}/
         env:
           GOOGLE_CLOUD_PROJECT: ${{ vars.GOOGLE_CLOUD_PROJECT }}
 
