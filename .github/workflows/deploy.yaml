@@ -1,0 +1,36 @@
+name: Deploy to Cloud Storage
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      # Set up Google Cloud authentication
+      - uses: google-github-actions/setup-gcloud@v0.2.0
+        with:
+          service_account_key: ${{ secrets.GOOGLE_CLOUD_SERVICE_ACCOUNT_KEY }}
+
+      # Install dependencies
+      - name: Install npm dependencies
+        run: npm install
+
+      # Build your React app
+      - name: Build for production
+        run: npm run build  # Replace with your build command
+
+      # Configure Google Cloud project
+      - name: Configure gcloud
+        run: gcloud config set project ${{ vars.GOOGLE_CLOUD_PROJECT }}
+
+      # Upload files to Cloud Storage bucket
+      - name: Upload to Cloud Storage
+        run: |
+          gsutil -h "Authorization: Bearer $(gcloud auth print-access-token)" cp -r dist/* gs://${{ vars.GOOGLE_CLOUD_BUCKET }}/
+        env:
+          GOOGLE_CLOUD_PROJECT: ${{ vars.GOOGLE_CLOUD_PROJECT }}
+
