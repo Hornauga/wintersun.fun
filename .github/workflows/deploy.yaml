@@ -2,7 +2,7 @@ name: Deploy to Cloud Storage
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build-and-deploy:
@@ -21,7 +21,7 @@ jobs:
 
       # Build your React app
       - name: Build for production
-        run: npm run build  # Replace with your build command
+        run: npm run build # Replace with your build command
 
       # Configure Google Cloud project
       - name: Configure gcloud
@@ -33,4 +33,3 @@ jobs:
           gsutil -h "Authorization: Bearer $(gcloud auth print-access-token)" cp -r dist/* gs://${{ vars.GOOGLE_CLOUD_BUCKET }}/
         env:
           GOOGLE_CLOUD_PROJECT: ${{ vars.GOOGLE_CLOUD_PROJECT }}
-
