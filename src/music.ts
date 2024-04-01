@@ -1,5 +1,5 @@
 export interface Album {
-  name: string;
+  title: string;
   artist: string;
   src: {
     youtube?: string;
@@ -8,7 +8,7 @@ export interface Album {
 }
 
 export interface Song {
-  name: string;
+  title: string;
   album?: Album;
   src: {
     youtube?: string;
@@ -17,50 +17,58 @@ export interface Song {
 }
 
 export const albumWintersunWintersun: Album = {
-  name: "Wintersun",
+  title: "Wintersun",
   artist: "Wintersun",
   src: { youtube: "XfMrC0dvvmw" },
 };
 export const albumWintersunWintersunSongs: Song[] = [
   {
-    name: "Winter Madness Intro & Winter Madness",
+    title: "Winter Madness Intro",
     album: albumWintersunWintersun,
     src: { youtube: "GUXpbnT5eBE" },
   },
   {
-    name: "Beyond The Dark Sun",
+    title: "Winter Madness",
     album: albumWintersunWintersun,
-    src: { youtube: "KuG6lJ6xbKk" },
+    src: {
+      youtube: "GUXpbnT5eBE?start=155",
+      spotify: "2N1SFSnHMIdHY0waUbjEnv",
+    },
   },
   {
-    name: "Sleeping Stars",
+    title: "Beyond The Dark Sun",
     album: albumWintersunWintersun,
-    src: { youtube: "hDsTtJXdMZo" },
+    src: { youtube: "KuG6lJ6xbKk", spotify: "1L3S5vFgsVzweUJnAIfSGM" },
   },
   {
-    name: "Battle Against Time",
+    title: "Sleeping Stars",
     album: albumWintersunWintersun,
-    src: { youtube: "b4E0qN4_xQI" },
+    src: { youtube: "hDsTtJXdMZo", spotify: "5MqVSSinDohOuMjNhO6PU6" },
   },
   {
-    name: "Death and the Healing",
+    title: "Battle Against Time",
     album: albumWintersunWintersun,
-    src: { youtube: "wX-X7oX5Abc" },
+    src: { youtube: "b4E0qN4_xQI", spotify: "0tEA8vx1V2mJoxSIqapi0H" },
   },
   {
-    name: "Starchild",
+    title: "Death and the Healing",
     album: albumWintersunWintersun,
-    src: { youtube: "oyuOjCfCsm4" },
+    src: { youtube: "wX-X7oX5Abc", spotify: "6EAsLKCDMQV3BRRb9OdaMJ" },
   },
   {
-    name: "Sadness and Hate",
+    title: "Starchild",
     album: albumWintersunWintersun,
-    src: { youtube: "x3s19wDvyeU" },
+    src: { youtube: "oyuOjCfCsm4", spotify: "3LPVfzrc9G8EOQ00nTgvKL" },
   },
   {
-    name: "Beautiful Death",
+    title: "Beautiful Death",
     album: albumWintersunWintersun,
-    src: { youtube: "TNg-mfVnCWk" },
+    src: { youtube: "TNg-mfVnCWk", spotify: "6S83nQwA0aPHKB86vAqgl5" },
+  },
+  {
+    title: "Sadness and Hate",
+    album: albumWintersunWintersun,
+    src: { youtube: "x3s19wDvyeU", spotify: "4cN0IBNbFkq0srzoyNOC4C" },
   },
 ];
 
