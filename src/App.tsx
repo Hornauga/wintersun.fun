@@ -17,6 +17,19 @@ function YouTubeEmbed({ song }: { song: Song }) {
   );
 }
 
+function SpotifyEmbed({ song }: { song: Song }) {
+  const src = `https://open.spotify.com/embed/track/${song.src.spotify}`;
+  return (
+    <iframe
+      src={src}
+      width="100%"
+      height="152"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy"
+    ></iframe>
+  );
+}
+
 function App() {
   return (
     <div className="App">
@@ -34,13 +47,7 @@ function App() {
           <p>
             <YouTubeEmbed song={song} />
           </p>
-          {"spotify" in song.src && (
-            <p>
-              <a href={`https://open.spotify.com/track/${song.src.spotify}`}>
-                Listen on Spotify
-              </a>
-            </p>
-          )}
+          {"spotify" in song.src && <SpotifyEmbed song={song} />}
         </div>
       ))}
     </div>
