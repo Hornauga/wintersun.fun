@@ -1,5 +1,7 @@
 import "./App.css";
 import { Song, allSongs } from "./music.ts";
+import Button from '@mui/material/Button';
+
 
 function YouTubeEmbed({ song }: { song: Song }) {
   const src = `https://www.youtube.com/embed/${song.src.youtube}`;
@@ -41,6 +43,10 @@ function App() {
         />
         <p>Spreading the Wintersun fun!</p>
       </header>
+
+      <div>
+        <Button variant="contained">Click me</Button>
+      </div>
       {allSongs.map((song) => (
         <div>
           <h3>{song.title}</h3>
