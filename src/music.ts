@@ -19,7 +19,7 @@ export interface Song {
 export const albumWintersunWintersun: Album = {
   title: "Wintersun",
   artist: "Wintersun",
-  src: { youtube: "XfMrC0dvvmw" },
+  src: { youtube: "XfMrC0dvvmw", spotify: "5vlG5D2TCZzvWYAevPVYCI" },
 };
 export const albumWintersunWintersunSongs: Song[] = [
   {
