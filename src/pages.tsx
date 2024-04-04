@@ -79,6 +79,7 @@ const spacing = "8px";
 const mainSize = `calc( 100vh - ${barSize} - ${spacing} )`;
 
 function WelcomePage({ navigate }: { navigate: (pageName: PageName) => void }) {
+  console.log(navigate); // TODO Remove
   return (
     <Box minHeight={mainSize}>
       <Typography variant="subtitle1" align="center" gutterBottom>
@@ -89,6 +90,7 @@ function WelcomePage({ navigate }: { navigate: (pageName: PageName) => void }) {
 }
 
 function FiltersPage({ navigate }: { navigate: (pageName: PageName) => void }) {
+  console.log(navigate); // TODO Remove
   return (
     <>
       <header>
@@ -142,6 +144,7 @@ function FiltersPage({ navigate }: { navigate: (pageName: PageName) => void }) {
 }
 
 function ResultsPage({ navigate }: { navigate: (pageName: PageName) => void }) {
+  console.log(navigate); // TODO Remove
   return (
     <Box minHeight={mainSize}>
       {allSongs.map((song) => (
