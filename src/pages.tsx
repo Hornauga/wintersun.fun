@@ -2,13 +2,10 @@ import {
   Button,
   Typography,
   Box,
-  Grid,
   Toolbar,
-  IconButton,
   AppBar,
   Container,
 } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
 
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
@@ -27,195 +24,130 @@ export function Page({
   pageName: PageName;
   navigate: (pageName: PageName) => void;
 }) {
+  var foo;
   if (pageName === "welcome") {
-    return <WelcomePage navigate={navigate} />;
+    foo = <WelcomePage navigate={navigate} />;
   } else if (pageName === "filters") {
-    return <FiltersPage navigate={navigate} />;
+    foo = <FiltersPage navigate={navigate} />;
   } else if (pageName === "results") {
-    return <ResultsPage navigate={navigate} />;
+    foo = <ResultsPage navigate={navigate} />;
   }
+  return (
+    <Container maxWidth="sm" style={{ height: "100vh" }}>
+      <AppBar position="static">
+        <Toolbar>
+          <Box
+            sx={{
+              display: "flex",
+              width: "100%",
+              height: barSize,
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <Box>
+              <Button
+                variant="contained"
+                sx={{ width: 100 }}
+                onClick={() => navigate("welcome")}
+              >
+                About
+              </Button>
+            </Box>
+            <Box>
+              <Typography variant="h4">Wintersun.fun</Typography>
+            </Box>
+            <Box>
+              <Button
+                variant="contained"
+                sx={{ width: 100 }}
+                onClick={() => navigate("filters")}
+              >
+                Filters
+              </Button>
+            </Box>
+          </Box>
+        </Toolbar>
+      </AppBar>
+      {foo}
+    </Container>
+  );
 }
 
 const barSize = "64px";
 const spacing = "8px";
-const mainSize = `calc( 100vh - 2*${barSize} - 2*${spacing} )`;
+const mainSize = `calc( 100vh - ${barSize} - ${spacing} )`;
 
 function WelcomePage({ navigate }: { navigate: (pageName: PageName) => void }) {
   return (
-    <Container maxWidth="sm" disableGutters style={{ height: "100vh" }}>
-      <Grid container spacing={spacing}>
-        <Grid item xs={12}>
-          <AppBar position="sticky">
-            <Toolbar>
-              {/* <Box
-                sx={{
-                  height: barSize, alignItems: 'center',
-                  flexGrow: 1,
-                  display: "flex",
-                  justifyContent: "center",
-                }}
-              >
-                <Typography variant="h2" component="div">
-                  Wintersun.fun
-                </Typography>
-              </Box> */}
-
-              {/* <Box
-                sx={{
-                  display: "contents",
-                  alignItems: "center",
-                }}
-              >
-                <Box sx={{ display: "block" }}>
-                  <Button variant="contained" color="primary">
-                    Left Button
-                  </Button>
-                </Box>
-                <Typography
-                  variant="h3"
-                  sx={{ display: "flex", margin: "auto" }}
-                >
-                Wintersun.fun
-              </Typography>
-                <Box sx={{ display: "flex" }}>
-                  <Button variant="contained" color="secondary">
-                    Right
-                  </Button>
-                </Box>
-              </Box> */}
-
-              <Box sx={{ display: "block", justifyContent: "space-evenly" }}>
-                <Button variant="contained" color="primary">
-                  Left Button
-                </Button>
-                <Typography variant="h3">Wintersun.fun</Typography>
-                <Button variant="contained" color="secondary">
-                  Right
-                </Button>
-              </Box>
-            </Toolbar>
-          </AppBar>
-        </Grid>
-        <Grid item xs={12}>
-          <Box minHeight={mainSize}>
-            <Typography variant="subtitle1" align="center" gutterBottom>
-              Your guide to enjoying the music of Wintersun
-            </Typography>
-            <Button variant="contained" onClick={() => navigate("filters")}>
-              Let's go!
-            </Button>
-          </Box>
-        </Grid>
-        <Grid item xs={12}>
-          <AppBar position="sticky">
-            <Toolbar></Toolbar>
-          </AppBar>
-        </Grid>
-      </Grid>
-    </Container>
+    <Box minHeight={mainSize}>
+      <Typography variant="subtitle1" align="center" gutterBottom>
+        Your guide to enjoying the music of Wintersun
+      </Typography>
+    </Box>
   );
 }
 
 function FiltersPage({ navigate }: { navigate: (pageName: PageName) => void }) {
   return (
-    <Container maxWidth="sm" disableGutters style={{ height: "100vh" }}>
-      <Grid container spacing={spacing}>
-        <Grid item xs={12}>
-          <Box sx={{ height: barSize }}>
-            <AppBar position="sticky">
-              <Toolbar></Toolbar>
-            </AppBar>
-          </Box>
-        </Grid>
-        <Grid item xs={12}>
-          <Box minHeight={mainSize}>
-            <header>
-              <Typography variant="h1" align="center">
-                Filtering
-              </Typography>
-              <Typography variant="subtitle1" align="center" gutterBottom>
-                Let's figure out how you can best enjoy Wintersun
-              </Typography>
+    <>
+      <header>
+        <Typography variant="h1" align="center">
+          Filtering
+        </Typography>
+        <Typography variant="subtitle1" align="center" gutterBottom>
+          Let's figure out how you can best enjoy Wintersun
+        </Typography>
 
-              <Button variant="contained" onClick={() => navigate("welcome")}>
-                Restart
-              </Button>
+        <Button variant="contained" onClick={() => navigate("welcome")}>
+          Restart
+        </Button>
 
-              <Button variant="contained" onClick={() => navigate("results")}>
-                Results
-              </Button>
-            </header>
-            <Typography variant="body1">
-              Indicate your preferences for the following
-            </Typography>
-            <FormControl>
-              {[
-                "Black metal",
-                "Death metal",
-                "Folk metal",
-                "Power metal",
-                "Clean vocals",
-                "Extreme vocals (growls/screams)",
-              ].map((thing) => (
-                <>
-                  <FormLabel>{thing}</FormLabel>
-                  <RadioGroup row>
-                    <FormControlLabel
-                      value="dislike"
-                      control={<Radio />}
-                      label="Dislike"
-                    />
-                    <FormControlLabel
-                      value="neutral"
-                      control={<Radio />}
-                      label="Neutral"
-                    />
-                    <FormControlLabel
-                      value="like"
-                      control={<Radio />}
-                      label="Like"
-                    />
-                  </RadioGroup>
-                </>
-              ))}
-            </FormControl>
-          </Box>
-        </Grid>
-        <Grid item xs={12}>
-          <AppBar position="sticky">
-            <Toolbar></Toolbar>
-          </AppBar>
-        </Grid>
-      </Grid>
-    </Container>
+        <Button variant="contained" onClick={() => navigate("results")}>
+          Results
+        </Button>
+      </header>
+      <Typography variant="body1">
+        Indicate your preferences for the following
+      </Typography>
+      <FormControl>
+        {[
+          "Black metal",
+          "Death metal",
+          "Folk metal",
+          "Power metal",
+          "Clean vocals",
+          "Extreme vocals (growls/screams)",
+        ].map((thing) => (
+          <>
+            <FormLabel>{thing}</FormLabel>
+            <RadioGroup row>
+              <FormControlLabel
+                value="dislike"
+                control={<Radio />}
+                label="Dislike"
+              />
+              <FormControlLabel
+                value="neutral"
+                control={<Radio />}
+                label="Neutral"
+              />
+              <FormControlLabel value="like" control={<Radio />} label="Like" />
+            </RadioGroup>
+          </>
+        ))}
+      </FormControl>
+    </>
   );
 }
 
 function ResultsPage({ navigate }: { navigate: (pageName: PageName) => void }) {
   return (
-    <Container maxWidth="sm" disableGutters style={{ height: "100vh" }}>
-      <Grid container spacing={spacing}>
-        <Grid item xs={12}>
-          <Box sx={{ height: barSize }}>
-            <AppBar position="static">
-              <Toolbar></Toolbar>
-            </AppBar>
-          </Box>
-        </Grid>
-        <Grid item xs={12}>
-          <Box minHeight={mainSize}>
-            {allSongs.map((song) => (
-              <SongDisplay song={song} />
-            ))}
-          </Box>
-        </Grid>
-        <Grid item xs={12}>
-          <AppBar position="static">
-            <Toolbar></Toolbar>
-          </AppBar>
-        </Grid>
-      </Grid>
-    </Container>
+    <Box minHeight={mainSize}>
+      {allSongs.map((song) => (
+        <SongDisplay song={song} />
+      ))}
+    </Box>
   );
 }
 
