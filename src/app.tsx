@@ -2,25 +2,27 @@ import {
   createTheme,
   ThemeProvider,
   CssBaseline,
-  Container,
+  responsiveFontSizes,
 } from "@mui/material";
 import { useState } from "react";
-import { indigo, purple } from "@mui/material/colors";
+import { blue, indigo } from "@mui/material/colors";
 import { Page, PageName } from "./pages";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
-const theme = createTheme({
-  // https://mui.com/material-ui/customization/theming/
-  // https://mui.com/material-ui/customization/color/
-  palette: {
-    mode: "dark",
-    primary: indigo,
-    secondary: purple,
-  },
-});
+const theme = responsiveFontSizes(
+  createTheme({
+    // https://mui.com/material-ui/customization/theming/
+    // https://mui.com/material-ui/customization/color/
+    palette: {
+      mode: "dark",
+      primary: indigo,
+      secondary: blue,
+    },
+  }),
+);
 
 function App() {
   const [pageName, setPageName] = useState<PageName>("welcome");
@@ -30,9 +32,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline enableColorScheme />
-      <Container maxWidth="sm">
-        <Page pageName={pageName} navigate={navigate}></Page>
-      </Container>
+      <Page pageName={pageName} navigate={navigate}></Page>
     </ThemeProvider>
   );
 }
