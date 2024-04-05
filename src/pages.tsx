@@ -5,13 +5,9 @@ import {
   Toolbar,
   AppBar,
   Container,
+  FormControl,
+  Slider,
 } from "@mui/material";
-
-import Radio from "@mui/material/Radio";
-import RadioGroup from "@mui/material/RadioGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import FormControl from "@mui/material/FormControl";
-import FormLabel from "@mui/material/FormLabel";
 
 import { Song, allSongs } from "./music.ts";
 
@@ -97,6 +93,49 @@ function WelcomePage() {
   );
 }
 
+interface FilterItem {
+  id: string;
+  title: string;
+  description: string;
+}
+
+var filterItems: FilterItem[] = [
+  {
+    id: "black",
+    title: "Black Metal",
+    description: "The Black metal genre",
+  },
+  {
+    id: "death",
+    title: "Death metal",
+    description: "The Death metal genre",
+  },
+  {
+    id: "folk",
+    title: "Folk metal",
+    description: "The Folk metal genre",
+  },
+  {
+    id: "Power",
+    title: "Power metal",
+    description: "The power metal genre",
+  },
+  {
+    id: "thrash",
+    title: "Thrash metal",
+    description: "The thrash metal genre",
+  },
+  {
+    id: "clean",
+    title: "Clean vocals",
+    description: "Clean vocals",
+  },
+  {
+    id: "unclean",
+    title: "Extreme vocals",
+    description: "Growling, screaming, and such",
+  },
+];
 
 function FiltersPage() {
   return (
