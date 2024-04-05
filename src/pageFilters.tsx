@@ -8,16 +8,20 @@ function FilterLabel(filterItem: FilterItem, preference: Preference) {
       result += "😩 I HATE";
       break;
     case -1:
-      result += "🤨 I dislike";
+      //result += "🙁 I dislike";
+      //result += "😟 I dislike";
+      result += "😑 I dislike";
       break;
     case 0:
+      //result += "😗 I am OK with";
       result += "😐 I am OK with";
       break;
     case 1:
-      result += "😀 I like";
+      // result += "😊 I like";
+      result += "🙂 I like";
       break;
     case 2:
-      result += "🤩 I LOVE";
+      result += "😍 I LOVE";
       break;
   }
   result += " " + filterItem.longForm;
@@ -39,9 +43,6 @@ export function FiltersPage() {
         <Typography variant="subtitle1" align="center" gutterBottom>
           Let's figure out how you can best enjoy Wintersun
         </Typography>
-        {/* <Typography variant="h4">
-              &#x1F62D;&#x1F621;&#x1F641;&#x1F642;&#x1F610;&#x1F600;&#x1F60D;&#x1F929;
-            </Typography> */}
       </header>
       <Typography variant="body1">
         Indicate your preferences for the following
