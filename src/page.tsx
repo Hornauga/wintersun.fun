@@ -51,7 +51,9 @@ export function Page({
               </Button>
             </Box>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
-              <Typography variant="h4">Wintersun.fun</Typography>
+              <Typography variant="h4" margin="none">
+                Wintersun.fun
+              </Typography>
             </Box>
             <Box
               sx={{ display: { xs: "flex", sm: "none" }, maxHeight: "100%" }}

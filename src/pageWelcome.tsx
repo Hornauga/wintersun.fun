@@ -4,7 +4,7 @@ import { loremIpsum } from "./misc";
 export function WelcomePage() {
   return (
     <Box>
-      <Typography variant="h4" align="center" gutterBottom>
+      <Typography variant="h4" align="center">
         Hello
       </Typography>
       <Typography variant="body1" align="justify">

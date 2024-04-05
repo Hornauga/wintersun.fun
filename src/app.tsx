@@ -21,6 +21,16 @@ const theme = responsiveFontSizes(
       primary: indigo,
       secondary: blue,
     },
+    components: {
+      MuiTypography: {
+        styleOverrides: {
+          root: {
+            marginBottom: "1rem",
+            marginTop: "1rem",
+          },
+        },
+      },
+    },
   }),
 );
 

@@ -40,7 +40,7 @@ export function FiltersPage() {
         <Typography variant="h1" align="center">
           Filtering
         </Typography>
-        <Typography variant="subtitle1" align="center" gutterBottom>
+        <Typography variant="subtitle1" align="center">
           Let's figure out how you can best enjoy Wintersun
         </Typography>
       </header>
