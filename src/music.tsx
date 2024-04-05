@@ -73,7 +73,7 @@ export const albumWintersunWintersunSongs: Song[] = [
 ];
 
 export const allSongs: Song[] = [...albumWintersunWintersunSongs];
-export function YouTubeEmbed({ song }: { song: Song; }) {
+export function YouTubeEmbed({ song }: { song: Song }) {
   const src = `https://www.youtube.com/embed/${song.src.youtube}`;
   return (
     <iframe
@@ -85,7 +85,7 @@ export function YouTubeEmbed({ song }: { song: Song; }) {
     ></iframe>
   );
 }
-export function SpotifyEmbed({ song }: { song: Song; }) {
+export function SpotifyEmbed({ song }: { song: Song }) {
   const src = `https://open.spotify.com/embed/track/${song.src.spotify}`;
   // https://stackoverflow.com/q/1234127
   // https://stackoverflow.com/a/76903187

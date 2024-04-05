@@ -1,12 +1,62 @@
-import { Typography, Box } from "@mui/material";
+import { Typography, Box, Button } from "@mui/material";
+import ChevronLeft from "@mui/icons-material/ChevronLeft";
+import ChevronRight from "@mui/icons-material/ChevronRight";
+import FirstPage from "@mui/icons-material/FirstPage";
+import LastPage from "@mui/icons-material/LastPage";
+
 import { Song, allSongs } from "./music";
 import { YouTubeEmbed, SpotifyEmbed } from "./music";
 
 import { loremIpsum } from "./misc";
+import { useState } from "react";
 
 export function ResultsPage() {
+  const [currentResult, setCurrentResult] = useState(0);
   return (
     <Box>
+      <Box
+        sx={{
+          display: "flex",
+          width: "100%",
+          justifyContent: "space-around",
+          alignItems: "center",
+          marginTop: "16px",
+          marginBottom: "16px",
+        }}
+      >
+        <Button
+          variant="text"
+          sx={{ width: 100 }}
+          onClick={() => setCurrentResult(0)}
+        >
+          <FirstPage />
+        </Button>
+        <Button
+          variant="text"
+          sx={{ width: 100 }}
+          onClick={() => setCurrentResult(currentResult - 1)}
+        >
+          <ChevronLeft />
+        </Button>
+        <Button variant="text" disabled sx={{ width: 100 }}>
+          {currentResult + 1}/{allSongs.length}
+        </Button>
+        <Button
+          variant="text"
+          sx={{ width: 100 }}
+          onClick={() => setCurrentResult(currentResult + 1)}
+        >
+          <ChevronRight />
+        </Button>
+        <Button
+          variant="text"
+          sx={{ width: 100 }}
+          onClick={() => setCurrentResult(allSongs.length - 1)}
+        >
+          <LastPage />
+        </Button>
+      </Box>
+      <Box>Helloooo</Box>
       {allSongs.map((song) => (
         <SongDisplay song={song} />
       ))}
