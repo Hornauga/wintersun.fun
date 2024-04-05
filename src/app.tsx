@@ -6,7 +6,7 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import { blue, indigo } from "@mui/material/colors";
-import { Page, PageName } from "./pages";
+import { Page, PageName } from "./page";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
