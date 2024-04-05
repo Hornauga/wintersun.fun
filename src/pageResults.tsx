@@ -12,6 +12,7 @@ import { useState } from "react";
 
 export function ResultsPage() {
   const [currentResult, setCurrentResult] = useState(0);
+  const songs = allSongs;
   return (
     <Box>
       <Box
@@ -27,6 +28,7 @@ export function ResultsPage() {
         <Button
           variant="text"
           sx={{ width: 100 }}
+          disabled={currentResult === 0}
           onClick={() => setCurrentResult(0)}
         >
           <FirstPage />
@@ -34,16 +36,18 @@ export function ResultsPage() {
         <Button
           variant="text"
           sx={{ width: 100 }}
+          disabled={currentResult === 0}
           onClick={() => setCurrentResult(currentResult - 1)}
         >
           <ChevronLeft />
         </Button>
         <Button variant="text" disabled sx={{ width: 100 }}>
-          {currentResult + 1}/{allSongs.length}
+          {currentResult + 1}/{songs.length}
         </Button>
         <Button
           variant="text"
           sx={{ width: 100 }}
+          disabled={currentResult === songs.length - 1}
           onClick={() => setCurrentResult(currentResult + 1)}
         >
           <ChevronRight />
@@ -51,15 +55,13 @@ export function ResultsPage() {
         <Button
           variant="text"
           sx={{ width: 100 }}
-          onClick={() => setCurrentResult(allSongs.length - 1)}
+          disabled={currentResult === songs.length - 1}
+          onClick={() => setCurrentResult(songs.length - 1)}
         >
           <LastPage />
         </Button>
       </Box>
-      <Box>Helloooo</Box>
-      {allSongs.map((song) => (
-        <SongDisplay song={song} />
-      ))}
+      <SongDisplay song={songs[currentResult]} />
     </Box>
   );
 }
