@@ -44,6 +44,7 @@ export function Page({
             <Box>
               <Button
                 variant="contained"
+                disabled={pageName === "welcome"}
                 sx={{ width: 100 }}
                 onClick={() => navigate("welcome")}
               >
@@ -66,9 +67,11 @@ export function Page({
               <Button
                 variant="contained"
                 sx={{ width: 100 }}
-                onClick={() => navigate("filters")}
+                onClick={() =>
+                  navigate(pageName === "filters" ? "results" : "filters")
+                }
               >
-                Filters
+                {pageName === "filters" ? "Go!" : "Filters"}
               </Button>
             </Box>
           </Box>
@@ -162,7 +165,7 @@ function FiltersPage() {
               min={-2}
               max={2}
               defaultValue={0}
-              onChange={ (e, val) => console.log(`${e}: ${val}`) }  // TODO
+              onChange={(e, val) => console.log(`${e}: ${val}`)} // TODO
             />
           </Box>
         ))}
