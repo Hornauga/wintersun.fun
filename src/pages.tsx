@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 
 import { Song, allSongs } from "./music.ts";
+import { useState } from "react";
 
 export type PageName = "welcome" | "filters" | "results";
 
@@ -106,41 +107,68 @@ var filterItems: FilterItem[] = [
   {
     id: "black",
     title: "Black Metal",
-    description: "The Black metal genre",
+    description: "the black metal genre",
   },
   {
     id: "death",
     title: "Death metal",
-    description: "The Death metal genre",
+    description: "the death metal genre",
   },
   {
     id: "folk",
     title: "Folk metal",
-    description: "The Folk metal genre",
+    description: "the folk metal genre",
   },
   {
-    id: "Power",
+    id: "power",
     title: "Power metal",
-    description: "The power metal genre",
+    description: "the power metal genre",
   },
   {
     id: "thrash",
     title: "Thrash metal",
-    description: "The thrash metal genre",
+    description: "the thrash metal genre",
   },
   {
     id: "clean",
     title: "Clean vocals",
-    description: "Clean vocals",
+    description: "clean vocals",
   },
   {
     id: "unclean",
     title: "Extreme vocals",
-    description: "Growling, screaming, and such",
+    description: "growling, screaming, and such",
   },
 ];
 
+type Preference = -2 | -1 | 0 | 1 | 2;
+
+function FilterLabel(title: string, preference: Preference) {
+  switch (preference) {
+    case -2:
+      return <Typography variant="body1">😭 I HATE {title}</Typography>
+    case -1:
+      return `🙁 I dislike ${title}`;
+    case 0:
+      return `😐 Ok ${title}`;
+    case 1:
+      return `🙂 I like ${title}`;
+    case 2:
+      return `😍 I LOVE ${title}`;
+  }
+}
+
+interface StateAndSetter {
+  state: Preference;
+  setState: React.Dispatch<React.SetStateAction<Preference>>;
+}
+
 function FiltersPage() {
+  const filterStates = new Map<string, StateAndSetter>();
+  for (const filterItem of filterItems) {
+    const [state, setState] = useState<Preference>(0);
+    filterStates.set(filterItem.id, { state, setState });
+  }
   return (
     <>
       <header>
@@ -150,6 +178,9 @@ function FiltersPage() {
         <Typography variant="subtitle1" align="center" gutterBottom>
           Let's figure out how you can best enjoy Wintersun
         </Typography>
+        <Typography variant="h4">
+          &#x1F62D;&#x1F621;&#x1F641;&#x1F642;&#x1F610;&#x1F600;&#x1F60D;&#x1F929;
+        </Typography>
       </header>
       <Typography variant="body1">
         Indicate your preferences for the following
@@ -157,15 +188,20 @@ function FiltersPage() {
       <FormControl>
         {filterItems.map((item) => (
           <Box>
-            {item.title}
+            {FilterLabel(item.title, (filterStates.get(item.id) ?? { state: 0 }).state)}
             <Slider
               valueLabelDisplay="off"
+              color="secondary"
               marks
               step={1}
               min={-2}
               max={2}
-              defaultValue={0}
-              onChange={(e, val) => console.log(`${e}: ${val}`)} // TODO
+              value={(filterStates.get(item.id) ?? { state: 0 }).state}
+              onChange={(_, val) =>
+                (filterStates.get(item.id) ?? { setState: (_) => {} }).setState(
+                  val as Preference,
+                )
+              }
             />
           </Box>
         ))}
