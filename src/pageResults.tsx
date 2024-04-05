@@ -1,10 +1,9 @@
 import { Typography, Box } from "@mui/material";
 import { Song, allSongs } from "./music.ts";
-import { mainSize } from "./page.tsx";
 
 export function ResultsPage() {
   return (
-    <Box minHeight={mainSize}>
+    <Box>
       {allSongs.map((song) => (
         <SongDisplay song={song} />
       ))}

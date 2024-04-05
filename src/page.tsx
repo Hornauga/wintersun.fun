@@ -30,13 +30,12 @@ export function Page({
   }
   return (
     <Container maxWidth="sm" style={{ height: "100vh" }}>
-      <AppBar sx={{ position: { xs: "fixed", sm: "static" } }}>
+      <AppBar position="static" >
         <Toolbar>
           <Box
             sx={{
               display: "flex",
               width: "100%",
-              height: barSize,
               justifyContent: "space-between",
               alignItems: "center",
             }}
@@ -60,7 +59,7 @@ export function Page({
               <img
                 src="icons/wintersun.png"
                 alt="Wintersun.fun (Wintersun logo)"
-                style={{ maxHeight: `calc(${barSize} - 16px)` }}
+                style={{maxHeight:"48px"}}
               />
             </Box>
             <Box>
@@ -81,7 +80,3 @@ export function Page({
     </Container>
   );
 }
-
-const barSize = "64px";
-const spacing = "8px";
-export const mainSize = `calc( 100vh - ${barSize} - ${spacing} )`;
