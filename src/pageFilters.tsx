@@ -5,16 +5,16 @@ function FilterLabel(filterItem: FilterItem, preference: Preference) {
   var result = `${filterItem.label}? `;
   switch (preference) {
     case -2:
-      result += "😭 I HATE";
+      result += "😩 I HATE";
       break;
     case -1:
-      result += "🙁 I dislike";
+      result += "🤨 I dislike";
       break;
     case 0:
       result += "😐 I am OK with";
       break;
     case 1:
-      result += "🙂 I like";
+      result += "😀 I like";
       break;
     case 2:
       result += "🤩 I LOVE";
