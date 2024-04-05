@@ -34,7 +34,7 @@ export function Page({
   }
   return (
     <Container maxWidth="sm" style={{ height: "100vh" }}>
-      <AppBar position="static">
+      <AppBar sx={{ position: { xs: "fixed", sm: "static" } }}>
         <Toolbar>
           <Box
             sx={{
@@ -57,15 +57,13 @@ export function Page({
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               <Typography variant="h4">Wintersun.fun</Typography>
             </Box>
-            {/* <Box sx={{ display: { xs: "block", sm: "none" }, maxHeight: "100% !important", maxWidth: "100%", height: "auto", width:"auto"  }}> */}
             <Box
               sx={{ display: { xs: "flex", sm: "none" }, maxHeight: "100%" }}
             >
               <img
                 src="icons/wintersun.png"
-                alt="Wintersun logo"
+                alt="Wintersun.fun (Wintersun logo)"
                 style={{ maxHeight: `calc(${barSize} - 16px)` }}
-                // style={{ maxHeight: "100% !important", maxWidth: "100%", height: "auto", width:"auto" }}
               />
             </Box>
             <Box>
