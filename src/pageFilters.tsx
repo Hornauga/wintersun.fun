@@ -28,6 +28,41 @@ function FilterLabel(filterItem: FilterItem, preference: Preference) {
   return <Typography variant="body1">{result}</Typography>;
 }
 
+function Filter({
+  filterStates,
+  filterItem,
+}: {
+  filterStates: Map<string, StateAndSetter>;
+  filterItem: FilterItem;
+}) {
+  return (
+    <Box>
+      <Typography>
+        {FilterLabel(
+          filterItem,
+          (filterStates.get(filterItem.id) ?? { state: 0 }).state,
+        )}
+      </Typography>
+
+      <Slider
+        sx={{ width: "100%" }}
+        valueLabelDisplay="off"
+        color="secondary"
+        marks
+        step={1}
+        min={-2}
+        max={2}
+        value={(filterStates.get(filterItem.id) ?? { state: 0 }).state}
+        onChange={(_, val) =>
+          (filterStates.get(filterItem.id) ?? { setState: (_) => {} }).setState(
+            val as Preference,
+          )
+        }
+      />
+    </Box>
+  );
+}
+
 export function FiltersPage() {
   const filterStates = new Map<string, StateAndSetter>();
   for (const filterItem of filterItems) {
@@ -48,27 +83,8 @@ export function FiltersPage() {
         Indicate your preferences for the following
       </Typography>
       <FormControl>
-        {filterItems.map((item) => (
-          <Box>
-            {FilterLabel(
-              item,
-              (filterStates.get(item.id) ?? { state: 0 }).state,
-            )}
-            <Slider
-              valueLabelDisplay="off"
-              color="secondary"
-              marks
-              step={1}
-              min={-2}
-              max={2}
-              value={(filterStates.get(item.id) ?? { state: 0 }).state}
-              onChange={(_, val) =>
-                (filterStates.get(item.id) ?? { setState: (_) => {} }).setState(
-                  val as Preference,
-                )
-              }
-            />
-          </Box>
+        {filterItems.map((filterItem) => (
+          <Filter filterStates={filterStates} filterItem={filterItem} />
         ))}
       </FormControl>
     </>
@@ -116,6 +132,21 @@ var filterItems: FilterItem[] = [
     id: "unclean",
     label: "Extreme vocals",
     longForm: "growling, screaming, squealing, and such",
+  },
+  {
+    id: "riff",
+    label: "Riffs",
+    longForm: "sick riffs",
+  },
+  {
+    id: "melodies",
+    label: "Melodies",
+    longForm: "melodic music",
+  },
+  {
+    id: "energy",
+    label: "Energy",
+    longForm: "energetic music",
   },
 ];
 
