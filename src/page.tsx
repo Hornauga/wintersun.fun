@@ -144,7 +144,7 @@ var filterItems: FilterItem[] = [
 type Preference = -2 | -1 | 0 | 1 | 2;
 
 function FilterLabel(filterItem: FilterItem, preference: Preference) {
-  var result = `${filterItem.label}? `
+  var result = `${filterItem.label}? `;
   switch (preference) {
     case -2:
       result += "😭 I HATE";
@@ -163,7 +163,7 @@ function FilterLabel(filterItem: FilterItem, preference: Preference) {
       break;
   }
   result += " " + filterItem.longForm;
-    return <Typography variant="body1">{result}</Typography>;
+  return <Typography variant="body1">{result}</Typography>;
 }
 
 interface StateAndSetter {
@@ -196,7 +196,10 @@ function FiltersPage() {
       <FormControl>
         {filterItems.map((item) => (
           <Box>
-            {FilterLabel(item, (filterStates.get(item.id) ?? { state: 0 }).state)}
+            {FilterLabel(
+              item,
+              (filterStates.get(item.id) ?? { state: 0 }).state,
+            )}
             <Slider
               valueLabelDisplay="off"
               color="secondary"
