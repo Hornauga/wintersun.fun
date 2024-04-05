@@ -99,63 +99,71 @@ function WelcomePage() {
 
 interface FilterItem {
   id: string;
-  title: string;
-  description: string;
+  label: string;
+  longForm: string;
 }
 
 var filterItems: FilterItem[] = [
   {
     id: "black",
-    title: "Black Metal",
-    description: "the black metal genre",
+    label: "Black metal",
+    longForm: "the black metal genre",
   },
   {
     id: "death",
-    title: "Death metal",
-    description: "the death metal genre",
+    label: "Death metal",
+    longForm: "the death metal genre",
   },
   {
     id: "folk",
-    title: "Folk metal",
-    description: "the folk metal genre",
+    label: "Folk metal",
+    longForm: "the folk metal genre",
   },
   {
     id: "power",
-    title: "Power metal",
-    description: "the power metal genre",
+    label: "Power metal",
+    longForm: "the power metal genre",
   },
   {
     id: "thrash",
-    title: "Thrash metal",
-    description: "the thrash metal genre",
+    label: "Thrash metal",
+    longForm: "the thrash metal genre",
   },
   {
     id: "clean",
-    title: "Clean vocals",
-    description: "clean vocals",
+    label: "Clean vocals",
+    longForm: "clean vocals",
   },
   {
     id: "unclean",
-    title: "Extreme vocals",
-    description: "growling, screaming, and such",
+    label: "Extreme vocals",
+    longForm: "growling, screaming, squealing, and such",
   },
 ];
 
 type Preference = -2 | -1 | 0 | 1 | 2;
 
-function FilterLabel(title: string, preference: Preference) {
+function FilterLabel(filterItem: FilterItem, preference: Preference) {
+  var result = `${filterItem.label}? `
   switch (preference) {
     case -2:
-      return <Typography variant="body1">😭 I HATE {title}</Typography>
+      result += "😭 I HATE";
+      break;
     case -1:
-      return `🙁 I dislike ${title}`;
+      result += "🙁 I dislike";
+      break;
     case 0:
-      return `😐 Ok ${title}`;
+      result += "😐 I am OK with";
+      break;
     case 1:
-      return `🙂 I like ${title}`;
+      result += "🙂 I like";
+      break;
     case 2:
-      return `😍 I LOVE ${title}`;
+      result += "🤩 I LOVE";
+      break;
   }
+  result += " " + filterItem.longForm;
+    return <Typography variant="body1">{result}</Typography>;
 }
 
 interface StateAndSetter {
@@ -178,9 +186,9 @@ function FiltersPage() {
         <Typography variant="subtitle1" align="center" gutterBottom>
           Let's figure out how you can best enjoy Wintersun
         </Typography>
-        <Typography variant="h4">
+        {/* <Typography variant="h4">
           &#x1F62D;&#x1F621;&#x1F641;&#x1F642;&#x1F610;&#x1F600;&#x1F60D;&#x1F929;
-        </Typography>
+        </Typography> */}
       </header>
       <Typography variant="body1">
         Indicate your preferences for the following
@@ -188,7 +196,7 @@ function FiltersPage() {
       <FormControl>
         {filterItems.map((item) => (
           <Box>
-            {FilterLabel(item.title, (filterStates.get(item.id) ?? { state: 0 }).state)}
+            {FilterLabel(item, (filterStates.get(item.id) ?? { state: 0 }).state)}
             <Slider
               valueLabelDisplay="off"
               color="secondary"
