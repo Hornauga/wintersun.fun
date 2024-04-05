@@ -30,7 +30,7 @@ export function Page({
   }
   return (
     <Container maxWidth="sm" style={{ height: "100vh" }}>
-      <AppBar position="static" >
+      <AppBar position="static">
         <Toolbar>
           <Box
             sx={{
@@ -59,7 +59,7 @@ export function Page({
               <img
                 src="icons/wintersun.png"
                 alt="Wintersun.fun (Wintersun logo)"
-                style={{maxHeight:"48px"}}
+                style={{ maxHeight: "48px" }}
               />
             </Box>
             <Box>
