@@ -26,11 +26,11 @@ export function Page({
 }) {
   var foo;
   if (pageName === "welcome") {
-    foo = <WelcomePage navigate={navigate} />;
+    foo = <WelcomePage />;
   } else if (pageName === "filters") {
-    foo = <FiltersPage navigate={navigate} />;
+    foo = <FiltersPage />;
   } else if (pageName === "results") {
-    foo = <ResultsPage navigate={navigate} />;
+    foo = <ResultsPage />;
   }
   return (
     <Container maxWidth="sm" style={{ height: "100vh" }}>
@@ -87,10 +87,9 @@ const barSize = "64px";
 const spacing = "8px";
 const mainSize = `calc( 100vh - ${barSize} - ${spacing} )`;
 
-function WelcomePage({ navigate }: { navigate: (pageName: PageName) => void }) {
-  console.log(navigate); // TODO Remove
+function WelcomePage() {
   return (
-    <Box minHeight={mainSize}>
+    <Box>
       <Typography variant="subtitle1" align="center" gutterBottom>
         Your guide to enjoying the music of Wintersun
       </Typography>
@@ -98,8 +97,8 @@ function WelcomePage({ navigate }: { navigate: (pageName: PageName) => void }) {
   );
 }
 
-function FiltersPage({ navigate }: { navigate: (pageName: PageName) => void }) {
-  console.log(navigate); // TODO Remove
+
+function FiltersPage() {
   return (
     <>
       <header>
@@ -109,51 +108,31 @@ function FiltersPage({ navigate }: { navigate: (pageName: PageName) => void }) {
         <Typography variant="subtitle1" align="center" gutterBottom>
           Let's figure out how you can best enjoy Wintersun
         </Typography>
-
-        <Button variant="contained" onClick={() => navigate("welcome")}>
-          Restart
-        </Button>
-
-        <Button variant="contained" onClick={() => navigate("results")}>
-          Results
-        </Button>
       </header>
       <Typography variant="body1">
         Indicate your preferences for the following
       </Typography>
       <FormControl>
-        {[
-          "Black metal",
-          "Death metal",
-          "Folk metal",
-          "Power metal",
-          "Clean vocals",
-          "Extreme vocals (growls/screams)",
-        ].map((thing) => (
-          <>
-            <FormLabel>{thing}</FormLabel>
-            <RadioGroup row>
-              <FormControlLabel
-                value="dislike"
-                control={<Radio />}
-                label="Dislike"
-              />
-              <FormControlLabel
-                value="neutral"
-                control={<Radio />}
-                label="Neutral"
-              />
-              <FormControlLabel value="like" control={<Radio />} label="Like" />
-            </RadioGroup>
-          </>
+        {filterItems.map((item) => (
+          <Box>
+            {item.title}
+            <Slider
+              valueLabelDisplay="off"
+              marks
+              step={1}
+              min={-2}
+              max={2}
+              defaultValue={0}
+              onChange={ (e, val) => console.log(`${e}: ${val}`) }  // TODO
+            />
+          </Box>
         ))}
       </FormControl>
     </>
   );
 }
 
-function ResultsPage({ navigate }: { navigate: (pageName: PageName) => void }) {
-  console.log(navigate); // TODO Remove
+function ResultsPage() {
   return (
     <Box minHeight={mainSize}>
       {allSongs.map((song) => (
