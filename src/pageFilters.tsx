@@ -78,10 +78,11 @@ function Filter({
   return (
     <Box flexDirection="column">
       <Box marginTop="32px">
-      <FilterLabel
-        filterItem={filterItem}
-        preference={(filterStates.get(filterItem.id) ?? { state: 0 }).state}
-      /></Box>
+        <FilterLabel
+          filterItem={filterItem}
+          preference={(filterStates.get(filterItem.id) ?? { state: 0 }).state}
+        />
+      </Box>
       <Slider
         sx={{ width: "80%", margin: "32px 10% 0 10%" }}
         valueLabelDisplay="auto"
