@@ -14,9 +14,9 @@ export function WelcomePage() {
         </a>{" "}
         makes music today. The purpose of this website is to bridge the gap
         between you and Wintersun's brilliance, because more listeners means
-        more Wintersun music! Press <strong>FILTERS</strong> (top right) to
-        select your musical preferences and receive a bespoke introduction to
-        all the music Jari has been involved in making.
+        more Wintersun music! Press <strong>FILTERS</strong> (top right) and
+        dial in your musical preferences to receive a bespoke introduction to
+        all the music Jari has been involved in making over the years.
       </Typography>
       <Typography variant="h4" align="center">
         Hello
