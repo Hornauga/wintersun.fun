@@ -1,6 +1,6 @@
 import { Typography, Box, Tooltip, Slider } from "@mui/material";
 import { useState } from "react";
-import { loremIpsum } from "./misc";
+import { loremIpsum } from "../misc";
 
 function valueLabelFormat(value: number) {
   switch (value) {

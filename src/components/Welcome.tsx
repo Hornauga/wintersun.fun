@@ -1,5 +1,5 @@
 import { Typography, Box } from "@mui/material";
-import { loremIpsum } from "./misc";
+import { loremIpsum } from "../misc";
 
 export function WelcomePage() {
   return (

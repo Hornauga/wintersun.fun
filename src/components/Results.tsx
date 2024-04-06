@@ -4,10 +4,10 @@ import ChevronRight from "@mui/icons-material/ChevronRight";
 import FirstPage from "@mui/icons-material/FirstPage";
 import LastPage from "@mui/icons-material/LastPage";
 
-import { Song, allSongs } from "./music";
-import { YouTubeEmbed, SpotifyEmbed } from "./music";
+import { Song, allSongs } from "../music";
+import { YouTubeEmbed, SpotifyEmbed } from "../music";
 
-import { loremIpsum } from "./misc";
+import { loremIpsum } from "../misc";
 import { useState } from "react";
 
 export function ResultsPage() {

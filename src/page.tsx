@@ -7,9 +7,9 @@ import {
   Container,
 } from "@mui/material";
 
-import { WelcomePage } from "./pageWelcome.tsx";
-import { FiltersPage } from "./pageFilters.tsx";
-import { ResultsPage } from "./pageResults.tsx";
+import { WelcomePage } from "./components/pageWelcome.tsx";
+import { FiltersPage } from "./components/pageFilters.tsx";
+import { ResultsPage } from "./components/pageResults.tsx";
 
 export type PageName = "welcome" | "filters" | "results";
 
