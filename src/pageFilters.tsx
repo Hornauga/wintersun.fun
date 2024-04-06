@@ -1,31 +1,71 @@
-import { Typography, Box, FormControl, Slider } from "@mui/material";
+import { Typography, Box, Tooltip, Slider } from "@mui/material";
 import { useState } from "react";
+import { loremIpsum } from "./misc";
 
-function FilterLabel(filterItem: FilterItem, preference: Preference) {
-  var result = `${filterItem.label}? `;
+function valueLabelFormat(value: number) {
+  switch (value) {
+    case -2:
+      return "HATE";
+    case -1:
+      return "Dislike";
+    case 0:
+      return "Neutral";
+    case 1:
+      return "Like";
+    case 2:
+      return "LOVE";
+  }
+}
+
+function FilterLabel({
+  filterItem,
+  preference,
+}: {
+  filterItem: FilterItem;
+  preference: Preference;
+}) {
+  var tooltip = "";
+  var emoji = "";
+  var emoji2 = "";
   switch (preference) {
     case -2:
-      result += "😩 I HATE";
+      tooltip += "I HATE";
+      emoji = "😩";
+      emoji2 = "💩";
       break;
     case -1:
-      //result += "🙁 I dislike";
-      //result += "😟 I dislike";
-      result += "😑 I dislike";
+      tooltip += "I dislike";
+      // emoji = "🙁";
+      // emoji = "😟";
+      emoji = "😑";
+      emoji2 = "👎";
       break;
     case 0:
-      //result += "😗 I am OK with";
-      result += "😐 I am OK with";
+      tooltip += "I am OK with";
+      // emoji = "😗";
+      emoji = "😐";
+      emoji2 = "😐";
       break;
     case 1:
-      // result += "😊 I like";
-      result += "🙂 I like";
+      tooltip += "I like";
+      // emoji = "😊";
+      emoji = "🙂";
+      emoji2 = "👍";
       break;
     case 2:
-      result += "😍 I LOVE";
+      tooltip += "I LOVE";
+      emoji = "😍";
+      emoji2 = "⭐";
       break;
   }
-  result += " " + filterItem.longForm;
-  return <Typography variant="body1">{result}</Typography>;
+  tooltip += " " + filterItem.longForm;
+  return (
+    <Tooltip title={tooltip} arrow>
+      <Typography variant="h5" align="center">
+        {emoji} {filterItem.label} {emoji2}
+      </Typography>
+    </Tooltip>
+  );
 }
 
 function Filter({
@@ -36,17 +76,16 @@ function Filter({
   filterItem: FilterItem;
 }) {
   return (
-    <Box>
-      <Typography>
-        {FilterLabel(
-          filterItem,
-          (filterStates.get(filterItem.id) ?? { state: 0 }).state,
-        )}
-      </Typography>
-
+    <Box flexDirection="column">
+      <Box marginTop="32px">
+      <FilterLabel
+        filterItem={filterItem}
+        preference={(filterStates.get(filterItem.id) ?? { state: 0 }).state}
+      /></Box>
       <Slider
-        sx={{ width: "100%" }}
-        valueLabelDisplay="off"
+        sx={{ width: "80%", margin: "32px 10% 0 10%" }}
+        valueLabelDisplay="auto"
+        valueLabelFormat={valueLabelFormat}
         color="secondary"
         marks
         step={1}
@@ -71,22 +110,18 @@ export function FiltersPage() {
   }
   return (
     <>
-      <header>
-        <Typography variant="h1" align="center">
-          Filtering
-        </Typography>
-        <Typography variant="subtitle1" align="center">
-          Let's figure out how you can best enjoy Wintersun
-        </Typography>
-      </header>
-      <Typography variant="body1">
-        Indicate your preferences for the following
+      <Typography variant="h4" align="center">
+        Filtering
       </Typography>
-      <FormControl>
-        {filterItems.map((filterItem) => (
-          <Filter filterStates={filterStates} filterItem={filterItem} />
-        ))}
-      </FormControl>
+      <Typography variant="body1" align="justify">
+        Let's figure out how you can best enjoy Wintersun. {loremIpsum}
+      </Typography>
+      {filterItems.map((filterItem) => (
+        <Filter filterStates={filterStates} filterItem={filterItem} />
+      ))}
+      <Typography variant="body1" align="justify">
+        That's all of the available filters for now. {loremIpsum}
+      </Typography>
     </>
   );
 }

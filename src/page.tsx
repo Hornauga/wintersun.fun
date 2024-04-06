@@ -20,13 +20,13 @@ export function Page({
   pageName: PageName;
   navigate: (pageName: PageName) => void;
 }) {
-  var foo;
+  var page;
   if (pageName === "welcome") {
-    foo = <WelcomePage />;
+    page = <WelcomePage />;
   } else if (pageName === "filters") {
-    foo = <FiltersPage />;
+    page = <FiltersPage />;
   } else if (pageName === "results") {
-    foo = <ResultsPage />;
+    page = <ResultsPage />;
   }
   return (
     <Container maxWidth="sm" style={{ height: "100vh" }}>
@@ -78,7 +78,8 @@ export function Page({
           </Box>
         </Toolbar>
       </AppBar>
-      {foo}
+      {page}
+      <Box minHeight="32px"></Box>
     </Container>
   );
 }
