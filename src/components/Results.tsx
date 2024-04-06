@@ -5,7 +5,8 @@ import FirstPage from "@mui/icons-material/FirstPage";
 import LastPage from "@mui/icons-material/LastPage";
 
 import { Song, allSongs } from "../music";
-import { YouTubeEmbed, SpotifyEmbed } from "../music";
+import { EmbedSpotify } from "./SpotifyEmbed";
+import { EmbedYouTube } from "./YouTubeEmbed";
 
 import { loremIpsum } from "../misc";
 import { useState } from "react";
@@ -74,9 +75,9 @@ function SongDisplay({ song }: { song: Song }) {
       </Typography>
       {/* <Typography variant="caption" align="center">{song.album? : "Foo" ? "bar"}</Typography> */}
       <p>
-        <YouTubeEmbed song={song} />
+        <EmbedYouTube song={song} />
       </p>
-      <p>{"spotify" in song.src && <SpotifyEmbed song={song} />}</p>
+      <p>{"spotify" in song.src && <EmbedSpotify song={song} />}</p>
       <Typography variant="body1" align="justify">
         Here's why you'll like this song: it's black melodic death power metal.{" "}
         {loremIpsum}
