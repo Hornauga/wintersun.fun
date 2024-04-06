@@ -45,28 +45,23 @@ const theme = responsiveFontSizes(
   }),
 );
 
-type PageName = "welcome" | "filters" | "results";
+type PageID = "welcome" | "filters" | "results";
 
 export default function App() {
-  const [pageName, setPageName] = useState<PageName>("welcome");
-
-  function navigate(pageName: PageName) {
-    setPageName(pageName);
-  }
+  const [pageID, setPageID] = useState<PageID>("welcome");
 
   var page;
-  if (pageName === "welcome") {
+  if (pageID === "welcome") {
     page = <WelcomePage />;
-  } else if (pageName === "filters") {
+  } else if (pageID === "filters") {
     page = <FiltersPage />;
-  } else if (pageName === "results") {
+  } else if (pageID === "results") {
     page = <ResultsPage />;
   }
 
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline enableColorScheme />
-
       <Container maxWidth="sm" style={{ height: "100vh" }}>
         <AppBar position="static">
           <Toolbar>
@@ -81,9 +76,9 @@ export default function App() {
               <Box>
                 <Button
                   variant="contained"
-                  disabled={pageName === "welcome"}
+                  disabled={pageID === "welcome"}
                   sx={{ width: 100 }}
-                  onClick={() => navigate("welcome")}
+                  onClick={() => setPageID("welcome")}
                 >
                   About
                 </Button>
@@ -107,17 +102,17 @@ export default function App() {
                   variant="contained"
                   sx={{ width: 100 }}
                   onClick={() =>
-                    navigate(pageName === "filters" ? "results" : "filters")
+                    setPageID(pageID === "filters" ? "results" : "filters")
                   }
                 >
-                  {pageName === "filters" ? "Go!" : "Filters"}
+                  {pageID === "filters" ? "Go!" : "Filters"}
                 </Button>
               </Box>
             </Box>
           </Toolbar>
         </AppBar>
         {page}
-        <Box minHeight="32px"></Box>
+        <Box minHeight="32px">{/* Hidden footer */}</Box>
       </Container>
     </ThemeProvider>
   );
