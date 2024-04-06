@@ -1,4 +1,4 @@
-import { Song } from "../music";
+import { Song } from "../music/core";
 
 export function EmbedYouTube({ song }: { song: Song }) {
   if (song.src.youtube === undefined) {
