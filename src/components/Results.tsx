@@ -5,8 +5,8 @@ import FirstPage from "@mui/icons-material/FirstPage";
 import LastPage from "@mui/icons-material/LastPage";
 
 import { Song, allSongs } from "../music";
-import { EmbedSpotify } from "./SpotifyEmbed";
-import { EmbedYouTube } from "./YouTubeEmbed";
+import { EmbedSpotify } from "./EmbedSpotify";
+import { EmbedYouTube } from "./EmbedYouTube";
 
 import { loremIpsum } from "../misc";
 import { useState } from "react";
