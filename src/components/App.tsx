@@ -19,9 +19,9 @@ import {
   Container,
 } from "@mui/material";
 
-import { WelcomePage } from "./components/Welcome.tsx";
-import { FiltersPage } from "./components/Filters.tsx";
-import { ResultsPage } from "./components/Results.tsx";
+import { WelcomePage } from "./Welcome.tsx";
+import { FiltersPage } from "./Filters.tsx";
+import { ResultsPage } from "./Results.tsx";
 
 const theme = responsiveFontSizes(
   createTheme({
