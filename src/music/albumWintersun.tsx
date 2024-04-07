@@ -199,7 +199,7 @@ export const songSadnessAndHate: Song = {
   src: { youtube: "x3s19wDvyeU", spotify: "4cN0IBNbFkq0srzoyNOC4C" },
   qualityValues: {
     jari: 3,
-    black: 2,
+    black: 1,
     death: 1,
     folk: 2,
     power: 0,

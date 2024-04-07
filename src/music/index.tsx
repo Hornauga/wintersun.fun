@@ -35,7 +35,6 @@ export type Quality =
   | "riffs"
   | "solos"
   // Character
-  | "dynamic"
   | "energetic"
   | "epic"
   | "intense"
