@@ -128,64 +128,6 @@ export function FiltersPage() {
   );
 }
 
-interface FilterItem {
-  id: string;
-  label: string;
-  longForm: string;
-}
-
-var filterItems: FilterItem[] = [
-  {
-    id: "black",
-    label: "Black metal",
-    longForm: "the black metal genre",
-  },
-  {
-    id: "death",
-    label: "Death metal",
-    longForm: "the death metal genre",
-  },
-  {
-    id: "folk",
-    label: "Folk metal",
-    longForm: "the folk metal genre",
-  },
-  {
-    id: "power",
-    label: "Power metal",
-    longForm: "the power metal genre",
-  },
-  {
-    id: "thrash",
-    label: "Thrash metal",
-    longForm: "the thrash metal genre",
-  },
-  {
-    id: "clean",
-    label: "Clean vocals",
-    longForm: "clean vocals",
-  },
-  {
-    id: "unclean",
-    label: "Extreme vocals",
-    longForm: "growling, screaming, squealing, and such",
-  },
-  {
-    id: "riff",
-    label: "Riffs",
-    longForm: "sick riffs",
-  },
-  {
-    id: "melodies",
-    label: "Melodies",
-    longForm: "melodic music",
-  },
-  {
-    id: "energy",
-    label: "Energy",
-    longForm: "energetic music",
-  },
-];
 
 interface StateAndSetter {
   state: Preference;

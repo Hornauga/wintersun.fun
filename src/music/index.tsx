@@ -46,29 +46,69 @@ export type QualityCategory =
   | "musical"
   | "character";
 
-export type QualityInfo = { category: QualityCategory };
+export type QualityInfo = {
+  category: QualityCategory;
+  label: string;
+  long: string;
+};
 
 export const qualities: Record<Quality, QualityInfo> = {
   // Tiebreaker
-  jari: { category: "jari" },
+  jari: {
+    category: "jari",
+    label: "Jari factor",
+    long: 'the fact Jari\'s... "so good"',
+  },
   // Genre
-  black: { category: "genre" },
-  death: { category: "genre" },
-  folk: { category: "genre" },
-  power: { category: "genre" },
-  thrash: { category: "genre" },
+  black: {
+    category: "genre",
+    label: "Black metal",
+    long: "the black metal genre",
+  },
+  death: {
+    category: "genre",
+    label: "Death metal",
+    long: "the death metal genre",
+  },
+  folk: {
+    category: "genre",
+    label: "Folk metal",
+    long: "the folk metal genre",
+  },
+  power: {
+    category: "genre",
+    label: "Power metal",
+    long: "the power metal genre",
+  },
+  thrash: {
+    category: "genre",
+    label: "Thrash metal",
+    long: "the thrash metal genre",
+  },
   // Vocals
-  clean: { category: "vocals" },
-  extreme: { category: "vocals" },
+  clean: { category: "vocals", label: "Clean vocals", long: "clean vocals" },
+  extreme: {
+    category: "vocals",
+    label: "Extreme vocals",
+    long: "growling, screaming, squealing, and such",
+  },
   // Musical
-  melodic: { category: "musical" },
-  riffs: { category: "musical" },
-  solos: { category: "musical" },
+  melodic: { category: "musical", label: "Melodies", long: "melodic music" },
+  riffs: { category: "musical", label: "Riffs", long: "sick riffs" },
+  solos: { category: "musical", label: "Solos", long: "amazing tasty solos" },
   // Characteristic
-  energetic: { category: "character" },
-  epic: { category: "character" },
-  intense: { category: "character" },
-  melancholic: { category: "character" },
+  energetic: {
+    category: "character",
+    label: "Energy",
+    long: "energetic music",
+  },
+  epic: { category: "character", label: "Epic", long: "epic music" },
+  intense: { category: "character", label: "Intense", long: "intense music" },
+  melancholic: {
+    category: "character",
+    label: "Melancholy",
+    long: "melancholic music",
+  },
 };
 
 export enum QualityValue {
@@ -105,4 +145,3 @@ export enum Preference {
   LIKE = 1,
   LOVE = 2,
 }
- 
