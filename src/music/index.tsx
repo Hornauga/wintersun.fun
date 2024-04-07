@@ -1,23 +1,3 @@
-// Rejected qualities
-//neoclassical
-//symphonic
-//choirs
-//chanting
-//churning
-//swelling
-//trumpeting
-//soothing
-//disturbing
-//fast
-//slow
-//uplifting
-//relentless
-//fullon
-//triumphant
-//powerful
-//rhythmic
-//dynamic
-
 export type Quality =
   // Tiebreaker
   | "jari"
@@ -39,6 +19,25 @@ export type Quality =
   | "epic"
   | "intense"
   | "melancholic";
+// Rejected (for now) qualities
+//neoclassical
+//symphonic
+//choirs
+//chanting
+//churning
+//swelling
+//trumpeting
+//soothing
+//disturbing
+//fast
+//slow
+//uplifting
+//relentless
+//fullon
+//triumphant
+//powerful
+//rhythmic
+//dynamic
 
 export type QualityCategory =
   | "jari"
@@ -98,3 +97,12 @@ export interface Song extends Media {
   album?: Album;
   qualityValues: QualityValues;
 }
+
+export enum Preference {
+  HATE = -2,
+  DISLIKE = -1,
+  NONE = 0,
+  LIKE = 1,
+  LOVE = 2,
+}
+ 

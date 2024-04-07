@@ -1,6 +1,7 @@
 import { Typography, Box, Tooltip, Slider } from "@mui/material";
 import { useState } from "react";
 import { loremIpsum } from "../misc";
+import { Preference } from "../music";
 
 function valueLabelFormat(value: number) {
   switch (value) {
@@ -185,8 +186,6 @@ var filterItems: FilterItem[] = [
     longForm: "energetic music",
   },
 ];
-
-type Preference = -2 | -1 | 0 | 1 | 2;
 
 interface StateAndSetter {
   state: Preference;
