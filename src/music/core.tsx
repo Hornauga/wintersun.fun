@@ -1,75 +1,101 @@
-export interface Album {
-  title: string;
-  artist: string;
-  src: {
-    youtube?: string;
-    spotify?: string;
-  };
-}
+// Rejected qualities
+//neoclassical
+//symphonic
+//choirs
+//chanting
+//churning
+//swelling
+//trumpeting
+//soothing
+//disturbing
+//fast
+//slow
+//uplifting
+//relentless
+//fullon
+//triumphant
+//powerful
+//rhythmic
+//dynamic
 
-export interface Song {
-  title: string;
-  album?: Album;
-  src: {
-    youtube?: string;
-    spotify?: string;
-  };
-}
+export type Quality =
+  // Tiebreaker
+  | "jari"
+  // Genre
+  | "black"
+  | "death"
+  | "folk"
+  | "power"
+  | "thrash"
+  // Vocals
+  | "clean"
+  | "extreme"
+  // Musical
+  | "melodic"
+  | "riffs"
+  | "solos"
+  // Character
+  | "dynamic"
+  | "energetic"
+  | "epic"
+  | "intense"
+  | "melancholic";
 
-export const albumWintersunWintersun: Album = {
-  title: "Wintersun",
-  artist: "Wintersun",
-  src: { youtube: "XfMrC0dvvmw", spotify: "5vlG5D2TCZzvWYAevPVYCI" },
+export type QualityCategory =
+  | "jari"
+  | "genre"
+  | "vocals"
+  | "musical"
+  | "character";
+
+export type QualityInfo = { category: QualityCategory };
+
+export const qualities: Record<Quality, QualityInfo> = {
+  // Tiebreaker
+  jari: { category: "jari" },
+  // Genre
+  black: { category: "genre" },
+  death: { category: "genre" },
+  folk: { category: "genre" },
+  power: { category: "genre" },
+  thrash: { category: "genre" },
+  // Vocals
+  clean: { category: "vocals" },
+  extreme: { category: "vocals" },
+  // Musical
+  melodic: { category: "musical" },
+  riffs: { category: "musical" },
+  solos: { category: "musical" },
+  // Characteristic
+  energetic: { category: "character" },
+  epic: { category: "character" },
+  intense: { category: "character" },
+  melancholic: { category: "character" },
 };
-export const albumWintersunWintersunSongs: Song[] = [
-  {
-    title: "Winter Madness Intro",
-    album: albumWintersunWintersun,
-    src: { youtube: "GUXpbnT5eBE" },
-  },
-  {
-    title: "Winter Madness",
-    album: albumWintersunWintersun,
-    src: {
-      youtube: "GUXpbnT5eBE?start=155",
-      spotify: "2N1SFSnHMIdHY0waUbjEnv",
-    },
-  },
-  {
-    title: "Beyond The Dark Sun",
-    album: albumWintersunWintersun,
-    src: { youtube: "KuG6lJ6xbKk", spotify: "1L3S5vFgsVzweUJnAIfSGM" },
-  },
-  {
-    title: "Sleeping Stars",
-    album: albumWintersunWintersun,
-    src: { youtube: "hDsTtJXdMZo", spotify: "5MqVSSinDohOuMjNhO6PU6" },
-  },
-  {
-    title: "Battle Against Time",
-    album: albumWintersunWintersun,
-    src: { youtube: "b4E0qN4_xQI", spotify: "0tEA8vx1V2mJoxSIqapi0H" },
-  },
-  {
-    title: "Death and the Healing",
-    album: albumWintersunWintersun,
-    src: { youtube: "wX-X7oX5Abc", spotify: "6EAsLKCDMQV3BRRb9OdaMJ" },
-  },
-  {
-    title: "Starchild",
-    album: albumWintersunWintersun,
-    src: { youtube: "oyuOjCfCsm4", spotify: "3LPVfzrc9G8EOQ00nTgvKL" },
-  },
-  {
-    title: "Beautiful Death",
-    album: albumWintersunWintersun,
-    src: { youtube: "TNg-mfVnCWk", spotify: "6S83nQwA0aPHKB86vAqgl5" },
-  },
-  {
-    title: "Sadness and Hate",
-    album: albumWintersunWintersun,
-    src: { youtube: "x3s19wDvyeU", spotify: "4cN0IBNbFkq0srzoyNOC4C" },
-  },
-];
 
-export const allSongs: Song[] = [...albumWintersunWintersunSongs];
+export enum QualityValue {
+  NONE = 0,
+  SOME = 1,
+  MORE = 2,
+  MOST = 3,
+}
+
+export type QualityValues = Record<Quality, QualityValue>;
+
+export type Artist = string;
+
+export interface Media {
+  title: string;
+  artist?: Artist;
+  src?: {
+    youtube?: string;
+    spotify?: string;
+  };
+}
+
+export interface Album extends Media {}
+
+export interface Song extends Media {
+  album?: Album;
+  qualityValues: QualityValues;
+}
