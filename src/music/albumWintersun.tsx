@@ -1,4 +1,4 @@
-import { Song, Album } from ".";
+import { Album, Song } from ".";
 
 export const albumWintersunWintersun: Album = {
   title: "Wintersun",

@@ -1,7 +1,7 @@
-import { Song } from "../music/core";
+import { Song } from "../music";
 
 export function EmbedSpotify({ song }: { song: Song }) {
-  if (song.src.spotify === undefined) {
+  if (song.src?.spotify === undefined) {
     return <></>;
   }
   const src = `https://open.spotify.com/embed/track/${song.src.spotify}`;
