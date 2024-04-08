@@ -99,14 +99,14 @@ export const qualities: Record<Quality, QualityInfo> = {
   // Characteristic
   energetic: {
     category: "character",
-    label: "Energy",
+    label: "Energetic",
     long: "energetic music",
   },
   epic: { category: "character", label: "Epic", long: "epic music" },
   intense: { category: "character", label: "Intense", long: "intense music" },
   melancholic: {
     category: "character",
-    label: "Melancholy",
+    label: "Melancholic",
     long: "melancholic music",
   },
 };

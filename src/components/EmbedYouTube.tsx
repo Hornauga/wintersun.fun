@@ -1,9 +1,7 @@
 import { Song } from "../music";
 
 export function EmbedYouTube({ song }: { song: Song }) {
-  if (song.src?.youtube === undefined) {
-    return <></>;
-  }
+  if (song.src?.youtube === undefined) return;
   const src = `https://www.youtube.com/embed/${song.src.youtube}`;
   return (
     <iframe
