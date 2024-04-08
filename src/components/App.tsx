@@ -19,9 +19,9 @@ import {
   Container,
 } from "@mui/material";
 
-import { WelcomePage } from "./Welcome.tsx";
-import { FiltersPage } from "./Filters.tsx";
-import { ResultsPage } from "./Results.tsx";
+import Welcome from "./Welcome.tsx";
+import Filters from "./Filters.tsx";
+import Results from "./Results.tsx";
 
 const theme = responsiveFontSizes(
   createTheme({
@@ -52,11 +52,11 @@ export default function App() {
 
   var page;
   if (pageID === "welcome") {
-    page = <WelcomePage />;
+    page = <Welcome />;
   } else if (pageID === "filters") {
-    page = <FiltersPage />;
+    page = <Filters />;
   } else if (pageID === "results") {
-    page = <ResultsPage />;
+    page = <Results />;
   }
 
   return (

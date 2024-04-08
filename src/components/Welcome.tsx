@@ -1,7 +1,7 @@
 import { Typography, Box } from "@mui/material";
 import { loremIpsum } from "../misc";
 
-export function WelcomePage() {
+export default function Welcome() {
   return (
     <Box>
       <Typography variant="h4" align="center">

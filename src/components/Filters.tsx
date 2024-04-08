@@ -104,7 +104,7 @@ function Filter({
   );
 }
 
-export function FiltersPage() {
+export default function Filters() {
   const filterStates = new Map<string, StateAndSetter>();
   for (const filterItem of filterItems) {
     const [state, setState] = useState<Preference>(0);
@@ -127,7 +127,6 @@ export function FiltersPage() {
     </>
   );
 }
-
 
 interface StateAndSetter {
   state: Preference;

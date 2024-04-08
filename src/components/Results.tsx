@@ -11,7 +11,7 @@ import LastPage from "@mui/icons-material/LastPage";
 import * as albumWintersun from "../music/albumWintersun";
 import { SongArticle } from "./articles";
 
-export function ResultsPage() {
+export default function Results() {
   const [currentResult, setCurrentResult] = useState(0);
   const songs = [
     albumWintersun.songBattleAgainstTime,
