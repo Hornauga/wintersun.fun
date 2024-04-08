@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 import {
   AppBar,
@@ -25,7 +25,9 @@ import {
   Preference,
   Quality,
   QualityPreferences,
+  Song,
   makePreferences,
+  recommendation,
 } from "../music/index.tsx";
 
 const theme = responsiveFontSizes(
@@ -53,13 +55,21 @@ const theme = responsiveFontSizes(
 type PageID = "welcome" | "filters" | "results";
 
 export default function App() {
+  // The results of filtering
+  var songs = useRef<Song[]>([]);
+  var preferenceChanged = useRef<boolean>(true);
+
   // Filter preference states and their setter
   const [preferences, setPreferences] =
     useState<QualityPreferences>(makePreferences);
   function setPreference(quality: Quality, preference: Preference) {
     if (preferences[quality] === preference) return;
+    preferenceChanged.current = true;
     setPreferences({ ...preferences, ...{ [quality]: preference } });
   }
+
+  // Which result is being shown
+  const [currentResult, setCurrentResult] = useState(0);
 
   // Page selection
   const [pageID, setPageID] = useState<PageID>("welcome");
@@ -69,7 +79,15 @@ export default function App() {
   } else if (pageID === "filters") {
     page = <Filters preferences={preferences} setPreference={setPreference} />;
   } else if (pageID === "results") {
-    page = <Results />;
+    preferenceChanged.current = false;
+    songs.current = recommendation(preferences);
+    page = (
+      <Results
+        songs={songs.current}
+        currentResult={currentResult}
+        setCurrentResult={setCurrentResult}
+      />
+    );
   }
 
   return (

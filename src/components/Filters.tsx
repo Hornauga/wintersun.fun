@@ -37,7 +37,7 @@ export default function Filters({
           categoryLast = qualityInfo.category;
           categoryHeader = (
             <Typography variant="h4" align="center">
-              Category: {qualityInfo.category.toUpperCase()}
+              {qualityInfo.category.toUpperCase()}
             </Typography>
           );
         }

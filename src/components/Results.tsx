@@ -8,15 +8,18 @@ import ChevronRight from "@mui/icons-material/ChevronRight";
 import FirstPage from "@mui/icons-material/FirstPage";
 import LastPage from "@mui/icons-material/LastPage";
 
-import * as albumWintersun from "../music/albumWintersun";
 import { SongArticle } from "./articles";
+import { Song } from "../music";
 
-export default function Results() {
-  const [currentResult, setCurrentResult] = useState(0);
-  const songs = [
-    albumWintersun.songBattleAgainstTime,
-    albumWintersun.songWinterMadness,
-  ];
+export default function Results({
+  songs,
+  currentResult,
+  setCurrentResult,
+}: {
+  songs: Song[];
+  currentResult: number;
+  setCurrentResult: React.Dispatch<React.SetStateAction<number>>;
+}) {
   return (
     <Box>
       <Box

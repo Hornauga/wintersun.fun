@@ -1,3 +1,5 @@
+import * as albumWintersun from "./albumWintersun";
+
 export type Quality =
   // Tiebreaker
   | "jari"
@@ -166,4 +168,13 @@ export enum Preference {
   NONE = 0,
   LIKE = 1,
   LOVE = 2,
+}
+
+export function recommendation(qualityPreferences: QualityPreferences): Song[] {
+  console.log(qualityPreferences);
+  return [
+    albumWintersun.songWinterMadnessIntro,
+    albumWintersun.songWinterMadness,
+    albumWintersun.songBattleAgainstTime,
+  ];
 }
