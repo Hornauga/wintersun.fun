@@ -1,23 +1,5 @@
-//import { Typography, Box, Tooltip, Slider } from "@mui/material";
-import { Typography } from "@mui/material";
-import { loremIpsum } from "../misc";
+import { Typography, Box, Tooltip, Slider } from "@mui/material";
 import { Quality, Preference, QualityPreferences } from "../music";
-
-//function valueLabelFormat(value: Preference) {
-//  // Slider tooltip label
-//  switch (value) {
-//    case Preference.HATE:
-//      return "HATE";
-//    case Preference.DISLIKE:
-//      return "Dislike";
-//    case Preference.NONE:
-//      return "Neutral";
-//    case Preference.LIKE:
-//      return "Like";
-//    case Preference.LOVE:
-//      return "LOVE";
-//  }
-//}
 
 //function FilterLabel({
 //  filterItem,
@@ -77,76 +59,78 @@ export default function Filters({
   preferences: QualityPreferences;
   setPreference: (quality: Quality, preference: Preference) => void;
 }) {
-  console.log(setPreference);
+  console.log(preferences);
   return (
     <>
       <Typography variant="h4" align="center">
         Filtering
       </Typography>
       <Typography variant="body1" align="justify">
-        Let's figure out how you can best enjoy Wintersun. {loremIpsum}
+        Let's figure out how you can best enjoy Wintersun! Simply adjust any or
+        all of the filters below to your liking;{" "}
+        <strong>left if you dislike</strong> the thing, or{" "}
+        <strong>right if you like</strong> the thing. Then press the{" "}
+        <strong>GO!</strong> button in the top right to see the results.
       </Typography>
-      {Object.entries(preferences).map(([key, value]) => {
-        <Typography>
-          {key}: {value}
-        </Typography>;
-      })}
+      {Object.entries(preferences).map(([quality, preference]) => (
+        <Filter
+          key={quality}
+          preference={preference}
+          setPreference={(newPreference: Preference) =>
+            setPreference(quality as Quality, newPreference)
+          }
+        />
+      ))}
       <Typography variant="body1" align="justify">
-        That's all of the available filters for now. {loremIpsum}
+        That's all of the available filters for now.
       </Typography>
     </>
   );
 }
 
-//  return (
-//    <Box flexDirection="column">
-//      <Box marginTop="32px">
-//        <FilterLabel
-//          filterItem={filterItem}
-//          preference={(filterStates.get(filterItem.id) ?? { state: 0 }).state}
-//        />
-//      </Box>
-//      <Slider
-//        sx={{ width: "80%", margin: "32px 10% 0 10%" }}
-//        valueLabelDisplay="auto"
-//        valueLabelFormat={valueLabelFormat}
-//        color="secondary"
-//        marks
-//        step={1}
-//        min={-2}
-//        max={2}
-//        value={(filterStates.get(filterItem.id) ?? { state: 0 }).state}
-//        onChange={(_, val) =>
-//          (filterStates.get(filterItem.id) ?? { setState: (_) => {} }).setState(
-//            val as Preference,
-//          )
-//        }
-//      />
-//    </Box>
-//  );
-//}
-//
-//function Filter() {
-//  var filters:  = [];
-//  filters.concat()
-//  for (const filterItem of filterItems) {
-//    const [state, setState] = useState<Preference>(0);
-//    filterStates.set(filterItem.id, { state, setState });
-//  }
-//  return (
-//    <>
-//      <Typography variant="h4" align="center">
-//        Filtering
-//      </Typography>
-//      <Typography variant="body1" align="justify">
-//        Let's figure out how you can best enjoy Wintersun. {loremIpsum}
-//      </Typography>
-//      {filterItems.map((filterItem) => (
-//        <Filter filterStates={filterStates} filterItem={filterItem} />
-//      ))}
-//      <Typography variant="body1" align="justify">
-//        That's all of the available filters for now. {loremIpsum}
-//      </Typography>
-//    </>
-//  );
-//}
+function Filter({
+  preference,
+  setPreference,
+}: {
+  preference: Preference;
+  setPreference: (preference: Preference) => void;
+}) {
+  return (
+    <Box flexDirection="column">
+      {/* <Box marginTop="32px">
+        <FilterLabel
+          filterItem={filterItem}
+          preference={(filterStates.get(filterItem.id) ?? { state: 0 }).state}
+        />
+      </Box> */}
+      <Slider
+        sx={{ width: "80%", margin: "32px 10% 0 10%" }}
+        valueLabelDisplay="auto"
+        valueLabelFormat={valueLabelFormat}
+        color="secondary"
+        marks
+        step={1}
+        min={-2}
+        max={2}
+        value={preference}
+        onChange={(_, val) => setPreference(val as Preference)}
+      />
+    </Box>
+  );
+}
+
+function valueLabelFormat(value: Preference) {
+  // Slider tooltip label
+  switch (value) {
+    case Preference.HATE:
+      return "HATE";
+    case Preference.DISLIKE:
+      return "Dislike";
+    case Preference.NONE:
+      return "Neutral";
+    case Preference.LIKE:
+      return "Like";
+    case Preference.LOVE:
+      return "LOVE";
+  }
+}

@@ -57,8 +57,8 @@ export default function App() {
   const [preferences, setPreferences] =
     useState<QualityPreferences>(makePreferences);
   function setPreference(quality: Quality, preference: Preference) {
-    preferences[quality] = preference;
-    setPreferences(preferences);
+    if (preferences[quality] === preference) return;
+    setPreferences({ ...preferences, ...{ [quality]: preference } });
   }
 
   // Page selection
