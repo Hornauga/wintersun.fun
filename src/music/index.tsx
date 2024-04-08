@@ -171,10 +171,16 @@ export enum Preference {
 }
 
 export function recommendation(qualityPreferences: QualityPreferences): Song[] {
-  console.log(qualityPreferences);
+  console.log(qualityPreferences); // TODO REMOVE
   return [
     albumWintersun.songWinterMadnessIntro,
     albumWintersun.songWinterMadness,
+    albumWintersun.songBeyondTheDarkSun,
+    albumWintersun.songSleepingStars,
     albumWintersun.songBattleAgainstTime,
+    albumWintersun.songDeathAndTheHealing,
+    albumWintersun.songStarchild,
+    albumWintersun.songBeautifulDeath,
+    albumWintersun.songSadnessAndHate,
   ];
 }
