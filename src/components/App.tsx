@@ -1,27 +1,32 @@
+import { useState } from "react";
+
 import {
-  createTheme,
-  ThemeProvider,
+  AppBar,
+  Box,
+  Button,
+  Container,
   CssBaseline,
+  ThemeProvider,
+  Toolbar,
+  Typography,
+  createTheme,
   responsiveFontSizes,
 } from "@mui/material";
-import { useState } from "react";
 import { blue, indigo } from "@mui/material/colors";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
-import {
-  Button,
-  Typography,
-  Box,
-  Toolbar,
-  AppBar,
-  Container,
-} from "@mui/material";
 
 import Welcome from "./Welcome.tsx";
 import Filters from "./Filters.tsx";
 import Results from "./Results.tsx";
+import {
+  Preference,
+  Quality,
+  QualityPreferences,
+  makePreferences,
+} from "../music/index.tsx";
 
 const theme = responsiveFontSizes(
   createTheme({
@@ -48,13 +53,21 @@ const theme = responsiveFontSizes(
 type PageID = "welcome" | "filters" | "results";
 
 export default function App() {
-  const [pageID, setPageID] = useState<PageID>("welcome");
+  // Filter preference states and their setter
+  const [preferences, setPreferences] =
+    useState<QualityPreferences>(makePreferences);
+  function setPreference(quality: Quality, preference: Preference) {
+    preferences[quality] = preference;
+    setPreferences(preferences);
+  }
 
+  // Page selection
+  const [pageID, setPageID] = useState<PageID>("welcome");
   var page;
   if (pageID === "welcome") {
     page = <Welcome />;
   } else if (pageID === "filters") {
-    page = <Filters />;
+    page = <Filters preferences={preferences} setPreference={setPreference} />;
   } else if (pageID === "results") {
     page = <Results />;
   }

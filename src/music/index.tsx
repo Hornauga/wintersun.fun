@@ -119,6 +119,28 @@ export enum QualityValue {
 }
 
 export type QualityValues = Record<Quality, QualityValue>;
+export type QualityPreferences = Record<Quality, Preference>;
+export function makePreferences(
+  initialPreference: Preference = Preference.NONE,
+): QualityPreferences {
+  return {
+    jari: Preference.LIKE,
+    black: initialPreference,
+    death: initialPreference,
+    folk: initialPreference,
+    power: initialPreference,
+    thrash: initialPreference,
+    clean: initialPreference,
+    extreme: initialPreference,
+    melodic: initialPreference,
+    riffs: initialPreference,
+    solos: initialPreference,
+    energetic: initialPreference,
+    epic: initialPreference,
+    intense: initialPreference,
+    melancholic: initialPreference,
+  };
+}
 
 export type Artist = string;
 
