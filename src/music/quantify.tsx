@@ -3,6 +3,18 @@ import { Song } from "./things";
 import * as albumEnsiferum from "./sources/ensiferum/albumEnsiferum";
 import * as albumIron from "./sources/ensiferum/albumIron";
 import * as albumWintersun from "./sources/wintersun/albumWintersun";
+import * as albumTheForestSeasons from "./sources/wintersun/albumTheForestSeasons";
+import * as albumTheForestSeasonsInstrumental from "./sources/wintersun/albumTheForestSeasonsInstrumental";
+import * as albumTimeI from "./sources/wintersun/albumTimeI";
+import * as albumTimeIInstrumental from "./sources/wintersun/albumTimeIInstrumental";
+import {
+  songWarning,
+  songRedHorizon,
+  songSteelOfTheGods,
+} from "./sources/wintersun/misc";
+import { songMemory } from "./sources/misc";
+import { songDevotion } from "./sources/misc/albumNuclearBlastAllstars";
+import { songSaturdaySatan } from "./sources/misc/albumCallOfTheWild";
 
 //
 // Qualities
@@ -185,6 +197,16 @@ export function recommendation(preferences: Preferences): Song[] {
     albumWintersun.songStarchild,
     albumWintersun.songBeautifulDeath,
     albumWintersun.songSadnessAndHate,
+    albumTimeI.songWhenTimeFadesAway,
+    albumTimeI.songSonsOfWinterAndStars,
+    albumTimeI.songLandOfSnowAndSorrow,
+    albumTimeI.songDarknessAndFrost,
+    albumTimeI.songTime,
+    albumTimeIInstrumental.songWhenTimeFadesAway,
+    albumTimeIInstrumental.songSonsOfWinterAndStars,
+    albumTimeIInstrumental.songLandOfSnowAndSorrow,
+    albumTimeIInstrumental.songDarknessAndFrost,
+    albumTimeIInstrumental.songTime,
     albumIron.songFerrumAeternum,
     albumIron.songIron,
     albumIron.songSwordChant,
@@ -208,5 +230,19 @@ export function recommendation(preferences: Preferences): Song[] {
     albumEnsiferum.songEternalWait,
     albumEnsiferum.songBattleSong,
     albumEnsiferum.songGoblinsDance,
+    albumTheForestSeasons.songSpring,
+    albumTheForestSeasons.songSummer,
+    albumTheForestSeasons.songAutumn,
+    albumTheForestSeasons.songWinter,
+    albumTheForestSeasonsInstrumental.songSpring,
+    albumTheForestSeasonsInstrumental.songSummer,
+    albumTheForestSeasonsInstrumental.songAutumn,
+    albumTheForestSeasonsInstrumental.songWinter,
+    songWarning,
+    songRedHorizon,
+    songSteelOfTheGods,
+    songSaturdaySatan,
+    songMemory,
+    songDevotion,
   ];
 }

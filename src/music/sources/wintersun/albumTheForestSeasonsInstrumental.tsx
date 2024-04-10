@@ -9,7 +9,7 @@ export const albumTheForestSeasonsInstrumental: Album = {
   src: albumTheForestSeasons.src,
 };
 
-export const songSpringInstrumental: Song = {
+export const songSpring: Song = {
   release: albumTheForestSeasonsInstrumental,
   title: "Awaken from the Dark Slumber (Spring) (Instrumental)",
   src: { youtube: "wbq72xgsdwo", spotify: "479BAqWRmIPnzXWp4cbeH4" },
@@ -34,7 +34,7 @@ export const songSpringInstrumental: Song = {
   },
 };
 
-export const songSummerInstrumental: Song = {
+export const songSummer: Song = {
   release: albumTheForestSeasonsInstrumental,
   title: "The Forest That Weeps (Summer) (Instrumental)",
   src: { youtube: "kAZpX88stks", spotify: "4bqmtsRT4aU0vekZTspAUq" },
@@ -58,7 +58,7 @@ export const songSummerInstrumental: Song = {
   },
 };
 
-export const songAutumnInstrumental: Song = {
+export const songAutumn: Song = {
   release: albumTheForestSeasonsInstrumental,
   title: "Eternall Darkness (Autumn) (Instrumental)",
   src: { youtube: "G6oRbo2YDXM", spotify: "3HBFFlGOxz4eSQ719VBarS" },
@@ -82,7 +82,7 @@ export const songAutumnInstrumental: Song = {
   },
 };
 
-export const songWinterInstrumental: Song = {
+export const songWinter: Song = {
   release: albumTheForestSeasonsInstrumental,
   title: "Loneliness (Winter) (Instrumental)",
   src: { youtube: "z34CxDbywFE", spotify: "1MWR66elh7xBvrONTuqoun" },
