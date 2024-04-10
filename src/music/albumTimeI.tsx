@@ -3,6 +3,7 @@ import { Album, Song } from ".";
 export const albumWintersunTimeI: Album = {
   title: "Time I",
   artist: "Wintersun",
+  year: 2012,
   src: { spotify: "0V32xSGyy0TyOzbc5ufoWX" },
 };
 

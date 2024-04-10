@@ -3,6 +3,7 @@ import { Album, Song } from ".";
 export const albumWintersunTimeIInstrumental: Album = {
   title: "Time I (Instrumental)",
   artist: "Wintersun",
+  year: 2012,
 };
 
 export const songWhenTimeFadesAway: Song = {

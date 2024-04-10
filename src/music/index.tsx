@@ -157,7 +157,9 @@ export interface Media {
   };
 }
 
-export interface Album extends Media {}
+export interface Album extends Media {
+  year: number;
+}
 
 export interface Song extends Media {
   album?: Album;

@@ -3,6 +3,7 @@ import { Album, Song } from ".";
 export const albumIron: Album = {
   title: "Iron",
   artist: "Ensiferum",
+  year: 2004,
   src: { spotify: "1UrdsJhCNyCqmBn9zy2Ut9" },
 };
 
