@@ -11,7 +11,7 @@ import {
   songWarning,
   songRedHorizon,
   songSteelOfTheGods,
-} from "./sources/wintersun/misc";
+} from "./sources/wintersun";
 import { songMemory } from "./sources/misc";
 import { songDevotion } from "./sources/misc/albumNuclearBlastAllstars";
 import { songSaturdaySatan } from "./sources/misc/albumCallOfTheWild";
