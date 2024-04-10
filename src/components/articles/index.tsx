@@ -17,16 +17,19 @@ function DefaultArticle({ song }: { song: Song }) {
       </Typography>
       {"title" in song.release && (
         <Typography variant="subtitle2" align="center" marginTop="0">
-          <a href={song.release.artist.wiki.toString()}>
+          <a href={song.release.artist.wiki.toString()} target="_blank">
             {song.release.artist.title}
           </a>{" "}
-          - <a href={song.release.wiki.toString()}>{song.release.title}</a>
+          -{" "}
+          <a href={song.release.wiki.toString()} target="_blank">
+            {song.release.title}
+          </a>
         </Typography>
       )}
       {!("title" in song.release) && (
         <Typography variant="subtitle2" align="center" marginTop="0">
           by{" "}
-          <a href={song.release.artist.wiki.toString()}>
+          <a href={song.release.artist.wiki.toString()} target="_blank">
             {song.release.artist.title}
           </a>
         </Typography>
