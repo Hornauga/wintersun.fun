@@ -1,3 +1,4 @@
+import * as albumIron from "./albumIron";
 import * as albumWintersun from "./albumWintersun";
 
 export type Quality =
@@ -182,5 +183,16 @@ export function recommendation(qualityPreferences: QualityPreferences): Song[] {
     albumWintersun.songStarchild,
     albumWintersun.songBeautifulDeath,
     albumWintersun.songSadnessAndHate,
+    albumIron.songFerrumAeternum,
+    albumIron.songIron,
+    albumIron.songSwordChant,
+    albumIron.songMourningHeartInterlude,
+    albumIron.songTaleOfRevenge,
+    albumIron.songLostInDespair,
+    albumIron.songSlayerOfLight,
+    albumIron.songIntoBattle,
+    albumIron.songLaiLaiHei,
+    albumIron.songTears,
+    albumIron.songBattery,
   ];
 }
