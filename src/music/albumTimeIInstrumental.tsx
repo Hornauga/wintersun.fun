@@ -54,7 +54,7 @@ export const songSonsOfWinterAndStars: Song = {
 export const songLandOfSnowAndSorrow: Song = {
   album: albumWintersunTimeIInstrumental,
   title: "Land of Snow and Sorrow (Instrumental)",
-  src: { youtube: "k1WqOsBRTwo"},
+  src: { youtube: "k1WqOsBRTwo" },
   qualityValues: {
     jari: 0,
     black: 0,
@@ -77,7 +77,7 @@ export const songLandOfSnowAndSorrow: Song = {
 export const songDarknessAndFrost: Song = {
   album: albumWintersunTimeIInstrumental,
   title: "Darkness and Frost",
-  src: { youtube: "68B3fhunbsU"},
+  src: { youtube: "68B3fhunbsU" },
   qualityValues: {
     jari: 0,
     black: 0,
@@ -100,7 +100,7 @@ export const songDarknessAndFrost: Song = {
 export const songTime: Song = {
   album: albumWintersunTimeIInstrumental,
   title: "Time",
-  src: { youtube: "68B3fhunbsU&start=147"},
+  src: { youtube: "68B3fhunbsU&start=147" },
   qualityValues: {
     jari: 0,
     black: 0,
