@@ -146,7 +146,10 @@ export function makePreferences(
   };
 }
 
-export type Artist = string;
+export interface Artist {
+  title: string;
+  wikipedia: URL;
+}
 
 export interface Media {
   title: string;
