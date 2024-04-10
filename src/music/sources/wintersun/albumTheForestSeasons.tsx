@@ -1,15 +1,16 @@
-import { Song } from "./things";
-import { Album } from "./things";
+import { Album, Song } from "../../things";
+import { Wintersun } from "../../artists";
 
 export const albumTheForestSeasons: Album = {
   title: "The Forest Seasons",
-  artist: "Wintersun",
+  artist: Wintersun,
   year: 2017,
+  wiki: new URL("https://en.wikipedia.org/wiki/The_Forest_Seasons"),
   src: { youtube: "ZFfN3G2vjqM", spotify: "7ql5kbq4iJKLT2lpiaiZSr" },
 };
 
 export const songSpring: Song = {
-  album: albumTheForestSeasons,
+  release: albumTheForestSeasons,
   title: "Awaken from the Dark Slumber (Spring)",
   src: { youtube: "9pQvOyo1nfQ", spotify: "46f36Ds9aJhDhbQsZajbih" },
   qualities: {
@@ -33,7 +34,7 @@ export const songSpring: Song = {
 };
 
 export const songSummer: Song = {
-  album: albumTheForestSeasons,
+  release: albumTheForestSeasons,
   title: "The Forest That Weeps (Summer)",
   src: { youtube: "ffQ2B5qegRg", spotify: "22mbGl4jUbr7bhqWOzejjt" },
   qualities: {
@@ -56,7 +57,7 @@ export const songSummer: Song = {
 };
 
 export const songAutumn: Song = {
-  album: albumTheForestSeasons,
+  release: albumTheForestSeasons,
   title: "Eternall Darkness (Autumn)",
   src: { youtube: "cwB3BQ0zWOw", spotify: "6NVJrvr7jKmdV04xhGG4TH" },
   qualities: {
@@ -79,7 +80,7 @@ export const songAutumn: Song = {
 };
 
 export const songWinter: Song = {
-  album: albumTheForestSeasons,
+  release: albumTheForestSeasons,
   title: "Loneliness (Winter)",
   src: { youtube: "qIiZFpOQnd8", spotify: "6Qb4UHym7uBDGHRU0LYNjk" },
   qualities: {

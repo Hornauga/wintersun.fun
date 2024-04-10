@@ -1,17 +1,16 @@
-import { Song } from "../../things";
-import { Album } from "../../things";
+import { Album, Song } from "../../things";
 import { Ensiferum } from "../../artists";
 
 export const albumIron: Album = {
   title: "Iron",
   artist: Ensiferum,
   year: 2004,
-  wikipedia: new URL("https://en.wikipedia.org/wiki/Iron_(Ensiferum_album)"),
+  wiki: new URL("https://en.wikipedia.org/wiki/Iron_(Ensiferum_album)"),
   src: { spotify: "1UrdsJhCNyCqmBn9zy2Ut9" },
 };
 
 export const songFerrumAeternum: Song = {
-  album: albumIron,
+  release: albumIron,
   title: "Ferrum Aeternum",
   src: { youtube: "AvCDRK13yv8", spotify: "3SdUwF3swZgYCBRDIAsf0c" },
   qualities: {
@@ -34,7 +33,7 @@ export const songFerrumAeternum: Song = {
 };
 
 export const songIron: Song = {
-  album: albumIron,
+  release: albumIron,
   title: "Iron",
   src: { youtube: "IYq4AePD72M", spotify: "0wwAkc9n9SfV27COAK2AUH" },
   qualities: {
@@ -57,7 +56,7 @@ export const songIron: Song = {
 };
 
 export const songSwordChant: Song = {
-  album: albumIron,
+  release: albumIron,
   title: "Sword Chant",
   src: { youtube: "3RkuvOaReiA", spotify: "7sYXsljeNiPXZVjXb5HuKX" },
   qualities: {
@@ -80,7 +79,7 @@ export const songSwordChant: Song = {
 };
 
 export const songMourningHeartInterlude: Song = {
-  album: albumIron,
+  release: albumIron,
   title: "Mourning Heart - Interlude",
   src: { youtube: "Nf0F0dAlm0Q", spotify: "2Hf2byNwWzrxoMAK4GBfHV" },
   qualities: {
@@ -103,7 +102,7 @@ export const songMourningHeartInterlude: Song = {
 };
 
 export const songTaleOfRevenge: Song = {
-  album: albumIron,
+  release: albumIron,
   title: "Tale of Revenge",
   src: { youtube: "uVhq9UyDzEk", spotify: "5T8tc2aeIRxtjhUu762WJP" },
   qualities: {
@@ -126,7 +125,7 @@ export const songTaleOfRevenge: Song = {
 };
 
 export const songLostInDespair: Song = {
-  album: albumIron,
+  release: albumIron,
   title: "Lost in Despair",
   src: { youtube: "Gj7sG0zPuQk", spotify: "3jZTEN6W2m9rESBhayO33M" },
   qualities: {
@@ -149,7 +148,7 @@ export const songLostInDespair: Song = {
 };
 
 export const songSlayerOfLight: Song = {
-  album: albumIron,
+  release: albumIron,
   title: "Slayer of Light",
   src: { youtube: "m4URBdnwet4", spotify: "0XATQ6wedL4bMP2emZNE9F" },
   qualities: {
@@ -172,7 +171,7 @@ export const songSlayerOfLight: Song = {
 };
 
 export const songIntoBattle: Song = {
-  album: albumIron,
+  release: albumIron,
   title: "Into Battle",
   src: { youtube: "A_r7GhkeFWw", spotify: "5XRUjUcadB3qBVgmp1cJ0e" },
   qualities: {
@@ -195,7 +194,7 @@ export const songIntoBattle: Song = {
 };
 
 export const songLaiLaiHei: Song = {
-  album: albumIron,
+  release: albumIron,
   title: "Lai Lai Hei",
   src: { youtube: "eMXGruO8zBU", spotify: "1Mp05e1nlnPnuZLnvJKuSy" },
   qualities: {
@@ -218,7 +217,7 @@ export const songLaiLaiHei: Song = {
 };
 
 export const songTears: Song = {
-  album: albumIron,
+  release: albumIron,
   title: "Tears",
   src: { youtube: "ZulDLr1oTYs", spotify: "6GqkpIizS6DMfcCKDji0qy" },
   qualities: {
@@ -241,7 +240,7 @@ export const songTears: Song = {
 };
 
 export const songBattery: Song = {
-  album: albumIron,
+  release: albumIron,
   title: "Battery",
   src: { youtube: "kwzwWl12NYs", spotify: "0EiiHEl43VwwemR4Gcrnkw" },
   qualities: {

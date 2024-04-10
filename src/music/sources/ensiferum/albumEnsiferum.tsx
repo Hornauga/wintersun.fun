@@ -1,17 +1,16 @@
-import { Song } from "../../things";
-import { Album } from "../../things";
+import { Album, Song } from "../../things";
 import { Ensiferum } from "../../artists";
 
 export const albumEnsiferum: Album = {
   title: "Ensiferum",
   artist: Ensiferum,
   year: 2001,
-  wikipedia: new URL("https://en.wikipedia.org/wiki/Ensiferum_(album)"),
+  wiki: new URL("https://en.wikipedia.org/wiki/Ensiferum_(album)"),
   src: { spotify: "1UrdsJhCNyCqmBn9zy2Ut9" },
 };
 
 export const songIntro: Song = {
-  album: albumEnsiferum,
+  release: albumEnsiferum,
   title: "Intro",
   src: { youtube: "rL3e4LH236w", spotify: "45LbKMd573GvriZR60E7DG" },
   qualities: {
@@ -34,7 +33,7 @@ export const songIntro: Song = {
 };
 
 export const songHeroInADream: Song = {
-  album: albumEnsiferum,
+  release: albumEnsiferum,
   title: "Hero in a Dream",
   src: { youtube: "Es8VIH-UH2w", spotify: "1ERKFXkhj7UekblpgUw2fF" },
   qualities: {
@@ -57,7 +56,7 @@ export const songHeroInADream: Song = {
 };
 
 export const songTokenOfTime: Song = {
-  album: albumEnsiferum,
+  release: albumEnsiferum,
   title: "Token of Time",
   src: { youtube: "BGpb1vv8hjo", spotify: "6NlRFM6YPUDQLTL94Cyf7W" },
   qualities: {
@@ -80,7 +79,7 @@ export const songTokenOfTime: Song = {
 };
 
 export const songGuardiansOfFate: Song = {
-  album: albumEnsiferum,
+  release: albumEnsiferum,
   title: "Guardians of Fate",
   src: { youtube: "1XlvSPTzKZo", spotify: "6vXlfcORbavPtxIPYGYYbz" },
   qualities: {
@@ -103,7 +102,7 @@ export const songGuardiansOfFate: Song = {
 };
 
 export const songOldMan: Song = {
-  album: albumEnsiferum,
+  release: albumEnsiferum,
   title: "Old Man (Väinämöinen)",
   src: { youtube: "uxrbG1oIi0E", spotify: "1IoBqiz40yvzhZnTnQt6bT" },
   qualities: {
@@ -126,7 +125,7 @@ export const songOldMan: Song = {
 };
 
 export const songLittleDreamer: Song = {
-  album: albumEnsiferum,
+  release: albumEnsiferum,
   title: "Little Dreamer (Väinämöinen Part II)",
   src: { youtube: "ILUaqsC0ulI", spotify: "49sHjT9q3WsuwhLJ3G5LEy" },
   qualities: {
@@ -149,7 +148,7 @@ export const songLittleDreamer: Song = {
 };
 
 export const songAbandoned: Song = {
-  album: albumEnsiferum,
+  release: albumEnsiferum,
   title: "Abandoned",
   src: { youtube: "rd_hJ3tVfAY", spotify: "1bXjgN41CumYbZovb0KAzn" },
   qualities: {
@@ -172,7 +171,7 @@ export const songAbandoned: Song = {
 };
 
 export const songWindrider: Song = {
-  album: albumEnsiferum,
+  release: albumEnsiferum,
   title: "Windrider",
   src: { youtube: "UlUD_X3lGY4", spotify: "6xtjbKMvK69gjhhcdBRuwB" },
   qualities: {
@@ -195,7 +194,7 @@ export const songWindrider: Song = {
 };
 
 export const songTreacherousGods: Song = {
-  album: albumEnsiferum,
+  release: albumEnsiferum,
   title: "Treacherous Gods",
   src: { youtube: "1HphiKoduC8", spotify: "0SAXvT9zZx4B36Eu3TwVYs" },
   qualities: {
@@ -218,7 +217,7 @@ export const songTreacherousGods: Song = {
 };
 
 export const songEternalWait: Song = {
-  album: albumEnsiferum,
+  release: albumEnsiferum,
   title: "Eternal Wait",
   src: { youtube: "WbBMh-ZvnkA", spotify: "2qUU8a2ovr5AMifrzrPrZS" },
   qualities: {
@@ -241,7 +240,7 @@ export const songEternalWait: Song = {
 };
 
 export const songBattleSong: Song = {
-  album: albumEnsiferum,
+  release: albumEnsiferum,
   title: "Battle Song",
   src: { youtube: "DGwE1KGf2dY", spotify: "1RAePnGQvZn6dQxt05OISI" },
   qualities: {
@@ -264,7 +263,7 @@ export const songBattleSong: Song = {
 };
 
 export const songGoblinsDance: Song = {
-  album: albumEnsiferum,
+  release: albumEnsiferum,
   title: "Goblin's Dance",
   src: { youtube: "P8zUj6yhDM0", spotify: "2OBXIrRkIIRZXkXZBRFOiF" },
   qualities: {

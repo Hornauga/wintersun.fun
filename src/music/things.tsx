@@ -3,26 +3,33 @@
 
 import { Qualities } from "./quantify";
 
-export interface Artist {
-  title: string;
-  wikipedia: URL;
+type Year = number;
+
+interface HasWiki {
+  wiki: URL;
 }
 
-export interface Media {
+interface HasTitle {
   title: string;
-  artist?: Artist;
-  src?: {
+}
+
+export interface Artist extends HasTitle, HasWiki {}
+
+interface AudioMedia extends HasTitle {
+  src: {
     youtube?: string;
     spotify?: string;
   };
 }
 
-export interface Album extends Media {
-  year: number;
-  wikipedia: URL;
+export interface Album extends AudioMedia, HasWiki {
+  artist: Artist;
+  year: Year;
 }
 
-export interface Song extends Media {
-  album?: Album;
+type Release = Album | { artist: Artist; year: Year };
+
+export interface Song extends AudioMedia {
+  release: Release;
   qualities: Qualities;
 }

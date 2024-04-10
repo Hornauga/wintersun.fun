@@ -1,15 +1,16 @@
-import { Song } from "./things";
-import { Album } from "./things";
+import { Album, Song } from "../../things";
+import { albumTheForestSeasons } from "./albumTheForestSeasons";
 
 export const albumTheForestSeasonsInstrumental: Album = {
-  title: "The Forest Seasons",
-  artist: "Wintersun",
-  year: 2017,
-  src: { youtube: "ZFfN3G2vjqM", spotify: "7ql5kbq4iJKLT2lpiaiZSr" },
+  title: albumTheForestSeasons.title + " (Instrumental)",
+  artist: albumTheForestSeasons.artist,
+  year: albumTheForestSeasons.year,
+  wiki: albumTheForestSeasons.wiki,
+  src: albumTheForestSeasons.src,
 };
 
 export const songSpringInstrumental: Song = {
-  album: albumTheForestSeasonsInstrumental,
+  release: albumTheForestSeasonsInstrumental,
   title: "Awaken from the Dark Slumber (Spring) (Instrumental)",
   src: { youtube: "wbq72xgsdwo", spotify: "479BAqWRmIPnzXWp4cbeH4" },
   qualities: {
@@ -33,7 +34,7 @@ export const songSpringInstrumental: Song = {
 };
 
 export const songSummerInstrumental: Song = {
-  album: albumTheForestSeasonsInstrumental,
+  release: albumTheForestSeasonsInstrumental,
   title: "The Forest That Weeps (Summer) (Instrumental)",
   src: { youtube: "kAZpX88stks", spotify: "4bqmtsRT4aU0vekZTspAUq" },
   qualities: {
@@ -56,7 +57,7 @@ export const songSummerInstrumental: Song = {
 };
 
 export const songAutumnInstrumental: Song = {
-  album: albumTheForestSeasonsInstrumental,
+  release: albumTheForestSeasonsInstrumental,
   title: "Eternall Darkness (Autumn) (Instrumental)",
   src: { youtube: "G6oRbo2YDXM", spotify: "3HBFFlGOxz4eSQ719VBarS" },
   qualities: {
@@ -79,7 +80,7 @@ export const songAutumnInstrumental: Song = {
 };
 
 export const songWinterInstrumental: Song = {
-  album: albumTheForestSeasonsInstrumental,
+  release: albumTheForestSeasonsInstrumental,
   title: "Loneliness (Winter) (Instrumental)",
   src: { youtube: "z34CxDbywFE", spotify: "1MWR66elh7xBvrONTuqoun" },
   qualities: {

@@ -15,9 +15,9 @@ function DefaultArticle({ song }: { song: Song }) {
       <Typography variant="h4" align="center" marginBottom="0">
         {song.title}
       </Typography>
-      {song.album !== undefined && (
+      {song.release !== undefined && (
         <Typography variant="subtitle2" align="center" marginTop="0">
-          {song.album.artist} - {song.album.title}
+          {song.release.artist} - {song.release.title}
         </Typography>
       )}
       <EmbedYouTube song={song} />
@@ -34,10 +34,10 @@ function DefaultArticle({ song }: { song: Song }) {
           </a>
         </p>
       )}
-      {song.album?.src && "spotify" in song.album.src && (
+      {song.release?.src && "spotify" in song.release.src && (
         <p>
           Listen to album on{" "}
-          <a href={`https://open.spotify.com/album/${song.album.src.spotify}`}>
+          <a href={`https://open.spotify.com/album/${song.release.src.spotify}`}>
             Spotify
           </a>
         </p>
@@ -50,10 +50,10 @@ function DefaultArticle({ song }: { song: Song }) {
           </a>
         </p>
       )}
-      {song.album?.src && "youtube" in song.album.src && (
+      {song.release?.src && "youtube" in song.release.src && (
         <p>
           Listen to album on{" "}
-          <a href={`https://www.youtube.com/watch?v=${song.album.src.youtube}`}>
+          <a href={`https://www.youtube.com/watch?v=${song.release.src.youtube}`}>
             YouTube
           </a>
         </p>

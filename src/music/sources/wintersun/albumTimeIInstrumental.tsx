@@ -1,14 +1,16 @@
-import { Song } from "./things";
-import { Album } from "./things";
+import { Album, Song } from "../../things";
+import { albumWintersunTimeI } from "./albumTimeI";
 
 export const albumWintersunTimeIInstrumental: Album = {
-  title: "Time I (Instrumental)",
-  artist: "Wintersun",
-  year: 2012,
+  title: albumWintersunTimeI.title + " (Instrumental)",
+  artist: albumWintersunTimeI.artist,
+  wiki: albumWintersunTimeI.wiki,
+  year: albumWintersunTimeI.year,
+  src: {},
 };
 
 export const songWhenTimeFadesAway: Song = {
-  album: albumWintersunTimeIInstrumental,
+  release: albumWintersunTimeIInstrumental,
   title: "When Time Fades Away",
   src: { youtube: "1Sc1LIYlzuQ" },
   qualities: {
@@ -31,7 +33,7 @@ export const songWhenTimeFadesAway: Song = {
 };
 
 export const songSonsOfWinterAndStars: Song = {
-  album: albumWintersunTimeIInstrumental,
+  release: albumWintersunTimeIInstrumental,
   title: "Sons of Winter and Stars (Instrumental)",
   src: { youtube: "1Sc1LIYlzuQ&start=257" },
   qualities: {
@@ -54,7 +56,7 @@ export const songSonsOfWinterAndStars: Song = {
 };
 
 export const songLandOfSnowAndSorrow: Song = {
-  album: albumWintersunTimeIInstrumental,
+  release: albumWintersunTimeIInstrumental,
   title: "Land of Snow and Sorrow (Instrumental)",
   src: { youtube: "k1WqOsBRTwo" },
   qualities: {
@@ -77,7 +79,7 @@ export const songLandOfSnowAndSorrow: Song = {
 };
 
 export const songDarknessAndFrost: Song = {
-  album: albumWintersunTimeIInstrumental,
+  release: albumWintersunTimeIInstrumental,
   title: "Darkness and Frost",
   src: { youtube: "68B3fhunbsU" },
   qualities: {
@@ -100,7 +102,7 @@ export const songDarknessAndFrost: Song = {
 };
 
 export const songTime: Song = {
-  album: albumWintersunTimeIInstrumental,
+  release: albumWintersunTimeIInstrumental,
   title: "Time",
   src: { youtube: "68B3fhunbsU&start=147" },
   qualities: {

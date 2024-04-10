@@ -1,15 +1,18 @@
-import { Song } from "./things";
-import { Album } from "./things";
+import { Album, Song } from "../../things";
+import { Powerwolf } from "../../artists";
 
 export const albumCallOfTheWild: Album = {
   title: "Call of the Wild",
-  artist: "Powerwolf",
+  artist: Powerwolf,
   year: 2021,
+  wiki: new URL(
+    "https://en.wikipedia.org/wiki/Call_of_the_Wild_(Powerwolf_album)",
+  ),
   src: { spotify: "6JhuNA7potIMg6r29IVULP" },
 };
 
 export const songSummer: Song = {
-  album: albumCallOfTheWild,
+  release: albumCallOfTheWild,
   title: "Saturday Satan",
   src: { spotify: "7Djt9wwqit8Ygyva3S0kLJ" },
   qualities: {
