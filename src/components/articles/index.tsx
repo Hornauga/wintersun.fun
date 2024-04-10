@@ -17,7 +17,7 @@ function DefaultArticle({ song }: { song: Song }) {
       </Typography>
       {song.release !== undefined && (
         <Typography variant="subtitle2" align="center" marginTop="0">
-          {song.release.artist} - {song.release.title}
+          TODO{/*{song.release.artist} - {song.release.title} */}
         </Typography>
       )}
       <EmbedYouTube song={song} />
@@ -26,7 +26,7 @@ function DefaultArticle({ song }: { song: Song }) {
         (PLACHOLDER) Here's why you'll like this song: it's black melodic death
         power metal.
       </Typography>
-      {song.src !== undefined && "spotify" in song.src && (
+      {song.src?.["spotify"] && (
         <p>
           Listen on{" "}
           <a href={`https://open.spotify.com/track/${song.src.spotify}`}>
@@ -34,15 +34,17 @@ function DefaultArticle({ song }: { song: Song }) {
           </a>
         </p>
       )}
-      {song.release?.src && "spotify" in song.release.src && (
+      {song.release.src?.["youtube"] && (
         <p>
           Listen to album on{" "}
-          <a href={`https://open.spotify.com/album/${song.release.src.spotify}`}>
+          <a
+            href={`https://open.spotify.com/album/${song.release.src.spotify}`}
+          >
             Spotify
           </a>
         </p>
       )}
-      {song.src !== undefined && "youtube" in song.src && (
+      {song.src?.["youtube"] && (
         <p>
           Listen on{" "}
           <a href={`https://www.youtube.com/watch?v=${song.src.youtube}`}>
@@ -50,10 +52,12 @@ function DefaultArticle({ song }: { song: Song }) {
           </a>
         </p>
       )}
-      {song.release?.src && "youtube" in song.release.src && (
+      {song.release.src?.["youtube"] && (
         <p>
           Listen to album on{" "}
-          <a href={`https://www.youtube.com/watch?v=${song.release.src.youtube}`}>
+          <a
+            href={`https://www.youtube.com/watch?v=${song.release.src.youtube}`}
+          >
             YouTube
           </a>
         </p>

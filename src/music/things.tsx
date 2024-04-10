@@ -15,11 +15,13 @@ interface HasTitle {
 
 export interface Artist extends HasTitle, HasWiki {}
 
+type Src = {
+  youtube?: string;
+  spotify?: string;
+};
+
 interface AudioMedia extends HasTitle {
-  src: {
-    youtube?: string;
-    spotify?: string;
-  };
+  src: Src;
 }
 
 export interface Album extends AudioMedia, HasWiki {
@@ -27,7 +29,7 @@ export interface Album extends AudioMedia, HasWiki {
   year: Year;
 }
 
-type Release = Album | { artist: Artist; year: Year };
+type Release = Album | { artist: Artist; year: Year; src: Src };
 
 export interface Song extends AudioMedia {
   release: Release;

@@ -1,8 +1,14 @@
+import { Song } from "./things";
+
+import * as albumEnsiferum from "./sources/ensiferum/albumEnsiferum";
+import * as albumIron from "./sources/ensiferum/albumIron";
+import * as albumWintersun from "./sources/wintersun/albumWintersun";
+
 //
 // Qualities
 //
 
-export type Quality =
+export type QualityName =
   // Tiebreaker
   | "jari"
   // Genre
@@ -43,14 +49,14 @@ export type Quality =
 //   rhythmic
 //   dynamic
 
-export enum QualityValue {
+export enum Quality {
   NONE = 0,
   SOME = 1,
   MORE = 2,
   MOST = 3,
 }
 
-export type Qualities = Record<Quality, QualityValue>;
+export type Qualities = Record<QualityName, Quality>;
 
 export type QualityCategory =
   | "jari"
@@ -65,7 +71,7 @@ export type QualityInfo = {
   long: string;
 };
 
-export const qualityInfo: Record<Quality, QualityInfo> = {
+export const qualityInfos: Record<QualityName, QualityInfo> = {
   // Tiebreaker
   jari: {
     category: "jari",
@@ -128,7 +134,7 @@ export const qualityInfo: Record<Quality, QualityInfo> = {
 // Preferences
 //
 
-export enum PreferenceValue {
+export enum Preference {
   HATE = -2,
   DISLIKE = -1,
   NONE = 0,
@@ -136,13 +142,13 @@ export enum PreferenceValue {
   LOVE = 2,
 }
 
-export type Preferences = Record<Quality, PreferenceValue>;
+export type Preferences = Record<QualityName, Preference>;
 
 export function makePreferences(
-  initialPreference: PreferenceValue = PreferenceValue.NONE,
+  initialPreference: Preference = Preference.NONE,
 ): Preferences {
   return {
-    jari: PreferenceValue.LIKE,
+    jari: Preference.LIKE,
     black: initialPreference,
     death: initialPreference,
     folk: initialPreference,
@@ -158,4 +164,42 @@ export function makePreferences(
     intense: initialPreference,
     melancholic: initialPreference,
   };
+}
+
+export function recommendation(preferences: Preferences): Song[] {
+  console.log(preferences); // TODO REMOVE
+  return [
+    albumWintersun.songWinterMadnessIntro,
+    albumWintersun.songWinterMadness,
+    albumWintersun.songBeyondTheDarkSun,
+    albumWintersun.songSleepingStars,
+    albumWintersun.songBattleAgainstTime,
+    albumWintersun.songDeathAndTheHealing,
+    albumWintersun.songStarchild,
+    albumWintersun.songBeautifulDeath,
+    albumWintersun.songSadnessAndHate,
+    albumIron.songFerrumAeternum,
+    albumIron.songIron,
+    albumIron.songSwordChant,
+    albumIron.songMourningHeartInterlude,
+    albumIron.songTaleOfRevenge,
+    albumIron.songLostInDespair,
+    albumIron.songSlayerOfLight,
+    albumIron.songIntoBattle,
+    albumIron.songLaiLaiHei,
+    albumIron.songTears,
+    albumIron.songBattery,
+    albumEnsiferum.songIntro,
+    albumEnsiferum.songHeroInADream,
+    albumEnsiferum.songTokenOfTime,
+    albumEnsiferum.songGuardiansOfFate,
+    albumEnsiferum.songOldMan,
+    albumEnsiferum.songLittleDreamer,
+    albumEnsiferum.songAbandoned,
+    albumEnsiferum.songWindrider,
+    albumEnsiferum.songTreacherousGods,
+    albumEnsiferum.songEternalWait,
+    albumEnsiferum.songBattleSong,
+    albumEnsiferum.songGoblinsDance,
+  ];
 }

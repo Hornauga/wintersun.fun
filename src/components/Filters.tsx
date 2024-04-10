@@ -1,18 +1,20 @@
 import { Typography, Box, Tooltip, Slider } from "@mui/material";
 
-import { qualities } from "../music/quantify";
-import { Quality } from "../music/quantify";
-import { QualityCategory } from "../music/quantify";
-import { QualityInfo } from "../music/quantify";
-import { QualityPreferences } from "../music/quantify";
-import { Preference } from "../music/quantify";
+import {
+  qualityInfos,
+  QualityName,
+  QualityCategory,
+  QualityInfo,
+  Preferences,
+  Preference,
+} from "../music/quantify";
 
 export default function Filters({
   preferences,
   setPreference,
 }: {
-  preferences: QualityPreferences;
-  setPreference: (quality: Quality, preference: Preference) => void;
+  preferences: Preferences;
+  setPreference: (qualityName: QualityName, preference: Preference) => void;
 }) {
   var categoryLast: QualityCategory | null = null;
   return (
@@ -27,9 +29,9 @@ export default function Filters({
         <strong>right if you like</strong> the thing. Then press the{" "}
         <strong>GO!</strong> button in the top right to see the results.
       </Typography>
-      {Object.entries(preferences).map(([quality, preference]) => {
-        if ((quality as Quality) === "jari") return;
-        const qualityInfo = qualities[quality as Quality];
+      {Object.entries(preferences).map(([qualityName, preference]) => {
+        if ((qualityName as QualityName) === "jari") return;
+        const qualityInfo = qualityInfos[qualityName as QualityName];
         var categoryHeader;
         if (qualityInfo.category !== categoryLast) {
           categoryLast = qualityInfo.category;
@@ -43,11 +45,11 @@ export default function Filters({
           <>
             {categoryHeader}
             <Filter
-              key={quality} // I don't know why I suddenly need this
+              key={qualityName} // I don't know why I suddenly need this
               qualityInfo={qualityInfo}
               preference={preference}
               setPreference={(newPreference: Preference) =>
-                setPreference(quality as Quality, newPreference)
+                setPreference(qualityName as QualityName, newPreference)
               }
             />
           </>
