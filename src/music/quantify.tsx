@@ -20,6 +20,7 @@ export type QualityName =
   // Vocals
   | "clean"
   | "extreme"
+  | "singalong"
   // Musical
   | "melodic"
   | "riffs"
@@ -111,6 +112,11 @@ export const qualityInfos: Record<QualityName, QualityInfo> = {
     label: "Extreme vocals",
     long: "growling, screaming, squealing, and such",
   },
+  singalong: {
+    category: "vocals",
+    label: "Singalong songs",
+    long: "singalong vibes",
+  },
   // Musical
   melodic: { category: "musical", label: "Melodies", long: "melodic music" },
   riffs: { category: "musical", label: "Riffs", long: "sick riffs" },
@@ -156,6 +162,7 @@ export function makePreferences(
     thrash: initialPreference,
     clean: initialPreference,
     extreme: initialPreference,
+    singalong: initialPreference,
     melodic: initialPreference,
     riffs: initialPreference,
     solos: initialPreference,

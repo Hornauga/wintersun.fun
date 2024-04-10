@@ -24,6 +24,7 @@ export const songSummer: Song = {
     thrash: 1,
     clean: 3,
     extreme: 0,
+    singalong: 0,
     melodic: 2,
     riffs: 2,
     solos: 0,
