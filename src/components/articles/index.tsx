@@ -15,9 +15,20 @@ function DefaultArticle({ song }: { song: Song }) {
       <Typography variant="h4" align="center" marginBottom="0">
         {song.title}
       </Typography>
-      {song.release !== undefined && (
+      {"title" in song.release && (
         <Typography variant="subtitle2" align="center" marginTop="0">
-          TODO{/*{song.release.artist} - {song.release.title} */}
+          <a href={song.release.artist.wiki.toString()}>
+            {song.release.artist.title}
+          </a>{" "}
+          - <a href={song.release.wiki.toString()}>{song.release.title}</a>
+        </Typography>
+      )}
+      {!("title" in song.release) && (
+        <Typography variant="subtitle2" align="center" marginTop="0">
+          by{" "}
+          <a href={song.release.artist.wiki.toString()}>
+            {song.release.artist.title}
+          </a>
         </Typography>
       )}
       <EmbedYouTube song={song} />
