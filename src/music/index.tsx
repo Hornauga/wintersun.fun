@@ -1,3 +1,4 @@
+import * as albumEnsiferum from "./albumEnsiferum";
 import * as albumIron from "./albumIron";
 import * as albumWintersun from "./albumWintersun";
 
@@ -194,5 +195,17 @@ export function recommendation(qualityPreferences: QualityPreferences): Song[] {
     albumIron.songLaiLaiHei,
     albumIron.songTears,
     albumIron.songBattery,
+    albumEnsiferum.songIntro,
+    albumEnsiferum.songHeroInADream,
+    albumEnsiferum.songTokenOfTime,
+    albumEnsiferum.songGuardiansOfFate,
+    albumEnsiferum.songOldMan,
+    albumEnsiferum.songLittleDreamer,
+    albumEnsiferum.songAbandoned,
+    albumEnsiferum.songWindrider,
+    albumEnsiferum.songTreacherousGods,
+    albumEnsiferum.songEternalWait,
+    albumEnsiferum.songBattleSong,
+    albumEnsiferum.songGoblinsDance,
   ];
 }
