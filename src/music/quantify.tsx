@@ -8,6 +8,7 @@ import * as albumTheForestSeasonsInstrumental from "./sources/wintersun/albumThe
 import * as albumTimeI from "./sources/wintersun/albumTimeI";
 import * as albumTimeIInstrumental from "./sources/wintersun/albumTimeIInstrumental";
 import {
+  songWinterAcoustic,
   songWarning,
   songRedHorizon,
   songSteelOfTheGods,
@@ -238,6 +239,7 @@ export function recommendation(preferences: Preferences): Song[] {
     albumTheForestSeasonsInstrumental.songSummer,
     albumTheForestSeasonsInstrumental.songAutumn,
     albumTheForestSeasonsInstrumental.songWinter,
+    songWinterAcoustic,
     songWarning,
     songRedHorizon,
     songSteelOfTheGods,
