@@ -12,6 +12,7 @@ export const songWinterMadnessIntro: Song = {
   title: "Winter Madness Intro",
   src: { youtube: "GUXpbnT5eBE" },
   qualityValues: {
+    // Done
     jari: 0,
     black: 0,
     death: 0,
@@ -38,6 +39,7 @@ export const songWinterMadness: Song = {
     spotify: "2N1SFSnHMIdHY0waUbjEnv",
   },
   qualityValues: {
+    // Done
     jari: 3,
     black: 2,
     death: 2,
@@ -61,6 +63,7 @@ export const songBeyondTheDarkSun: Song = {
   title: "Beyond The Dark Sun",
   src: { youtube: "KuG6lJ6xbKk", spotify: "1L3S5vFgsVzweUJnAIfSGM" },
   qualityValues: {
+    // Done
     jari: 3,
     black: 2,
     death: 2,
@@ -84,6 +87,7 @@ export const songSleepingStars: Song = {
   title: "Sleeping Stars",
   src: { youtube: "hDsTtJXdMZo", spotify: "5MqVSSinDohOuMjNhO6PU6" },
   qualityValues: {
+    // Done
     jari: 1,
     black: 3,
     death: 0,
@@ -107,6 +111,7 @@ export const songBattleAgainstTime: Song = {
   title: "Battle Against Time",
   src: { youtube: "b4E0qN4_xQI", spotify: "0tEA8vx1V2mJoxSIqapi0H" },
   qualityValues: {
+    // Done
     jari: 3,
     black: 2,
     death: 2,
@@ -130,6 +135,7 @@ export const songDeathAndTheHealing: Song = {
   title: "Death and the Healing",
   src: { youtube: "wX-X7oX5Abc", spotify: "6EAsLKCDMQV3BRRb9OdaMJ" },
   qualityValues: {
+    // Done
     jari: 1,
     black: 1,
     death: 0,
@@ -153,6 +159,7 @@ export const songStarchild: Song = {
   title: "Starchild",
   src: { youtube: "oyuOjCfCsm4", spotify: "3LPVfzrc9G8EOQ00nTgvKL" },
   qualityValues: {
+    // Done
     jari: 3,
     black: 2,
     death: 1,
@@ -176,6 +183,7 @@ export const songBeautifulDeath: Song = {
   title: "Beautiful Death",
   src: { youtube: "TNg-mfVnCWk", spotify: "6S83nQwA0aPHKB86vAqgl5" },
   qualityValues: {
+    // Done
     jari: 3,
     black: 3,
     death: 1,
@@ -199,6 +207,7 @@ export const songSadnessAndHate: Song = {
   title: "Sadness and Hate",
   src: { youtube: "x3s19wDvyeU", spotify: "4cN0IBNbFkq0srzoyNOC4C" },
   qualityValues: {
+    // Done
     jari: 3,
     black: 1,
     death: 1,
