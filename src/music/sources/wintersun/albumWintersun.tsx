@@ -1,4 +1,6 @@
-import { Album, Song } from ".";
+import { Song } from "../../things";
+import { Album } from "../../things";
+import { Wintersun } from "artists";
 
 export const albumWintersunWintersun: Album = {
   title: "Wintersun",
@@ -11,7 +13,7 @@ export const songWinterMadnessIntro: Song = {
   album: albumWintersunWintersun,
   title: "Winter Madness Intro",
   src: { youtube: "GUXpbnT5eBE" },
-  qualityValues: {
+  qualities: {
     // Done
     jari: 0,
     black: 0,
@@ -38,7 +40,7 @@ export const songWinterMadness: Song = {
     youtube: "GUXpbnT5eBE?start=155",
     spotify: "2N1SFSnHMIdHY0waUbjEnv",
   },
-  qualityValues: {
+  qualities: {
     // Done
     jari: 3,
     black: 2,
@@ -62,7 +64,7 @@ export const songBeyondTheDarkSun: Song = {
   album: albumWintersunWintersun,
   title: "Beyond The Dark Sun",
   src: { youtube: "KuG6lJ6xbKk", spotify: "1L3S5vFgsVzweUJnAIfSGM" },
-  qualityValues: {
+  qualities: {
     // Done
     jari: 3,
     black: 2,
@@ -86,7 +88,7 @@ export const songSleepingStars: Song = {
   album: albumWintersunWintersun,
   title: "Sleeping Stars",
   src: { youtube: "hDsTtJXdMZo", spotify: "5MqVSSinDohOuMjNhO6PU6" },
-  qualityValues: {
+  qualities: {
     // Done
     jari: 1,
     black: 3,
@@ -110,7 +112,7 @@ export const songBattleAgainstTime: Song = {
   album: albumWintersunWintersun,
   title: "Battle Against Time",
   src: { youtube: "b4E0qN4_xQI", spotify: "0tEA8vx1V2mJoxSIqapi0H" },
-  qualityValues: {
+  qualities: {
     // Done
     jari: 3,
     black: 2,
@@ -134,7 +136,7 @@ export const songDeathAndTheHealing: Song = {
   album: albumWintersunWintersun,
   title: "Death and the Healing",
   src: { youtube: "wX-X7oX5Abc", spotify: "6EAsLKCDMQV3BRRb9OdaMJ" },
-  qualityValues: {
+  qualities: {
     // Done
     jari: 1,
     black: 1,
@@ -158,7 +160,7 @@ export const songStarchild: Song = {
   album: albumWintersunWintersun,
   title: "Starchild",
   src: { youtube: "oyuOjCfCsm4", spotify: "3LPVfzrc9G8EOQ00nTgvKL" },
-  qualityValues: {
+  qualities: {
     // Done
     jari: 3,
     black: 2,
@@ -182,7 +184,7 @@ export const songBeautifulDeath: Song = {
   album: albumWintersunWintersun,
   title: "Beautiful Death",
   src: { youtube: "TNg-mfVnCWk", spotify: "6S83nQwA0aPHKB86vAqgl5" },
-  qualityValues: {
+  qualities: {
     // Done
     jari: 3,
     black: 3,
@@ -206,7 +208,7 @@ export const songSadnessAndHate: Song = {
   album: albumWintersunWintersun,
   title: "Sadness and Hate",
   src: { youtube: "x3s19wDvyeU", spotify: "4cN0IBNbFkq0srzoyNOC4C" },
-  qualityValues: {
+  qualities: {
     // Done
     jari: 3,
     black: 1,

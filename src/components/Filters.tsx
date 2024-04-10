@@ -1,13 +1,11 @@
 import { Typography, Box, Tooltip, Slider } from "@mui/material";
 
-import {
-  qualities,
-  QualityInfo,
-  Quality,
-  Preference,
-  QualityPreferences,
-  QualityCategory,
-} from "../music";
+import { qualities } from "../music/quantify";
+import { Quality } from "../music/quantify";
+import { QualityCategory } from "../music/quantify";
+import { QualityInfo } from "../music/quantify";
+import { QualityPreferences } from "../music/quantify";
+import { Preference } from "../music/quantify";
 
 export default function Filters({
   preferences,

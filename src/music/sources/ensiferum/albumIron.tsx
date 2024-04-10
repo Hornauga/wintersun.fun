@@ -1,9 +1,12 @@
-import { Album, Song } from ".";
+import { Song } from "../../things";
+import { Album } from "../../things";
+import { Ensiferum } from "../../artists";
 
 export const albumIron: Album = {
   title: "Iron",
-  artist: "Ensiferum",
+  artist: Ensiferum,
   year: 2004,
+  wikipedia: new URL("https://en.wikipedia.org/wiki/Iron_(Ensiferum_album)"),
   src: { spotify: "1UrdsJhCNyCqmBn9zy2Ut9" },
 };
 
@@ -11,7 +14,7 @@ export const songFerrumAeternum: Song = {
   album: albumIron,
   title: "Ferrum Aeternum",
   src: { youtube: "AvCDRK13yv8", spotify: "3SdUwF3swZgYCBRDIAsf0c" },
-  qualityValues: {
+  qualities: {
     jari: 0,
     black: 0,
     death: 0,
@@ -34,7 +37,7 @@ export const songIron: Song = {
   album: albumIron,
   title: "Iron",
   src: { youtube: "IYq4AePD72M", spotify: "0wwAkc9n9SfV27COAK2AUH" },
-  qualityValues: {
+  qualities: {
     jari: 0,
     black: 0,
     death: 0,
@@ -57,7 +60,7 @@ export const songSwordChant: Song = {
   album: albumIron,
   title: "Sword Chant",
   src: { youtube: "3RkuvOaReiA", spotify: "7sYXsljeNiPXZVjXb5HuKX" },
-  qualityValues: {
+  qualities: {
     jari: 0,
     black: 0,
     death: 0,
@@ -80,7 +83,7 @@ export const songMourningHeartInterlude: Song = {
   album: albumIron,
   title: "Mourning Heart - Interlude",
   src: { youtube: "Nf0F0dAlm0Q", spotify: "2Hf2byNwWzrxoMAK4GBfHV" },
-  qualityValues: {
+  qualities: {
     jari: 0,
     black: 0,
     death: 0,
@@ -103,7 +106,7 @@ export const songTaleOfRevenge: Song = {
   album: albumIron,
   title: "Tale of Revenge",
   src: { youtube: "uVhq9UyDzEk", spotify: "5T8tc2aeIRxtjhUu762WJP" },
-  qualityValues: {
+  qualities: {
     jari: 0,
     black: 0,
     death: 0,
@@ -126,7 +129,7 @@ export const songLostInDespair: Song = {
   album: albumIron,
   title: "Lost in Despair",
   src: { youtube: "Gj7sG0zPuQk", spotify: "3jZTEN6W2m9rESBhayO33M" },
-  qualityValues: {
+  qualities: {
     jari: 0,
     black: 0,
     death: 0,
@@ -149,7 +152,7 @@ export const songSlayerOfLight: Song = {
   album: albumIron,
   title: "Slayer of Light",
   src: { youtube: "m4URBdnwet4", spotify: "0XATQ6wedL4bMP2emZNE9F" },
-  qualityValues: {
+  qualities: {
     jari: 0,
     black: 0,
     death: 0,
@@ -172,7 +175,7 @@ export const songIntoBattle: Song = {
   album: albumIron,
   title: "Into Battle",
   src: { youtube: "A_r7GhkeFWw", spotify: "5XRUjUcadB3qBVgmp1cJ0e" },
-  qualityValues: {
+  qualities: {
     jari: 0,
     black: 0,
     death: 0,
@@ -195,7 +198,7 @@ export const songLaiLaiHei: Song = {
   album: albumIron,
   title: "Lai Lai Hei",
   src: { youtube: "eMXGruO8zBU", spotify: "1Mp05e1nlnPnuZLnvJKuSy" },
-  qualityValues: {
+  qualities: {
     jari: 0,
     black: 0,
     death: 0,
@@ -218,7 +221,7 @@ export const songTears: Song = {
   album: albumIron,
   title: "Tears",
   src: { youtube: "ZulDLr1oTYs", spotify: "6GqkpIizS6DMfcCKDji0qy" },
-  qualityValues: {
+  qualities: {
     jari: 0,
     black: 0,
     death: 0,
@@ -241,7 +244,7 @@ export const songBattery: Song = {
   album: albumIron,
   title: "Battery",
   src: { youtube: "kwzwWl12NYs", spotify: "0EiiHEl43VwwemR4Gcrnkw" },
-  qualityValues: {
+  qualities: {
     jari: 0,
     black: 0,
     death: 0,

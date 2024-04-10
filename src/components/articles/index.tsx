@@ -1,5 +1,5 @@
 import Typography from "@mui/material/Typography";
-import { Song } from "../../music";
+import { Song } from "../../music/things";
 import { EmbedYouTube } from "../EmbedYouTube";
 import { EmbedSpotify } from "../EmbedSpotify";
 

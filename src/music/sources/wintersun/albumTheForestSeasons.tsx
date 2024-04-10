@@ -1,4 +1,5 @@
-import { Album, Song } from ".";
+import { Song } from "./things";
+import { Album } from "./things";
 
 export const albumTheForestSeasons: Album = {
   title: "The Forest Seasons",
@@ -11,7 +12,7 @@ export const songSpring: Song = {
   album: albumTheForestSeasons,
   title: "Awaken from the Dark Slumber (Spring)",
   src: { youtube: "9pQvOyo1nfQ", spotify: "46f36Ds9aJhDhbQsZajbih" },
-  qualityValues: {
+  qualities: {
     // Done
     jari: 0,
     black: 3,
@@ -35,7 +36,7 @@ export const songSummer: Song = {
   album: albumTheForestSeasons,
   title: "The Forest That Weeps (Summer)",
   src: { youtube: "ffQ2B5qegRg", spotify: "22mbGl4jUbr7bhqWOzejjt" },
-  qualityValues: {
+  qualities: {
     jari: 0,
     black: 0,
     death: 0,
@@ -58,7 +59,7 @@ export const songAutumn: Song = {
   album: albumTheForestSeasons,
   title: "Eternall Darkness (Autumn)",
   src: { youtube: "cwB3BQ0zWOw", spotify: "6NVJrvr7jKmdV04xhGG4TH" },
-  qualityValues: {
+  qualities: {
     jari: 0,
     black: 0,
     death: 0,
@@ -81,7 +82,7 @@ export const songWinter: Song = {
   album: albumTheForestSeasons,
   title: "Loneliness (Winter)",
   src: { youtube: "qIiZFpOQnd8", spotify: "6Qb4UHym7uBDGHRU0LYNjk" },
-  qualityValues: {
+  qualities: {
     jari: 0,
     black: 0,
     death: 0,

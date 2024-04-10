@@ -1,4 +1,5 @@
-import { Album, Song } from ".";
+import { Song } from "./things";
+import { Album } from "./things";
 
 export const albumCallOfTheWild: Album = {
   title: "Call of the Wild",
@@ -11,7 +12,7 @@ export const songSummer: Song = {
   album: albumCallOfTheWild,
   title: "Saturday Satan",
   src: { spotify: "7Djt9wwqit8Ygyva3S0kLJ" },
-  qualityValues: {
+  qualities: {
     jari: 0,
     black: 0,
     death: 0,

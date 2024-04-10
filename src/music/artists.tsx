@@ -1,4 +1,4 @@
-import { Artist } from ".";
+import { Artist } from "./things";
 
 export const Ensiferum: Artist = {
   title: "Ensiferum",

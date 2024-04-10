@@ -22,13 +22,13 @@ import Welcome from "./Welcome.tsx";
 import Filters from "./Filters.tsx";
 import Results from "./Results.tsx";
 import {
-  Preference,
-  Quality,
-  QualityPreferences,
-  Song,
-  makePreferences,
   recommendation,
 } from "../music/index.tsx";
+import { Song } from "../music/things.tsx";
+import { Quality } from "../music/quantify.tsx";
+import { makePreferences } from "../music/quantify.tsx";
+import { QualityPreferences } from "../music/quantify.tsx";
+import { Preference } from "../music/quantify.tsx";
 
 const theme = responsiveFontSizes(
   createTheme({

@@ -7,7 +7,7 @@ import FirstPage from "@mui/icons-material/FirstPage";
 import LastPage from "@mui/icons-material/LastPage";
 
 import { SongArticle } from "./articles";
-import { Song } from "../music";
+import { Song } from "../music/things";
 
 export default function Results({
   songs,
