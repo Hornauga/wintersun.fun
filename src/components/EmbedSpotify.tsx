@@ -1,4 +1,4 @@
-import { Song } from "../music";
+import { Song } from "../music/things";
 
 export function EmbedSpotify({ song }: { song: Song }) {
   if (song.src?.spotify === undefined) return;

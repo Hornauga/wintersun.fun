@@ -1,16 +1,20 @@
-import { Album, Song } from ".";
+import { Album, Song } from "../../things";
+import { Wintersun } from "../../artists";
 
 export const albumWintersunWintersun: Album = {
   title: "Wintersun",
-  artist: "Wintersun",
+  artist: Wintersun,
+  year: 2004,
+  wiki: new URL("https://en.wikipedia.org/wiki/Wintersun_(album)"),
   src: { youtube: "XfMrC0dvvmw", spotify: "5vlG5D2TCZzvWYAevPVYCI" },
 };
 
 export const songWinterMadnessIntro: Song = {
-  album: albumWintersunWintersun,
+  release: albumWintersunWintersun,
   title: "Winter Madness Intro",
   src: { youtube: "GUXpbnT5eBE" },
-  qualityValues: {
+  qualities: {
+    // Done
     jari: 0,
     black: 0,
     death: 0,
@@ -19,6 +23,7 @@ export const songWinterMadnessIntro: Song = {
     thrash: 0,
     clean: 0,
     extreme: 0,
+    singalong: 0,
     melodic: 1,
     riffs: 0,
     solos: 1,
@@ -30,13 +35,14 @@ export const songWinterMadnessIntro: Song = {
 };
 
 export const songWinterMadness: Song = {
-  album: albumWintersunWintersun,
+  release: albumWintersunWintersun,
   title: "Winter Madness",
   src: {
     youtube: "GUXpbnT5eBE?start=155",
     spotify: "2N1SFSnHMIdHY0waUbjEnv",
   },
-  qualityValues: {
+  qualities: {
+    // Done
     jari: 3,
     black: 2,
     death: 2,
@@ -45,6 +51,7 @@ export const songWinterMadness: Song = {
     thrash: 1,
     clean: 1,
     extreme: 3,
+    singalong: 0,
     melodic: 3,
     riffs: 3,
     solos: 3,
@@ -56,10 +63,11 @@ export const songWinterMadness: Song = {
 };
 
 export const songBeyondTheDarkSun: Song = {
-  album: albumWintersunWintersun,
+  release: albumWintersunWintersun,
   title: "Beyond The Dark Sun",
   src: { youtube: "KuG6lJ6xbKk", spotify: "1L3S5vFgsVzweUJnAIfSGM" },
-  qualityValues: {
+  qualities: {
+    // Done
     jari: 3,
     black: 2,
     death: 2,
@@ -68,6 +76,7 @@ export const songBeyondTheDarkSun: Song = {
     thrash: 1,
     clean: 2,
     extreme: 3,
+    singalong: 0,
     melodic: 3,
     riffs: 3,
     solos: 1,
@@ -79,10 +88,11 @@ export const songBeyondTheDarkSun: Song = {
 };
 
 export const songSleepingStars: Song = {
-  album: albumWintersunWintersun,
+  release: albumWintersunWintersun,
   title: "Sleeping Stars",
   src: { youtube: "hDsTtJXdMZo", spotify: "5MqVSSinDohOuMjNhO6PU6" },
-  qualityValues: {
+  qualities: {
+    // Done
     jari: 1,
     black: 3,
     death: 0,
@@ -91,6 +101,7 @@ export const songSleepingStars: Song = {
     thrash: 0,
     clean: 1,
     extreme: 3,
+    singalong: 0,
     melodic: 2,
     riffs: 1,
     solos: 1,
@@ -102,10 +113,11 @@ export const songSleepingStars: Song = {
 };
 
 export const songBattleAgainstTime: Song = {
-  album: albumWintersunWintersun,
+  release: albumWintersunWintersun,
   title: "Battle Against Time",
   src: { youtube: "b4E0qN4_xQI", spotify: "0tEA8vx1V2mJoxSIqapi0H" },
-  qualityValues: {
+  qualities: {
+    // Done
     jari: 3,
     black: 2,
     death: 2,
@@ -114,6 +126,7 @@ export const songBattleAgainstTime: Song = {
     thrash: 2,
     clean: 2,
     extreme: 2,
+    singalong: 0,
     melodic: 3,
     riffs: 3,
     solos: 2,
@@ -125,10 +138,11 @@ export const songBattleAgainstTime: Song = {
 };
 
 export const songDeathAndTheHealing: Song = {
-  album: albumWintersunWintersun,
+  release: albumWintersunWintersun,
   title: "Death and the Healing",
   src: { youtube: "wX-X7oX5Abc", spotify: "6EAsLKCDMQV3BRRb9OdaMJ" },
-  qualityValues: {
+  qualities: {
+    // Done
     jari: 1,
     black: 1,
     death: 0,
@@ -137,6 +151,7 @@ export const songDeathAndTheHealing: Song = {
     thrash: 0,
     clean: 3,
     extreme: 0,
+    singalong: 0,
     melodic: 3,
     riffs: 1,
     solos: 3,
@@ -148,10 +163,11 @@ export const songDeathAndTheHealing: Song = {
 };
 
 export const songStarchild: Song = {
-  album: albumWintersunWintersun,
+  release: albumWintersunWintersun,
   title: "Starchild",
   src: { youtube: "oyuOjCfCsm4", spotify: "3LPVfzrc9G8EOQ00nTgvKL" },
-  qualityValues: {
+  qualities: {
+    // Done
     jari: 3,
     black: 2,
     death: 1,
@@ -160,6 +176,7 @@ export const songStarchild: Song = {
     thrash: 2,
     clean: 2,
     extreme: 2,
+    singalong: 0,
     melodic: 3,
     riffs: 2,
     solos: 0,
@@ -171,10 +188,11 @@ export const songStarchild: Song = {
 };
 
 export const songBeautifulDeath: Song = {
-  album: albumWintersunWintersun,
+  release: albumWintersunWintersun,
   title: "Beautiful Death",
   src: { youtube: "TNg-mfVnCWk", spotify: "6S83nQwA0aPHKB86vAqgl5" },
-  qualityValues: {
+  qualities: {
+    // Done
     jari: 3,
     black: 3,
     death: 1,
@@ -183,6 +201,7 @@ export const songBeautifulDeath: Song = {
     thrash: 1,
     clean: 1,
     extreme: 3,
+    singalong: 0,
     melodic: 2,
     riffs: 2,
     solos: 2,
@@ -194,10 +213,11 @@ export const songBeautifulDeath: Song = {
 };
 
 export const songSadnessAndHate: Song = {
-  album: albumWintersunWintersun,
+  release: albumWintersunWintersun,
   title: "Sadness and Hate",
   src: { youtube: "x3s19wDvyeU", spotify: "4cN0IBNbFkq0srzoyNOC4C" },
-  qualityValues: {
+  qualities: {
+    // Done
     jari: 3,
     black: 1,
     death: 1,
@@ -206,6 +226,7 @@ export const songSadnessAndHate: Song = {
     thrash: 0,
     clean: 2,
     extreme: 3,
+    singalong: 0,
     melodic: 2,
     riffs: 2,
     solos: 1,

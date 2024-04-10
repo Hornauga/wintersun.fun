@@ -21,14 +21,14 @@ import "@fontsource/roboto/700.css";
 import Welcome from "./Welcome.tsx";
 import Filters from "./Filters.tsx";
 import Results from "./Results.tsx";
+import { Song } from "../music/things.tsx";
 import {
-  Preference,
-  Quality,
-  QualityPreferences,
-  Song,
-  makePreferences,
   recommendation,
-} from "../music/index.tsx";
+  QualityName,
+  Preference,
+  Preferences,
+  makePreferences,
+} from "../music/quantify.tsx";
 
 const theme = responsiveFontSizes(
   createTheme({
@@ -61,13 +61,12 @@ export default function App() {
   var preferenceChanged = useRef<boolean>(true);
 
   // Filter preference states and their setter
-  const [preferences, setPreferences] =
-    useState<QualityPreferences>(makePreferences);
-  function setPreference(quality: Quality, preference: Preference) {
-    if (preferences[quality] === preference) return;
+  const [preferences, setPreferences] = useState<Preferences>(makePreferences);
+  function setPreference(qualityName: QualityName, preference: Preference) {
+    if (preferences[qualityName] === preference) return;
     preferenceChanged.current = true;
     setCurrentResult(0);
-    setPreferences({ ...preferences, ...{ [quality]: preference } });
+    setPreferences({ ...preferences, ...{ [qualityName]: preference } });
   }
 
   // Page selection

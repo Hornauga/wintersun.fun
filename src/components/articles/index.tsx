@@ -1,5 +1,5 @@
 import Typography from "@mui/material/Typography";
-import { Song } from "../../music";
+import { Song } from "../../music/things";
 import { EmbedYouTube } from "../EmbedYouTube";
 import { EmbedSpotify } from "../EmbedSpotify";
 
@@ -15,9 +15,23 @@ function DefaultArticle({ song }: { song: Song }) {
       <Typography variant="h4" align="center" marginBottom="0">
         {song.title}
       </Typography>
-      {song.album !== undefined && (
+      {"title" in song.release && (
         <Typography variant="subtitle2" align="center" marginTop="0">
-          {song.album.artist} - {song.album.title}
+          <a href={song.release.artist.wiki.toString()} target="_blank">
+            {song.release.artist.title}
+          </a>{" "}
+          -{" "}
+          <a href={song.release.wiki.toString()} target="_blank">
+            {song.release.title}
+          </a>
+        </Typography>
+      )}
+      {!("title" in song.release) && (
+        <Typography variant="subtitle2" align="center" marginTop="0">
+          by{" "}
+          <a href={song.release.artist.wiki.toString()} target="_blank">
+            {song.release.artist.title}
+          </a>
         </Typography>
       )}
       <EmbedYouTube song={song} />
@@ -26,7 +40,7 @@ function DefaultArticle({ song }: { song: Song }) {
         (PLACHOLDER) Here's why you'll like this song: it's black melodic death
         power metal.
       </Typography>
-      {song.src !== undefined && "spotify" in song.src && (
+      {song.src?.["spotify"] && (
         <p>
           Listen on{" "}
           <a href={`https://open.spotify.com/track/${song.src.spotify}`}>
@@ -34,15 +48,17 @@ function DefaultArticle({ song }: { song: Song }) {
           </a>
         </p>
       )}
-      {song.album?.src && "spotify" in song.album.src && (
+      {song.release.src?.["youtube"] && (
         <p>
           Listen to album on{" "}
-          <a href={`https://open.spotify.com/album/${song.album.src.spotify}`}>
+          <a
+            href={`https://open.spotify.com/album/${song.release.src.spotify}`}
+          >
             Spotify
           </a>
         </p>
       )}
-      {song.src !== undefined && "youtube" in song.src && (
+      {song.src?.["youtube"] && (
         <p>
           Listen on{" "}
           <a href={`https://www.youtube.com/watch?v=${song.src.youtube}`}>
@@ -50,10 +66,12 @@ function DefaultArticle({ song }: { song: Song }) {
           </a>
         </p>
       )}
-      {song.album?.src && "youtube" in song.album.src && (
+      {song.release.src?.["youtube"] && (
         <p>
           Listen to album on{" "}
-          <a href={`https://www.youtube.com/watch?v=${song.album.src.youtube}`}>
+          <a
+            href={`https://www.youtube.com/watch?v=${song.release.src.youtube}`}
+          >
             YouTube
           </a>
         </p>
