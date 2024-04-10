@@ -36,7 +36,7 @@ export const songWhenTimeFadesAway: Song = {
 export const songSonsOfWinterAndStars: Song = {
   release: albumWintersunTimeIInstrumental,
   title: "Sons of Winter and Stars (Instrumental)",
-  src: { youtube: "1Sc1LIYlzuQ&start=257" },
+  src: { youtube: "1Sc1LIYlzuQ?start=257" },
   qualities: {
     jari: 0,
     black: 0,
@@ -107,8 +107,8 @@ export const songDarknessAndFrost: Song = {
 
 export const songTime: Song = {
   release: albumWintersunTimeIInstrumental,
-  title: "Time",
-  src: { youtube: "68B3fhunbsU&start=147" },
+  title: "Time (Instrumental)",
+  src: { youtube: "68B3fhunbsU?start=147" },
   qualities: {
     jari: 0,
     black: 0,
