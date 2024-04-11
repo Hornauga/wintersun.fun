@@ -186,65 +186,107 @@ export function makePreferences(
   };
 }
 
+//
+// Song sources
+//
+
+const allSongs: Song[] = [
+  albumWintersun.songWinterMadnessIntro,
+  albumWintersun.songWinterMadness,
+  albumWintersun.songBeyondTheDarkSun,
+  albumWintersun.songSleepingStars,
+  albumWintersun.songBattleAgainstTime,
+  albumWintersun.songDeathAndTheHealing,
+  albumWintersun.songStarchild,
+  albumWintersun.songBeautifulDeath,
+  albumWintersun.songSadnessAndHate,
+  albumTimeI.songWhenTimeFadesAway,
+  albumTimeI.songSonsOfWinterAndStars,
+  albumTimeI.songLandOfSnowAndSorrow,
+  albumTimeI.songDarknessAndFrost,
+  albumTimeI.songTime,
+  albumTimeIInstrumental.songWhenTimeFadesAway,
+  albumTimeIInstrumental.songSonsOfWinterAndStars,
+  albumTimeIInstrumental.songLandOfSnowAndSorrow,
+  albumTimeIInstrumental.songDarknessAndFrost,
+  albumTimeIInstrumental.songTime,
+  albumIron.songFerrumAeternum,
+  albumIron.songIron,
+  albumIron.songSwordChant,
+  albumIron.songMourningHeartInterlude,
+  albumIron.songTaleOfRevenge,
+  albumIron.songLostInDespair,
+  albumIron.songSlayerOfLight,
+  albumIron.songIntoBattle,
+  albumIron.songLaiLaiHei,
+  albumIron.songTears,
+  albumIron.songBattery,
+  albumEnsiferum.songIntro,
+  albumEnsiferum.songHeroInADream,
+  albumEnsiferum.songTokenOfTime,
+  albumEnsiferum.songGuardiansOfFate,
+  albumEnsiferum.songOldMan,
+  albumEnsiferum.songLittleDreamer,
+  albumEnsiferum.songAbandoned,
+  albumEnsiferum.songWindrider,
+  albumEnsiferum.songTreacherousGods,
+  albumEnsiferum.songEternalWait,
+  albumEnsiferum.songBattleSong,
+  albumEnsiferum.songGoblinsDance,
+  albumTheForestSeasons.songSpring,
+  albumTheForestSeasons.songSummer,
+  albumTheForestSeasons.songAutumn,
+  albumTheForestSeasons.songWinter,
+  albumTheForestSeasonsInstrumental.songSpring,
+  albumTheForestSeasonsInstrumental.songSummer,
+  albumTheForestSeasonsInstrumental.songAutumn,
+  albumTheForestSeasonsInstrumental.songWinter,
+  songWinterAcoustic,
+  songWarning,
+  songRedHorizon,
+  songSteelOfTheGods,
+  songSaturdaySatan,
+  songMemory,
+  songDevotion,
+];
+
+// TODO: This isn't exactly science,
+//       but maybe we can improve our recommendation
+function score(preferences: Preferences, song: Song): number {
+  var score = 0;
+  var qualityName: QualityName, preference: Preference, quality: Quality;
+  for (qualityName in preferences) {
+    preference = preferences[qualityName];
+    quality = song.qualities[qualityName];
+    switch (preference) {
+      case Preference.HATE:
+        score -= quality * 3;
+        break;
+      case Preference.DISLIKE:
+        score -= quality;
+        break;
+      case Preference.NONE:
+        // Does nothing
+        break;
+      case Preference.LIKE:
+        score += quality * 2;
+        break;
+      case Preference.LOVE:
+        // Love beats hate
+        score += quality * 4;
+        break;
+    }
+  }
+  return score;
+}
+
+// TODO: we will pass some information on to users
+//export function recommendation(preferences: Preferences): {song: Song, score: number}[] {
 export function recommendation(preferences: Preferences): Song[] {
-  console.log(preferences); // TODO REMOVE
-  return [
-    albumWintersun.songWinterMadnessIntro,
-    albumWintersun.songWinterMadness,
-    albumWintersun.songBeyondTheDarkSun,
-    albumWintersun.songSleepingStars,
-    albumWintersun.songBattleAgainstTime,
-    albumWintersun.songDeathAndTheHealing,
-    albumWintersun.songStarchild,
-    albumWintersun.songBeautifulDeath,
-    albumWintersun.songSadnessAndHate,
-    albumTimeI.songWhenTimeFadesAway,
-    albumTimeI.songSonsOfWinterAndStars,
-    albumTimeI.songLandOfSnowAndSorrow,
-    albumTimeI.songDarknessAndFrost,
-    albumTimeI.songTime,
-    albumTimeIInstrumental.songWhenTimeFadesAway,
-    albumTimeIInstrumental.songSonsOfWinterAndStars,
-    albumTimeIInstrumental.songLandOfSnowAndSorrow,
-    albumTimeIInstrumental.songDarknessAndFrost,
-    albumTimeIInstrumental.songTime,
-    albumIron.songFerrumAeternum,
-    albumIron.songIron,
-    albumIron.songSwordChant,
-    albumIron.songMourningHeartInterlude,
-    albumIron.songTaleOfRevenge,
-    albumIron.songLostInDespair,
-    albumIron.songSlayerOfLight,
-    albumIron.songIntoBattle,
-    albumIron.songLaiLaiHei,
-    albumIron.songTears,
-    albumIron.songBattery,
-    albumEnsiferum.songIntro,
-    albumEnsiferum.songHeroInADream,
-    albumEnsiferum.songTokenOfTime,
-    albumEnsiferum.songGuardiansOfFate,
-    albumEnsiferum.songOldMan,
-    albumEnsiferum.songLittleDreamer,
-    albumEnsiferum.songAbandoned,
-    albumEnsiferum.songWindrider,
-    albumEnsiferum.songTreacherousGods,
-    albumEnsiferum.songEternalWait,
-    albumEnsiferum.songBattleSong,
-    albumEnsiferum.songGoblinsDance,
-    albumTheForestSeasons.songSpring,
-    albumTheForestSeasons.songSummer,
-    albumTheForestSeasons.songAutumn,
-    albumTheForestSeasons.songWinter,
-    albumTheForestSeasonsInstrumental.songSpring,
-    albumTheForestSeasonsInstrumental.songSummer,
-    albumTheForestSeasonsInstrumental.songAutumn,
-    albumTheForestSeasonsInstrumental.songWinter,
-    songWinterAcoustic,
-    songWarning,
-    songRedHorizon,
-    songSteelOfTheGods,
-    songSaturdaySatan,
-    songMemory,
-    songDevotion,
-  ];
+  var result = allSongs.map((song) => ({
+    song: song,
+    score: score(preferences, song),
+  }));
+  result.sort((a, b) => b.score - a.score);
+  return result.map((e) => e.song);
 }
