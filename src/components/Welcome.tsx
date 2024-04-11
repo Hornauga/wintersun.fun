@@ -78,20 +78,37 @@ export default function Welcome() {
           {Nightwish.title}
         </a>
         ), recorded a demo, landed a record deal, and scheduled a recording session for Wintersun's debut album at a professional studio.
-        Unfortunately, this recording session would end up clashing with Ensiferum's tour dates, forcing Jari to part ways with Ensiferum despite his wishes.
+        Unfortunately, this recording session would end up clashing with Ensiferum's tour dates, forcing Jari to part ways with Ensiferum despite his wish to remain.
       </Typography>
       <Typography variant="h5" align="center">
         Early Wintersun
       </Typography>
       <Typography variant="body1" align="justify">
-        when their self-titled debut album{" "}
-        <a href={albumEnsiferum.wiki.toString()} target="_blank">
-          {albumEnsiferum.title}
-        </a>{" "}
-        (and I hope to convince you they contain some of the most incredible
-        music you will ever hear). He is a vocalist, guitarist, composer, and
-        producer, unparallelled in many ways, dedicating their life to making
-        the best music they can.
+        With Kai on drums and Jari on everything else,
+        they headed to the studio to record 
+        Wintersun's self-titled debut album{" "}
+        <a href={albumWintersun.wiki.toString()} target="_blank">
+          {albumWintersun.title}
+        </a>.{" "}
+        Although Jari was unhappy with the process of recording, it was an instant classic.
+      </Typography>
+      <Typography variant="h5" align="center">
+        The TIME Saga Begins
+      </Typography>
+      <Typography variant="body1" align="justify">
+        Talk about the initial time recordings and the 2006 release date and whatnot
+      </Typography>
+      <Typography variant="h5" align="center">
+        The Forest Package Crowdfunding
+      </Typography>
+      <Typography variant="body1" align="justify">
+        Talk about TFS crowdfunding and whatnot.
+      </Typography>
+      <Typography variant="h5" align="center">
+        The Time Package Crowdfunding
+      </Typography>
+      <Typography variant="body1" align="justify">
+        Talk about the current crowdfunding.
       </Typography>
       <Typography variant="h4" align="center">
         About
