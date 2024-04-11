@@ -152,9 +152,17 @@ function FilterLabel({
   tooltip += " " + qualityInfo.long;
   return (
     <Tooltip title={tooltip} placement="top" arrow>
-      <Typography variant="h6" align="center">
-        {emoji} {qualityInfo.label} {emoji2}
-      </Typography>
+      <Box display="flex" justifyContent="space-evenly">
+        <Box alignContent="center" fontSize="32px">
+          {emoji}
+        </Box>
+        <Typography variant="h6" align="center" display="block">
+          {qualityInfo.label}
+        </Typography>
+        <Box alignContent="center" fontSize="32px">
+          {emoji2}
+        </Box>
+      </Box>
     </Tooltip>
   );
 }
