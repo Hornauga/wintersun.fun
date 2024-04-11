@@ -1,6 +1,6 @@
 import { Album, Song } from "../../things";
 import { Wintersun } from "../../artists";
-import { timePackage } from "../..";
+import { timePackage } from "../../misc";
 
 // Could consider having Immemorial here as well
 
