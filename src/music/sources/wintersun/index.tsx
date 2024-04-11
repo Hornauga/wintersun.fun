@@ -1,5 +1,6 @@
 import { Album, Song } from "../../things";
 import { Wintersun } from "../../artists";
+import { timePackage } from "../..";
 
 // Could consider having Immemorial here as well
 
@@ -55,9 +56,7 @@ export const albumSongsOfJariIII: Album = {
   title: "The Songs of Jari Mäenpää III",
   artist: Wintersun,
   year: 2024,
-  wiki: new URL(
-    "https://www.indiegogo.com/projects/wintersun-time-ii-pre-order-with-time-package",
-  ),
+  wiki: timePackage,
   src: {},
 };
 
@@ -89,9 +88,7 @@ export const albumFantasyMetalProject: Album = {
   title: "Fantasy Metal Project",
   artist: Wintersun,
   year: 2024,
-  wiki: new URL(
-    "https://www.indiegogo.com/projects/wintersun-time-ii-pre-order-with-time-package",
-  ),
+  wiki: timePackage,
   src: {},
 };
 

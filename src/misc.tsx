@@ -1,2 +1,0 @@
-export const loremIpsum: string =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu massa convallis, pharetra libero ultrices, vestibulum nisl. Donec non fringilla velit. Etiam neque tortor, consequat in dolor non, dapibus interdum diam. Aenean luctus euismod nisl congue rhoncus. Sed varius quam risus, eget vestibulum purus venenatis euismod. Quisque vel rhoncus velit. Praesent a massa nunc. Cras et mi nulla. Cras non pulvinar ex. Integer non lacus ut lorem efficitur consequat ac in metus. Vivamus ut dolor sed enim fringilla consectetur ac vel nisl.";

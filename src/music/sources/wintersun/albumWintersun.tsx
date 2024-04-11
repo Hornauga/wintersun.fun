@@ -1,7 +1,7 @@
 import { Album, Song } from "../../things";
 import { Wintersun } from "../../artists";
 
-export const albumWintersunWintersun: Album = {
+export const albumWintersun: Album = {
   title: "Wintersun",
   artist: Wintersun,
   year: 2004,
@@ -9,8 +9,10 @@ export const albumWintersunWintersun: Album = {
   src: { youtube: "XfMrC0dvvmw", spotify: "5vlG5D2TCZzvWYAevPVYCI" },
 };
 
+export default albumWintersun;
+
 export const songWinterMadnessIntro: Song = {
-  release: albumWintersunWintersun,
+  release: albumWintersun,
   title: "Winter Madness Intro",
   src: { youtube: "GUXpbnT5eBE" },
   qualities: {
@@ -35,7 +37,7 @@ export const songWinterMadnessIntro: Song = {
 };
 
 export const songWinterMadness: Song = {
-  release: albumWintersunWintersun,
+  release: albumWintersun,
   title: "Winter Madness",
   src: {
     youtube: "GUXpbnT5eBE?start=155",
@@ -63,7 +65,7 @@ export const songWinterMadness: Song = {
 };
 
 export const songBeyondTheDarkSun: Song = {
-  release: albumWintersunWintersun,
+  release: albumWintersun,
   title: "Beyond The Dark Sun",
   src: { youtube: "KuG6lJ6xbKk", spotify: "1L3S5vFgsVzweUJnAIfSGM" },
   qualities: {
@@ -88,7 +90,7 @@ export const songBeyondTheDarkSun: Song = {
 };
 
 export const songSleepingStars: Song = {
-  release: albumWintersunWintersun,
+  release: albumWintersun,
   title: "Sleeping Stars",
   src: { youtube: "hDsTtJXdMZo", spotify: "5MqVSSinDohOuMjNhO6PU6" },
   qualities: {
@@ -113,7 +115,7 @@ export const songSleepingStars: Song = {
 };
 
 export const songBattleAgainstTime: Song = {
-  release: albumWintersunWintersun,
+  release: albumWintersun,
   title: "Battle Against Time",
   src: { youtube: "b4E0qN4_xQI", spotify: "0tEA8vx1V2mJoxSIqapi0H" },
   qualities: {
@@ -138,7 +140,7 @@ export const songBattleAgainstTime: Song = {
 };
 
 export const songDeathAndTheHealing: Song = {
-  release: albumWintersunWintersun,
+  release: albumWintersun,
   title: "Death and the Healing",
   src: { youtube: "wX-X7oX5Abc", spotify: "6EAsLKCDMQV3BRRb9OdaMJ" },
   qualities: {
@@ -163,7 +165,7 @@ export const songDeathAndTheHealing: Song = {
 };
 
 export const songStarchild: Song = {
-  release: albumWintersunWintersun,
+  release: albumWintersun,
   title: "Starchild",
   src: { youtube: "oyuOjCfCsm4", spotify: "3LPVfzrc9G8EOQ00nTgvKL" },
   qualities: {
@@ -188,7 +190,7 @@ export const songStarchild: Song = {
 };
 
 export const songBeautifulDeath: Song = {
-  release: albumWintersunWintersun,
+  release: albumWintersun,
   title: "Beautiful Death",
   src: { youtube: "TNg-mfVnCWk", spotify: "6S83nQwA0aPHKB86vAqgl5" },
   qualities: {
@@ -213,7 +215,7 @@ export const songBeautifulDeath: Song = {
 };
 
 export const songSadnessAndHate: Song = {
-  release: albumWintersunWintersun,
+  release: albumWintersun,
   title: "Sadness and Hate",
   src: { youtube: "x3s19wDvyeU", spotify: "4cN0IBNbFkq0srzoyNOC4C" },
   qualities: {
