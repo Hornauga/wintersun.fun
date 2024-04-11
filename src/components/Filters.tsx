@@ -26,8 +26,8 @@ export default function Filters({
         Let's figure out how you can best enjoy Wintersun! Simply adjust any or
         all of the filters below to your preference;{" "}
         <strong>left if you dislike</strong> the thing, or{" "}
-        <strong>right if you like</strong> the thing. Then press the{" "}
-        <strong>GO!</strong> button (top right) to see the results.
+        <strong>right if you like</strong> the thing. Then press{" "}
+        <strong>GO!</strong> (top right) to see the results.
       </Typography>
       {Object.entries(preferences).map(([qualityName, preference]) => {
         if ((qualityName as QualityName) === "jari") return;
