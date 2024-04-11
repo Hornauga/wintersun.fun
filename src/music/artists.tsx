@@ -1,5 +1,10 @@
 import { Artist } from "./things";
 
+export const Jari: Artist = {
+  title: "Jari Mäenpää",
+  wiki: new URL("https://en.wikipedia.org/wiki/Jari_M%C3%A4enp%C3%A4%C3%A4"),
+};
+
 export const Ensiferum: Artist = {
   title: "Ensiferum",
   wiki: new URL("https://en.wikipedia.org/wiki/Ensiferum"),

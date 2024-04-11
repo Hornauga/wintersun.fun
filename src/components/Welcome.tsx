@@ -1,6 +1,8 @@
 import { Typography, Box } from "@mui/material";
 import { loremIpsum } from "../misc";
 
+import { Jari, Wintersun } from "../music/artists";
+
 export default function Welcome() {
   return (
     <Box>
@@ -9,15 +11,12 @@ export default function Welcome() {
       </Typography>
       <Typography variant="body1" align="justify">
         The band{" "}
-        <a href="https://en.wikipedia.org/wiki/Wintersun" target="_blank">
-          Wintersun
+        <a href={Wintersun.wiki.toString()} target="_blank">
+          {Wintersun.title}
         </a>{" "}
         is how{" "}
-        <a
-          href="https://en.wikipedia.org/wiki/Jari_M%C3%A4enp%C3%A4%C3%A4"
-          target="_blank"
-        >
-          Jari Mäenpää
+        <a href={Jari.wiki.toString()} target="_blank">
+          {Jari.title}
         </a>{" "}
         makes music today. The purpose of this website is to bridge the gap
         between you and Wintersun, because more Wintersun listeners means more
