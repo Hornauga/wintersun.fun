@@ -27,7 +27,7 @@ export default function Filters({
         all of the filters below to your preference;{" "}
         <strong>left if you dislike</strong> the thing, or{" "}
         <strong>right if you like</strong> the thing. Then press the{" "}
-        <strong>GO!</strong> button in the top right to see the results.
+        <strong>GO!</strong> button (top right) to see the results.
       </Typography>
       {Object.entries(preferences).map(([qualityName, preference]) => {
         if ((qualityName as QualityName) === "jari") return;
@@ -55,8 +55,8 @@ export default function Filters({
           </>
         );
       })}
-      <Typography variant="body1" align="justify">
-        That's all of the available filters for now.
+      <Typography variant="body1" align="center">
+        That's all of the available filters for now!
       </Typography>
     </Box>
   );
