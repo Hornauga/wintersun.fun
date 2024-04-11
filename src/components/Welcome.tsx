@@ -8,15 +8,25 @@ export default function Welcome() {
         TL;DR
       </Typography>
       <Typography variant="body1" align="justify">
-        <a href="https://en.wikipedia.org/wiki/Wintersun">Wintersun</a> is how{" "}
-        <a href="https://en.wikipedia.org/wiki/Jari_M%C3%A4enp%C3%A4%C3%A4">
+        The band{" "}
+        <a href="https://en.wikipedia.org/wiki/Wintersun" target="_blank">
+          Wintersun
+        </a>{" "}
+        is how{" "}
+        <a
+          href="https://en.wikipedia.org/wiki/Jari_M%C3%A4enp%C3%A4%C3%A4"
+          target="_blank"
+        >
           Jari Mäenpää
         </a>{" "}
         makes music today. The purpose of this website is to bridge the gap
-        between you and Wintersun's brilliance, because more listeners means
-        more Wintersun music! Press <strong>FILTERS</strong> (top right) and
-        dial in your musical preferences to receive a bespoke introduction to
-        all the music Jari has been involved in making over the years.
+        between you and Wintersun, because more Wintersun listeners means more
+        Wintersun music! Wintersun!
+      </Typography>
+      <Typography variant="body1" align="justify">
+        Press <strong>FILTERS</strong> (top right) and dial in your musical
+        preferences to receive a bespoke introduction to (nearly all of) the
+        music Jari has been involved in making over the years.
       </Typography>
       <Typography variant="h4" align="center">
         Hello
