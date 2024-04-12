@@ -276,31 +276,24 @@ export default function Welcome() {
       <Typography variant="h4" align="center">
         About This Project
       </Typography>
-      <Typography variant="h5" align="center">
-        About Me
-      </Typography>
       <Typography variant="body1" align="justify">
         I am{" "}
         <a href="https://www.linkedin.com/in/ragnarenglish/" target="_blank">
           Ragnar English
-        </a>{" "}
-        and I care an awful lot about music.
-      </Typography>
-      <Typography variant="h5" align="center">
-        About Me
-      </Typography>
-      <Typography variant="body1" align="justify">
-        My motivation for making this project is altruistic because you are
-        missing out if you are not listening to Wintersun, and the more people
-        listen to Wintersun, the more likely we are to see more Wintersun
-        music.(and I hope to convince you they contain some of the most
-        incredible music you will ever hear)
-      </Typography>
-      <Typography variant="h5" align="center">
-        Is This Science?
+        </a>
+        . I love Salt Skum and Skyr, my favorite rhetorical device is hyperbole,{" "}
+        and I care an awful lot about music, fitness, metal health, and the
+        wellbeing of my fellow humans.
       </Typography>
       <Typography variant="body1" align="justify">
-        Lol, no.
+        My motivation for making this project is in some way altruistic, because
+        I believe your life will be enriched for the addition of Wintersun's
+        music. Thus, as a pro bono humanitarian metal missionary, I hope to make
+        you a Wintersun listener by convincing you Jari has made some of the
+        most incredible music you will ever hear. In some way my motivation is
+        selfish, because I myself want more Wintersun music, and more Wintersun
+        listeners means more Wintersun music. I don't want to look back and
+        think I could have done more to support Wintersun, so here I am.
       </Typography>
     </Box>
   );
