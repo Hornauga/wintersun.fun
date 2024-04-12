@@ -16,6 +16,7 @@ import {
 import albumEnsiferum from "../music/sources/ensiferum/albumEnsiferum";
 import albumIron from "../music/sources/ensiferum/albumIron";
 import albumWintersun from "../music/sources/wintersun/albumWintersun";
+import albumTimeI from "../music/sources/wintersun/albumTimeI";
 import { timePackage, timePackageVideo } from "../music/misc";
 
 export default function Welcome() {
@@ -34,8 +35,7 @@ export default function Welcome() {
           {Jari.title}
         </a>{" "}
         makes music today. The purpose of this project is to bridge the gap
-        between you and Wintersun, because your life will be better for it, and
-        because{" "}
+        between you and Wintersun, because it will enrich your life, and because{" "}
         <a href={timePackage.toString()} target="_blank">
           more Wintersun listeners means more Wintersun music
         </a>
@@ -47,10 +47,13 @@ export default function Welcome() {
         music Jari has been involved in making over the years.
       </Typography>
       <Typography variant="body1" align="justify">
-        Please consider supporting Wintersun by contributing to their
-        crowdfunding campaign, and you will receive tons of exclusive digital
-        goodies! This is the best possible way to help the band make music right
-        now, and it is only available for a short time, so make haste!
+        Please consider supporting Wintersun by contributing to{" "}
+        <a href={timePackage.toString()} target="_blank">
+          their crowdfunding campaign
+        </a>
+        , and you will receive tons of exclusive digital goodies! This is the
+        best possible way to help the band make music right now, and it is only
+        available for a short time, so grab it now! :)
       </Typography>
       <EmbedYouTube video={timePackageVideo} />
       <Typography variant="h4" align="center">
@@ -153,16 +156,41 @@ export default function Welcome() {
         home where he struggled to forge his vision of Wintersun's intricate
         sound. A professional studio would have had the required resources, but
         Jari's prior recording experiences in rented spaces made this an
-        unappealing choice; among other things, he had felt pressured by an
-        unrealistic deadline for realizing his vision. Ironically, time is
-        exactly what he would lack in a professional studio. Such conditions had
-        ultimately left him unhappy with Wintersun's debut. It had been a
-        comprimise, and this time around he was in no mood to compromise on his
-        vision.
+        unappealing choice. Among other things, he had felt pressured by an
+        unrealistic deadline for realizing his vision (ironically, time is
+        exactly what he would lack in a professional studio), and those
+        conditions had ultimately left him unhappy with Wintersun's debut. It
+        had been a comprimise, and this time around he was in no mood to
+        compromise on his vision.
+      </Typography>
+      <Typography variant="body1" align="justify"></Typography>
+      <Typography variant="h5" align="center">
+        Time I
+      </Typography>
+      <Typography variant="body1" align="justify">
+        Having struggled for years to achieve his vision for Time, Jari became
+        more amenable to compromise, and struck a deal with with Wintersun's
+        label: the label would afford the band some additional support, and
+        Wintersun would release an album and go on tour. The album was a
+        regretful amputation of Time, featuring but a portion of Time with three
+        tracks (five if you count intros separately) completed as possible given
+        the circumstances, under the title of{" "}
+        <a href={albumTimeI.wiki.toString()} target="_blank">
+          {albumTimeI.title}
+        </a>{" "}
+        . The album was a heavily criticized success, and although the release
+        and tour was beneficial, Jari was once more dissatisfied with the result
+        having fallen short of his vision for Wintersun.
       </Typography>
       <Typography variant="body1" align="justify"></Typography>
       <Typography variant="h5" align="center">
         The Forest Package Crowdfunding
+      </Typography>
+      <Typography variant="body1" align="justify">
+        A couple of years later, Jari stopped working on the remaining portion
+        of Time, now titled Time II. No matter how he tried, he couldn't make it
+        sound the way he wanted with the resources he had. He'd gone down this
+        path before
       </Typography>
       <Typography variant="body1" align="justify">
         Talk about TFS crowdfunding and whatnot. 2014 burnout and no way to
