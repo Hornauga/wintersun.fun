@@ -221,17 +221,14 @@ export default function Welcome() {
         Wintersun the sale of digital copies, and{" "}
         <a href={forestPackage.toString()} target="_blank">
           The Forest Package
-        </a>{" "}
-        was born: a collection of digital goodies including a live album, prior
-        releases, the titular album, and more! It was wildly successful, blowing
-        past the "third of studio funding" goal in the first day, and not
-        concluding before achieving the second third as well.
+        </a> was born: a collection of digital goodies including a live album, prior releases, the titular album, and more!
+        Its sale via crowdfunding platform IndieGoGo was wildly successful, blowing past the "third of studio funding" goal in the first day, and not concluding before achieving the second third as well. Things were looking very positive: Wintersun might achieve their ultimate goal with but one more campaign!
       </Typography>
       <Typography variant="h5" align="center">
         Time II & Crowdfunding
       </Typography>
       <Typography variant="body1" align="justify">
-        Talk about the current crowdfunding.
+        Although the crowdfunding funds weren't sufficient to complete the Wintersun studio, Jari put those funds to work rather than have them sit around depreciating in value.
       </Typography>
       <Typography variant="h4" align="center">
         About Me
