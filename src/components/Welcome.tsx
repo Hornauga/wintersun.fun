@@ -1,6 +1,8 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
+import { EmbedYouTube } from "./EmbedYouTube";
+
 import {
   Jari,
   Kai,
@@ -14,7 +16,7 @@ import {
 import albumEnsiferum from "../music/sources/ensiferum/albumEnsiferum";
 import albumIron from "../music/sources/ensiferum/albumIron";
 import albumWintersun from "../music/sources/wintersun/albumWintersun";
-import { timePackage } from "../music/misc";
+import { timePackage, timePackageVideo } from "../music/misc";
 
 export default function Welcome() {
   return (
@@ -44,6 +46,13 @@ export default function Welcome() {
         preferences to receive a bespoke introduction to (nearly all of) the
         music Jari has been involved in making over the years.
       </Typography>
+      <Typography variant="body1" align="justify">
+        Please consider supporting Wintersun by contributing to their
+        crowdfunding campaign, and you will receive tons of exclusive digital
+        goodies! This is the best possible way to help the band make music right
+        now, and it is only available for a short time, so make haste!
+      </Typography>
+      <EmbedYouTube video={timePackageVideo} />
       <Typography variant="h4" align="center">
         Abridged Wintersun History
       </Typography>
@@ -68,7 +77,7 @@ export default function Welcome() {
           {albumIron.title}
         </a>{" "}
         put his multifaceted vocal prowess, guitar virtuosity, and songwriting
-        talents on full display. These albums remain pinnacles of exhuberant and
+        talents on full display. These albums remain pinnacles of exuberant and
         powerful folk metal and its adjacent genres.
       </Typography>
       <Typography variant="body1" align="justify">
