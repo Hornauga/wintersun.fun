@@ -9,6 +9,8 @@ export const albumTheForestSeasons: Album = {
   src: { youtube: "ZFfN3G2vjqM", spotify: "7ql5kbq4iJKLT2lpiaiZSr" },
 };
 
+export default albumTheForestSeasons;
+
 export const songSpring: Song = {
   release: albumTheForestSeasons,
   title: "Awaken from the Dark Slumber (Spring)",

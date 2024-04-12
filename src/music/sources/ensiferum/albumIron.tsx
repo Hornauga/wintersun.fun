@@ -9,6 +9,8 @@ export const albumIron: Album = {
   src: { spotify: "1UrdsJhCNyCqmBn9zy2Ut9" },
 };
 
+export default albumIron;
+
 export const songFerrumAeternum: Song = {
   release: albumIron,
   title: "Ferrum Aeternum",

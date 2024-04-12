@@ -9,6 +9,8 @@ export const albumEnsiferum: Album = {
   src: { spotify: "1UrdsJhCNyCqmBn9zy2Ut9" },
 };
 
+export default albumEnsiferum;
+
 export const songIntro: Song = {
   release: albumEnsiferum,
   title: "Intro",

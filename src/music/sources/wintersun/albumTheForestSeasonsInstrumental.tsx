@@ -9,6 +9,8 @@ export const albumTheForestSeasonsInstrumental: Album = {
   src: albumTheForestSeasons.src,
 };
 
+export default albumTheForestSeasonsInstrumental;
+
 export const songSpring: Song = {
   release: albumTheForestSeasonsInstrumental,
   title: "Awaken from the Dark Slumber (Spring) (Instrumental)",

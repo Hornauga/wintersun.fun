@@ -11,6 +11,8 @@ export const albumCallOfTheWild: Album = {
   src: { spotify: "6JhuNA7potIMg6r29IVULP" },
 };
 
+export default albumCallOfTheWild;
+
 export const songSaturdaySatan: Song = {
   release: albumCallOfTheWild,
   title: "Saturday Satan",

@@ -11,6 +11,8 @@ export const albumOutOfTheDark: Album = {
   src: { spotify: "4PEnW1fIBggqj61st6aWb7" },
 };
 
+export default albumOutOfTheDark;
+
 export const songDevotion: Song = {
   release: albumOutOfTheDark,
   title: "Devotion",

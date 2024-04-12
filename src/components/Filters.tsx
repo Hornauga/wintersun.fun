@@ -26,8 +26,8 @@ export default function Filters({
         Let's figure out how you can best enjoy Wintersun! Simply adjust any or
         all of the filters below to your preference;{" "}
         <strong>left if you dislike</strong> the thing, or{" "}
-        <strong>right if you like</strong> the thing. Then press the{" "}
-        <strong>GO!</strong> button in the top right to see the results.
+        <strong>right if you like</strong> the thing. Then press{" "}
+        <strong>GO!</strong> (top right) to see the results.
       </Typography>
       {Object.entries(preferences).map(([qualityName, preference]) => {
         if ((qualityName as QualityName) === "jari") return;
@@ -55,8 +55,8 @@ export default function Filters({
           </>
         );
       })}
-      <Typography variant="body1" align="justify">
-        That's all of the available filters for now.
+      <Typography variant="body1" align="center">
+        That's all of the available filters for now!
       </Typography>
     </Box>
   );
@@ -152,9 +152,17 @@ function FilterLabel({
   tooltip += " " + qualityInfo.long;
   return (
     <Tooltip title={tooltip} placement="top" arrow>
-      <Typography variant="h6" align="center">
-        {emoji} {qualityInfo.label} {emoji2}
-      </Typography>
+      <Box display="flex" justifyContent="space-evenly">
+        <Box alignContent="center" fontSize="32px">
+          {emoji}
+        </Box>
+        <Typography variant="h6" align="center" display="block">
+          {qualityInfo.label}
+        </Typography>
+        <Box alignContent="center" fontSize="32px">
+          {emoji2}
+        </Box>
+      </Box>
     </Tooltip>
   );
 }

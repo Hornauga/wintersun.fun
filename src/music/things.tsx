@@ -35,3 +35,7 @@ export interface Song extends AudioMedia {
   release: Release;
   qualities: Qualities;
 }
+
+export interface Video {
+  src: Src;
+}
