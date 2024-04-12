@@ -18,6 +18,8 @@ import albumIron from "../music/sources/ensiferum/albumIron";
 import albumWintersun from "../music/sources/wintersun/albumWintersun";
 import albumTimeI from "../music/sources/wintersun/albumTimeI";
 import { timePackage, timePackageVideo } from "../music/misc";
+import albumTheForestSeasons from "../music/sources/wintersun/albumTheForestSeasons";
+import { forestPackage } from "../music/misc";
 
 export default function Welcome() {
   return (
@@ -160,7 +162,7 @@ export default function Welcome() {
         unrealistic deadline for realizing his vision (ironically, time is
         exactly what he would lack in a professional studio), and those
         conditions had ultimately left him unhappy with Wintersun's debut. It
-        had been a comprimise, and this time around he was in no mood to
+        had been a compromise, and this time around he was in no mood to
         compromise on his vision.
       </Typography>
       <Typography variant="body1" align="justify"></Typography>
@@ -184,25 +186,49 @@ export default function Welcome() {
       </Typography>
       <Typography variant="body1" align="justify"></Typography>
       <Typography variant="h5" align="center">
-        The Forest Package Crowdfunding
+        Definition of Insanity
       </Typography>
       <Typography variant="body1" align="justify">
-        A couple of years later, Jari stopped working on the remaining portion
-        of Time, now titled Time II. No matter how he tried, he couldn't make it
-        sound the way he wanted with the resources he had. He'd gone down this
-        path before
-      </Typography>
-      <Typography variant="body1" align="justify">
-        Talk about TFS crowdfunding and whatnot. 2014 burnout and no way to
-        progress towards the vision with the sound. More projects piling up on
-        the backburner, and they'll require so much as well... how about we do a
-        side project, we record an album to publish, an album we can accomplish
-        with our current equipment, wrap it up with digital goodies, sell it to
-        our fans, do this whole process three times, and then we can invest in a
-        studio!
+        For a couple of years, Jari continued working on the remaining portion
+        of Time, now titled Time II, but his efforts and resources remained
+        insufficient to achieve the result he wanted. He'd gone down this path
+        before, each time dissatisfied with the result, and the handful of
+        Wintersun albums already underway would prove just as impossible
+        (although working on those had helped progress Time). He was
+        experiencing burnout, so he decided enough was enough, and put his work
+        on Time II on hold. Something would need to change for Wintersun to
+        continue. Jari concluded the only way to achieve his vision for
+        Wintersun was to have a professional studio of his own, but that would
+        require funds the band did not have.
       </Typography>
       <Typography variant="h5" align="center">
-        The Time Package Crowdfunding
+        The Forest Seasons & Crowdfunding
+      </Typography>
+      <Typography variant="body1" align="justify">
+        At the time, internet crowdfunding had become a popular method of
+        funding, and Jari saw an opportunity: if Wintersun used its current
+        resources to make digital content, and if a fraction of Wintersun's fans
+        purchased it for a modest amount via a crowdfunding campaign, Wintersun
+        could afford to build their studio after only three campaigns.
+      </Typography>
+      <Typography variant="body1" align="justify">
+        With that in mind, Wintersun recorded and produced an album that can be
+        considered a detour from the true Wintersun vision:{" "}
+        <a href={albumTheForestSeasons.wiki.toString()} target="_blank">
+          {albumTheForestSeasons.title}
+        </a>
+        . The label agreed to publish the album as normal while permitting
+        Wintersun the sale of digital copies, and{" "}
+        <a href={forestPackage.toString()} target="_blank">
+          The Forest Package
+        </a>{" "}
+        was born: a collection of digital goodies including a live album, prior
+        releases, the titular album, and more! It was wildly successful, blowing
+        past the "third of studio funding" goal in the first day, and not
+        concluding before achieving the second third as well.
+      </Typography>
+      <Typography variant="h5" align="center">
+        Time II & Crowdfunding
       </Typography>
       <Typography variant="body1" align="justify">
         Talk about the current crowdfunding.
@@ -212,7 +238,9 @@ export default function Welcome() {
       </Typography>
       <Typography variant="body1" align="justify">
         I'm{" "}
-        <a href="https://www.linkedin.com/in/ragnarenglish/">Ragnar English</a>{" "}
+        <a href="https://www.linkedin.com/in/ragnarenglish/" target="_blank">
+          Ragnar English
+        </a>{" "}
         and I care an awful lot about music. My motivation for making this
         project is altruistic because you are missing out if you are not
         listening to Wintersun, and the more people listen to Wintersun, the
