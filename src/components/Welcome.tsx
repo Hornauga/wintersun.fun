@@ -221,28 +221,86 @@ export default function Welcome() {
         Wintersun the sale of digital copies, and{" "}
         <a href={forestPackage.toString()} target="_blank">
           The Forest Package
-        </a> was born: a collection of digital goodies including a live album, prior releases, the titular album, and more!
-        Its sale via crowdfunding platform IndieGoGo was wildly successful, blowing past the "third of studio funding" goal in the first day, and not concluding before achieving the second third as well. Things were looking very positive: Wintersun might achieve their ultimate goal with but one more campaign!
+        </a>{" "}
+        was born: a collection of digital goodies including a live album, prior
+        releases, the titular album, and more! Its sale via crowdfunding
+        platform IndieGoGo was wildly successful, blowing past the "third of
+        studio funding" goal in the first day, and not concluding before
+        achieving the second third as well. Things were looking very positive:
+        Wintersun might achieve their ultimate goal with but one more campaign!
       </Typography>
       <Typography variant="h5" align="center">
-        Time II & Crowdfunding
+        2024: Time II & Crowdfunding
       </Typography>
       <Typography variant="body1" align="justify">
-        Although the crowdfunding funds weren't sufficient to complete the Wintersun studio, Jari put those funds to work rather than have them sit around depreciating in value.
+        Although the crowdfunding funds weren't sufficient to complete the
+        Wintersun studio, Jari put those funds to work rather than have them sit
+        around depreciating in value. He invested the money into equipment and
+        facilities which will eventually become part of the Wintersun studio,
+        and would make making Wintersun music easier until such time. These
+        resources coupled with technological advances meant the production of
+        further Wintersun albums could progress, and soon Jari found that he was
+        capable of realizing his vision for Time II. Not only that, but he could
+        go back and do the same for Time I, finally realizing his original and
+        true vision for the Time project, or in fact any Wintersun album.
+      </Typography>
+      <Typography variant="body1" align="justify">
+        With Time I and II both complete and slated for release in August 2024,
+        and still wishing to progress towards their goal of having a studio to
+        make upcoming albums possible, Wintersun applied the same approach as
+        with their previous album and made a new (ongoing!) crowdfunding
+        campaign for their latest product:{" "}
+        <a href={timePackage.toString()} target="_blank">
+          The Time Package
+        </a>
+        ! Not only does this digital package include the definitive versions of
+        both Time I and Time II and tons of goodies, but Jari added something
+        not a single fan anticipated.
+      </Typography>
+      <Typography variant="body1" align="justify">
+        See, prior to Wintersun's debut, Jari composed and recorded multiple
+        demo songs, and even a full fantasy themed demo album which he had
+        always hoped to record with Wintersun. Some of the songs had already
+        made their way onto the debut album and Time, but some had not, and
+        others simply weren't a fit for Wintersun (for example, being "too power
+        metal"). But thing is, Wintersun are already working on a few albums to
+        follow Time, leaving no time in the near future to make anything of
+        these demos. Given this, Jari decided to mix and master ALL of these
+        demos and release them as part of the crowdfunding!
+      </Typography>
+      <Typography variant="body1" align="justify">
+        That's where the story is today. Don't miss this amazing package, and
+        the rare opportunity to be able to directly support Wintersun's effort
+        to produce amazing music!
       </Typography>
       <Typography variant="h4" align="center">
+        About This Project
+      </Typography>
+      <Typography variant="h5" align="center">
         About Me
       </Typography>
       <Typography variant="body1" align="justify">
-        I'm{" "}
+        I am{" "}
         <a href="https://www.linkedin.com/in/ragnarenglish/" target="_blank">
           Ragnar English
         </a>{" "}
-        and I care an awful lot about music. My motivation for making this
-        project is altruistic because you are missing out if you are not
-        listening to Wintersun, and the more people listen to Wintersun, the
-        more likely we are to see more Wintersun music.(and I hope to convince
-        you they contain some of the most incredible music you will ever hear)
+        and I care an awful lot about music.
+      </Typography>
+      <Typography variant="h5" align="center">
+        About Me
+      </Typography>
+      <Typography variant="body1" align="justify">
+        My motivation for making this project is altruistic because you are
+        missing out if you are not listening to Wintersun, and the more people
+        listen to Wintersun, the more likely we are to see more Wintersun
+        music.(and I hope to convince you they contain some of the most
+        incredible music you will ever hear)
+      </Typography>
+      <Typography variant="h5" align="center">
+        Is This Science?
+      </Typography>
+      <Typography variant="body1" align="justify">
+        Lol, no.
       </Typography>
     </Box>
   );
