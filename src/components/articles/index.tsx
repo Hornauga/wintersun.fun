@@ -34,7 +34,7 @@ function DefaultArticle({ song }: { song: Song }) {
           </a>
         </Typography>
       )}
-      <EmbedYouTube song={song} />
+      <EmbedYouTube video={song} />
       <EmbedSpotify song={song} />
       <Typography variant="body1" align="justify">
         (PLACHOLDER) Here's why you'll like this song: it's black melodic death

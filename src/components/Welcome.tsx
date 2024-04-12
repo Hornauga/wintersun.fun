@@ -144,13 +144,14 @@ export default function Welcome() {
         home where he struggled to forge his vision of Wintersun's intricate
         sound. A professional studio would have had the required resources, but
         Jari's prior recording experiences in rented spaces made this an
-        unappealing choice; among other things, he had felt pressured by an unrealistic deadline for realizing his vision.
-        Ironically, time is exactly what he would lack in a professional studio.
-        Such conditions had ultimately left him unhappy with Wintersun's debut. It had been a comprimise, and this time around he was
-        in no mood to compromise on his vision.
+        unappealing choice; among other things, he had felt pressured by an
+        unrealistic deadline for realizing his vision. Ironically, time is
+        exactly what he would lack in a professional studio. Such conditions had
+        ultimately left him unhappy with Wintersun's debut. It had been a
+        comprimise, and this time around he was in no mood to compromise on his
+        vision.
       </Typography>
-      <Typography variant="body1" align="justify">
-      </Typography>
+      <Typography variant="body1" align="justify"></Typography>
       <Typography variant="h5" align="center">
         The Forest Package Crowdfunding
       </Typography>

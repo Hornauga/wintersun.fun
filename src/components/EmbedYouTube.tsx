@@ -1,8 +1,8 @@
-import { Song } from "../music/things";
+import { Song, Video } from "../music/things";
 
-export function EmbedYouTube({ song }: { song: Song }) {
-  if (song.src?.youtube === undefined) return;
-  const src = `https://www.youtube.com/embed/${song.src.youtube}`;
+export function EmbedYouTube({ video }: { video: Song | Video }) {
+  if (video.src.youtube === undefined) return;
+  const src = `https://www.youtube.com/embed/${video.src.youtube}`;
   return (
     <iframe
       src={src}
