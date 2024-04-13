@@ -58,6 +58,25 @@ export default function Filters({
       <Typography variant="body1" align="center">
         That's all of the available filters for now!
       </Typography>
+      <Typography variant="h4" align="center">
+        Suggestions
+      </Typography>
+      <Typography variant="body1" align="left">
+        <strong>Boundless</strong>: no adjusting genre sliders (they remain
+        neutral)
+      </Typography>
+      <Typography variant="body1" align="left">
+        <strong>Positivity</strong>: only move sliders to the right (only
+        like/love or neutral)
+      </Typography>
+      <Typography variant="body1" align="left">
+        <strong>Negativity</strong>: only move sliders to the left (only
+        dislike/hate or neutral)
+      </Typography>
+      <Typography variant="body1" align="left">
+        <strong>Vocalitist</strong>: adjust the vocal sliders and maybe a couple
+        of others
+      </Typography>
     </Box>
   );
 }
