@@ -73,7 +73,7 @@ function Filter({
 }) {
   return (
     <Box flexDirection="column">
-      <Box marginTop="32px">
+      <Box marginTop="32px" display="flex" justifyContent="center">
         <FilterLabel qualityInfo={qualityInfo} preference={preference} />
       </Box>
       <Slider
@@ -152,7 +152,7 @@ function FilterLabel({
   tooltip += " " + qualityInfo.long;
   return (
     <Tooltip title={tooltip} placement="top" arrow>
-      <Box display="flex" justifyContent="space-evenly">
+      <Box display="flex" justifyContent="space-between" width="65%">
         <Box alignContent="center" fontSize="32px">
           {emoji}
         </Box>
