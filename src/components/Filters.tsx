@@ -82,6 +82,7 @@ function Filter({
         valueLabelFormat={valueLabelFormat}
         color="secondary"
         marks
+        track={false}
         step={1}
         min={-2}
         max={2}
@@ -117,36 +118,36 @@ function FilterLabel({
 }) {
   var tooltip = "";
   var emoji = "";
-  var emoji2 = "";
+  //var emoji2 = ""; // Emoji we could use in future
   switch (preference) {
     case Preference.HATE:
       tooltip += "I HATE";
       emoji = "😩";
-      emoji2 = "💩";
+      //emoji2 = "💩";
       break;
     case Preference.DISLIKE:
       tooltip += "I dislike";
       // emoji = "🙁";
       // emoji = "😟";
       emoji = "😑";
-      emoji2 = "👎";
+      //emoji2 = "👎";
       break;
     case Preference.NONE:
       tooltip += "I am OK with";
       // emoji = "😗";
       emoji = "😐";
-      emoji2 = "😐";
+      //emoji2 = "😐";
       break;
     case Preference.LIKE:
       tooltip += "I like";
       // emoji = "😊";
       emoji = "🙂";
-      emoji2 = "👍";
+      //emoji2 = "👍";
       break;
     case Preference.LOVE:
       tooltip += "I LOVE";
       emoji = "😍";
-      emoji2 = "⭐";
+      //emoji2 = "⭐";
       break;
   }
   tooltip += " " + qualityInfo.long;
@@ -160,7 +161,7 @@ function FilterLabel({
           {qualityInfo.label}
         </Typography>
         <Box alignContent="center" fontSize="32px">
-          {emoji2}
+          {emoji}
         </Box>
       </Box>
     </Tooltip>
