@@ -39,11 +39,16 @@ function DefaultArticle({ song }: { song: Song }) {
           </a>
         </p>
       )}
-      <Typography variant="h5" align="center">Time Crowdfunding</Typography>
+      <Typography variant="h5" align="center">
+        Time Crowdfunding
+      </Typography>
       <Typography variant="body1" align="justify">
-        If you enjoy this music, please consider supporting Wintersun by purchasing the <a href={timePackage.toString()} target="_blank">
+        If you enjoy this music, please consider supporting Wintersun by
+        purchasing the{" "}
+        <a href={timePackage.toString()} target="_blank">
           Time Package
-        </a> via IndieGoGo so Wintersun can make even more music for you to enjoy!
+        </a>{" "}
+        via IndieGoGo so Wintersun can make even more music for you to enjoy!
       </Typography>
       <EmbedYouTube video={timePackageVideo} />
     </>

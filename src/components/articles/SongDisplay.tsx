@@ -6,8 +6,8 @@ import { EmbedSpotify } from "../EmbedSpotify";
 import { Song } from "../../music/things";
 
 export default function SongDisplay({ song }: { song: Song }) {
-    return (
-        <>
+  return (
+    <>
       <Typography variant="h4" align="center" marginBottom="0">
         {song.title}
       </Typography>
@@ -32,6 +32,6 @@ export default function SongDisplay({ song }: { song: Song }) {
       )}
       <EmbedYouTube video={song} />
       <EmbedSpotify song={song} />
-      </>
-    )
-    }
+    </>
+  );
+}
