@@ -23,43 +23,47 @@ export default function Results({
       <Box
         sx={{
           display: "flex",
-          width: "100%",
+          width: "auto",
           justifyContent: "space-around",
           alignItems: "center",
-          marginTop: "16px",
-          marginBottom: "16px",
+          margin: "16px",
         }}
       >
         <Button
-          variant="text"
-          sx={{ width: 100 }}
+          variant="outlined"
+          color="secondary"
+          sx={{ width: "16%" }}
           disabled={currentResult === 0}
           onClick={() => setCurrentResult(0)}
         >
           <FirstPage />
         </Button>
         <Button
-          variant="text"
-          sx={{ width: 100 }}
+          variant="outlined"
+          color="secondary"
+          sx={{ width: "16%" }}
           disabled={currentResult === 0}
           onClick={() => setCurrentResult(currentResult - 1)}
         >
           <ChevronLeft />
         </Button>
-        <Button variant="text" disabled sx={{ width: 100 }}>
+        <Button variant="text" disabled sx={{ width: "16%" }}>
+          {/* TODO: Is this a hack? Yes it is */}
           {currentResult + 1}/{songs.length}
         </Button>
         <Button
-          variant="text"
-          sx={{ width: 100 }}
+          variant="outlined"
+          color="secondary"
+          sx={{ width: "16%" }}
           disabled={currentResult === songs.length - 1}
           onClick={() => setCurrentResult(currentResult + 1)}
         >
           <ChevronRight />
         </Button>
         <Button
-          variant="text"
-          sx={{ width: 100 }}
+          variant="outlined"
+          color="secondary"
+          sx={{ width: "16%" }}
           disabled={currentResult === songs.length - 1}
           onClick={() => setCurrentResult(songs.length - 1)}
         >

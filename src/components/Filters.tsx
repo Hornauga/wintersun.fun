@@ -19,12 +19,9 @@ export default function Filters({
   var categoryLast: QualityCategory | null = null;
   return (
     <Box>
-      <Typography variant="h4" align="center">
-        Filter by preference
-      </Typography>
       <Typography variant="body1" align="justify">
         Let's figure out how you can best enjoy Wintersun! Simply adjust any or
-        all of the filters below to your preference;{" "}
+        all of the sliders below to your preference;{" "}
         <strong>left if you dislike</strong> the thing, or{" "}
         <strong>right if you like</strong> the thing. Then press{" "}
         <strong>GO!</strong> (top right) to see the results.
@@ -56,7 +53,26 @@ export default function Filters({
         );
       })}
       <Typography variant="body1" align="center">
-        That's all of the available filters for now!
+        That's all of the available preferences for now!
+      </Typography>
+      <Typography variant="h4" align="center">
+        Suggestions
+      </Typography>
+      <Typography variant="body1" align="left">
+        <strong>Boundless</strong>: no adjusting genre sliders (they remain
+        neutral)
+      </Typography>
+      <Typography variant="body1" align="left">
+        <strong>Positivity</strong>: only move sliders to the right (only
+        like/love or neutral)
+      </Typography>
+      <Typography variant="body1" align="left">
+        <strong>Negativity</strong>: only move sliders to the left (only
+        dislike/hate or neutral)
+      </Typography>
+      <Typography variant="body1" align="left">
+        <strong>Vocalitist</strong>: adjust the vocal sliders and maybe a couple
+        of others
       </Typography>
     </Box>
   );
@@ -73,7 +89,7 @@ function Filter({
 }) {
   return (
     <Box flexDirection="column">
-      <Box marginTop="32px">
+      <Box marginTop="16px" display="flex" justifyContent="center">
         <FilterLabel qualityInfo={qualityInfo} preference={preference} />
       </Box>
       <Slider
@@ -82,6 +98,7 @@ function Filter({
         valueLabelFormat={valueLabelFormat}
         color="secondary"
         marks
+        track={false}
         step={1}
         min={-2}
         max={2}
@@ -117,42 +134,42 @@ function FilterLabel({
 }) {
   var tooltip = "";
   var emoji = "";
-  var emoji2 = "";
+  //var emoji2 = ""; // Emoji we could use in future
   switch (preference) {
     case Preference.HATE:
       tooltip += "I HATE";
       emoji = "😩";
-      emoji2 = "💩";
+      //emoji2 = "💩";
       break;
     case Preference.DISLIKE:
       tooltip += "I dislike";
       // emoji = "🙁";
       // emoji = "😟";
       emoji = "😑";
-      emoji2 = "👎";
+      //emoji2 = "👎";
       break;
     case Preference.NONE:
       tooltip += "I am OK with";
       // emoji = "😗";
       emoji = "😐";
-      emoji2 = "😐";
+      //emoji2 = "😐";
       break;
     case Preference.LIKE:
       tooltip += "I like";
       // emoji = "😊";
       emoji = "🙂";
-      emoji2 = "👍";
+      //emoji2 = "👍";
       break;
     case Preference.LOVE:
       tooltip += "I LOVE";
       emoji = "😍";
-      emoji2 = "⭐";
+      //emoji2 = "⭐";
       break;
   }
   tooltip += " " + qualityInfo.long;
   return (
     <Tooltip title={tooltip} placement="top" arrow>
-      <Box display="flex" justifyContent="space-evenly">
+      <Box display="flex" justifyContent="space-between" width="65%">
         <Box alignContent="center" fontSize="32px">
           {emoji}
         </Box>
@@ -160,7 +177,7 @@ function FilterLabel({
           {qualityInfo.label}
         </Typography>
         <Box alignContent="center" fontSize="32px">
-          {emoji2}
+          {emoji}
         </Box>
       </Box>
     </Tooltip>

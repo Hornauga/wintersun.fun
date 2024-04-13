@@ -282,7 +282,7 @@ export default function Welcome() {
           Ragnar English
         </a>
         . I love Salt Skum and Skyr, my favorite rhetorical device is hyperbole,{" "}
-        and I care an awful lot about music, fitness, metal health, and the
+        and I care an awful lot about music, fitness, me(n)tal health, and the
         wellbeing of my fellow humans.
       </Typography>
       <Typography variant="body1" align="justify">
