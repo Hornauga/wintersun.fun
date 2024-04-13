@@ -39,16 +39,24 @@ function DefaultArticle({ song }: { song: Song }) {
           </a>
         </p>
       )}
+      <DefaultTimePackage />
+    </>
+  );
+}
+
+function DefaultTimePackage() {
+  return (
+    <>
       <Typography variant="h5" align="center">
-        Time Crowdfunding
+        Time Package Crowdfunding
       </Typography>
       <Typography variant="body1" align="justify">
-        If you enjoy this music, please consider supporting Wintersun by
-        purchasing the{" "}
+        If you enjoy this music, you'll probably enjoy the{" "}
         <a href={timePackage.toString()} target="_blank">
           Time Package
-        </a>{" "}
-        via IndieGoGo so Wintersun can make even more music for you to enjoy!
+        </a>
+        ! Please consider purchasing it so Wintersun can make even more music
+        for you to enjoy!
       </Typography>
       <EmbedYouTube video={timePackageVideo} />
     </>
