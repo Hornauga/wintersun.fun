@@ -19,9 +19,6 @@ export default function Filters({
   var categoryLast: QualityCategory | null = null;
   return (
     <Box>
-      <Typography variant="h4" align="center">
-        Filter by preference
-      </Typography>
       <Typography variant="body1" align="justify">
         Let's figure out how you can best enjoy Wintersun! Simply adjust any or
         all of the sliders below to your preference;{" "}
