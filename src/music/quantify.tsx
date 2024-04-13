@@ -27,26 +27,26 @@ export type QualityName =
   // Genre
   | "black"
   | "death"
-  | "folk"
   | "power"
   | "thrash"
   // Vocals
   | "clean"
   | "extreme"
+  | "choirs"
   | "singalong"
-  // Musical
-  | "melodic"
+  // Other
   | "riffs"
   | "solos"
-  // Character
+  | "melodic"
   | "energetic"
   | "epic"
+  | "folk"
   | "intense"
   | "melancholic";
 // Rejected (for now) qualities
 //   neoclassical
 //   symphonic
-//   choirs
+//   folk
 //   chanting
 //   churning
 //   swelling
@@ -72,12 +72,7 @@ export enum Quality {
 
 export type Qualities = Record<QualityName, Quality>;
 
-export type QualityCategory =
-  | "jari"
-  | "genre"
-  | "vocals"
-  | "musical"
-  | "character";
+export type QualityCategory = "jari" | "genre" | "vocals" | "other";
 
 export type QualityInfo = {
   category: QualityCategory;
@@ -103,11 +98,6 @@ export const qualityInfos: Record<QualityName, QualityInfo> = {
     label: "Death metal",
     long: "the death metal genre",
   },
-  folk: {
-    category: "genre",
-    label: "Folk metal",
-    long: "the folk metal genre",
-  },
   power: {
     category: "genre",
     label: "Power metal",
@@ -125,26 +115,35 @@ export const qualityInfos: Record<QualityName, QualityInfo> = {
     label: "Extreme vocals",
     long: "growling, screaming, squealing, and such",
   },
+  choirs: {
+    category: "vocals",
+    label: "Choirs or chanting",
+    long: "choirs/chanting",
+  },
   singalong: {
     category: "vocals",
     label: "Singalong songs",
     long: "singalong vibes",
   },
-  // Musical
-  melodic: { category: "musical", label: "Melodies", long: "melodic music" },
-  riffs: { category: "musical", label: "Riffs", long: "sick riffs" },
-  solos: { category: "musical", label: "Solos", long: "amazing tasty solos" },
-  // Characteristic
+  // Other
+  riffs: { category: "other", label: "Riffs", long: "sick riffs" },
+  solos: { category: "other", label: "Solos", long: "amazing tasty solos" },
+  melodic: { category: "other", label: "Melodic music", long: "melodic music" },
   energetic: {
-    category: "character",
-    label: "Energetic",
+    category: "other",
+    label: "Energetic music",
     long: "energetic music",
   },
-  epic: { category: "character", label: "Epic", long: "epic music" },
-  intense: { category: "character", label: "Intense", long: "intense music" },
+  epic: { category: "other", label: "Epic music", long: "epic music" },
+  folk: {
+    category: "other",
+    label: "Folk music",
+    long: "folk music",
+  },
+  intense: { category: "other", label: "Intense music", long: "intense music" },
   melancholic: {
-    category: "character",
-    label: "Melancholic",
+    category: "other",
+    label: "Melancholic music",
     long: "melancholic music",
   },
 };
@@ -170,17 +169,18 @@ export function makePreferences(
     jari: Preference.LIKE,
     black: initialPreference,
     death: initialPreference,
-    folk: initialPreference,
     power: initialPreference,
     thrash: initialPreference,
     clean: initialPreference,
     extreme: initialPreference,
+    choirs: initialPreference,
     singalong: initialPreference,
-    melodic: initialPreference,
     riffs: initialPreference,
     solos: initialPreference,
+    melodic: initialPreference,
     energetic: initialPreference,
     epic: initialPreference,
+    folk: initialPreference,
     intense: initialPreference,
     melancholic: initialPreference,
   };
@@ -205,10 +205,10 @@ const allSongs: Song[] = [
   albumTimeI.songLandOfSnowAndSorrow,
   albumTimeI.songDarknessAndFrost,
   albumTimeI.songTime,
-  albumTimeIInstrumental.songWhenTimeFadesAway,
+  //albumTimeIInstrumental.songWhenTimeFadesAway,
   albumTimeIInstrumental.songSonsOfWinterAndStars,
   albumTimeIInstrumental.songLandOfSnowAndSorrow,
-  albumTimeIInstrumental.songDarknessAndFrost,
+  //albumTimeIInstrumental.songDarknessAndFrost,
   albumTimeIInstrumental.songTime,
   albumIron.songFerrumAeternum,
   albumIron.songIron,
