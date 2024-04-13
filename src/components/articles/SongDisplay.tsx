@@ -6,6 +6,8 @@ import { EmbedSpotify } from "../EmbedSpotify";
 import { Song } from "../../music/things";
 
 export default function SongDisplay({ song }: { song: Song }) {
+  const albumOnYouTube: boolean = "youtube" in song.release.src;
+  const albumOnSpotify: boolean = "spotify" in song.release.src;
   return (
     <>
       <Typography variant="h4" align="center" marginBottom="0">
@@ -32,6 +34,28 @@ export default function SongDisplay({ song }: { song: Song }) {
       )}
       <EmbedYouTube video={song} />
       <EmbedSpotify song={song} />
+      <Typography variant="body1" align="justify">
+        {(albumOnSpotify || albumOnYouTube) &&
+          "This album is available to listen on "}
+        {albumOnSpotify && (
+          <a
+            href={`https://open.spotify.com/album/${song.release.src.spotify}`}
+            target="_blank"
+          >
+            Spotify
+          </a>
+        )}
+        {albumOnSpotify ? (albumOnYouTube ? " and " : "") : ""}
+        {albumOnYouTube && (
+          <a
+            href={`https://www.youtube.com/watch?v=${song.release.src.youtube}`}
+            target="_blank"
+          >
+            YouTube
+          </a>
+        )}
+        {(albumOnSpotify || albumOnYouTube) && "."}
+      </Typography>
     </>
   );
 }

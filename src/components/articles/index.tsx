@@ -15,30 +15,6 @@ function DefaultArticle({ song }: { song: Song }) {
   return (
     <>
       <SongDisplay song={song}></SongDisplay>
-      <Typography variant="body1" align="justify">
-        (PLACHOLDER) Here's why you'll like this song: it's black melodic death
-        power metal.
-      </Typography>
-      {song.release.src?.["youtube"] && (
-        <p>
-          Listen to album on{" "}
-          <a
-            href={`https://open.spotify.com/album/${song.release.src.spotify}`}
-          >
-            Spotify
-          </a>
-        </p>
-      )}
-      {song.release.src?.["youtube"] && (
-        <p>
-          Listen to album on{" "}
-          <a
-            href={`https://www.youtube.com/watch?v=${song.release.src.youtube}`}
-          >
-            YouTube
-          </a>
-        </p>
-      )}
       <DefaultTimePackage />
     </>
   );
