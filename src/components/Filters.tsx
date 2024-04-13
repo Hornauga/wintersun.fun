@@ -24,7 +24,7 @@ export default function Filters({
       </Typography>
       <Typography variant="body1" align="justify">
         Let's figure out how you can best enjoy Wintersun! Simply adjust any or
-        all of the filters below to your preference;{" "}
+        all of the sliders below to your preference;{" "}
         <strong>left if you dislike</strong> the thing, or{" "}
         <strong>right if you like</strong> the thing. Then press{" "}
         <strong>GO!</strong> (top right) to see the results.
@@ -73,7 +73,7 @@ function Filter({
 }) {
   return (
     <Box flexDirection="column">
-      <Box marginTop="32px" display="flex" justifyContent="center">
+      <Box marginTop="16px" display="flex" justifyContent="center">
         <FilterLabel qualityInfo={qualityInfo} preference={preference} />
       </Box>
       <Slider
