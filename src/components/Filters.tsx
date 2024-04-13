@@ -53,7 +53,7 @@ export default function Filters({
         );
       })}
       <Typography variant="body1" align="center">
-        That's all of the available filters for now!
+        That's all of the available preferences for now!
       </Typography>
       <Typography variant="h4" align="center">
         Suggestions
