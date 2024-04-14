@@ -205,7 +205,7 @@ export default function Welcome() {
       </Typography>
       <Typography variant="body1" align="justify"></Typography>
       <Typography variant="h5" align="center">
-        Definition of Insanity
+        Burnout
       </Typography>
       <Typography variant="body1" align="justify">
         For a couple of years, Jari continued working on the remaining portion
