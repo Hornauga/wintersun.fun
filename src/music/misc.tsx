@@ -11,3 +11,7 @@ export const forestPackage = new URL(
 export const timePackageVideo: Video = {
   src: { youtube: "EsX2NOF2UkE" },
 };
+
+export const timePackageMusicClips: Video = {
+  src: { youtube: "mBgDboo5GDg" },
+};
