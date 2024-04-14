@@ -1,7 +1,7 @@
 import Typography from "@mui/material/Typography";
 
-import { EmbedYouTube } from "../EmbedYouTube";
-import { EmbedSpotify } from "../EmbedSpotify";
+import EmbedYouTube from "../EmbedYouTube";
+import EmbedSpotify from "../EmbedSpotify";
 
 import { Song } from "../../music/things";
 

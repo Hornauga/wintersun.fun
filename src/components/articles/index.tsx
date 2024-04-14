@@ -1,7 +1,8 @@
 import Typography from "@mui/material/Typography";
 import { Song } from "../../music/things";
-import { EmbedYouTube } from "../EmbedYouTube";
+import EmbedYouTube from "../EmbedYouTube";
 import SongDisplay from "./SongDisplay";
+import Ensiferum from "./Ensiferum";
 
 import { timePackage, timePackageVideo } from "../../music/misc";
 
@@ -12,10 +13,13 @@ export function SongArticle({ song }: { song: Song }): JSX.Element {
 }
 
 function DefaultArticle({ song }: { song: Song }) {
+  var article = <DefaultTimePackage />;
+  if ("title" in song.release && song.release.title === "Ensiferum")
+    article = <Ensiferum />;
   return (
     <>
       <SongDisplay song={song}></SongDisplay>
-      <DefaultTimePackage />
+      {article}
     </>
   );
 }

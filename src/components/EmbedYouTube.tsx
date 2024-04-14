@@ -1,6 +1,6 @@
 import { Song, Video } from "../music/things";
 
-export function EmbedYouTube({ video }: { video: Song | Video }) {
+export default function EmbedYouTube({ video }: { video: Song | Video }) {
   if (video.src.youtube === undefined) return;
   const src = `https://www.youtube.com/embed/${video.src.youtube}`;
   return (
