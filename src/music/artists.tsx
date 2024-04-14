@@ -40,6 +40,11 @@ export const Arthemesia: Artist = {
   wiki: new URL("https://en.wikipedia.org/wiki/Arthemesia"),
 };
 
+export const Cadacross: Artist = {
+  title: "Cadacross",
+  wiki: new URL("https://en.wikipedia.org/wiki/Cadacross"),
+};
+
 export const Ensiferum: Artist = {
   title: "Ensiferum",
   wiki: new URL("https://en.wikipedia.org/wiki/Ensiferum"),

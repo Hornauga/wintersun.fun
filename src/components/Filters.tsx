@@ -1,4 +1,4 @@
-import { Typography, Box, Tooltip, Slider } from "@mui/material";
+import { Button, Typography, Box, Tooltip, Slider } from "@mui/material";
 
 import {
   qualityInfos,
@@ -12,19 +12,47 @@ import {
 export default function Filters({
   preferences,
   setPreference,
+  showResults,
 }: {
   preferences: Preferences;
   setPreference: (qualityName: QualityName, preference: Preference) => void;
+  showResults: () => void;
 }) {
   var categoryLast: QualityCategory | null = null;
   return (
     <Box>
+      <Typography variant="body1" align="center">
+        Let's figure out how you can best enjoy Wintersun!
+      </Typography>
       <Typography variant="body1" align="justify">
-        Let's figure out how you can best enjoy Wintersun! Simply adjust any or
-        all of the sliders below to your preference;{" "}
-        <strong>left if you dislike</strong> the thing, or{" "}
-        <strong>right if you like</strong> the thing. Then press{" "}
-        <strong>GO!</strong> (top right) to see the results.
+        Below you will find sliders you can adjust to indicate your musical
+        preferences. Once you've done that, you can press this button (also at
+        the bottom of the page) to receive song recommendations:
+      </Typography>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-around",
+        }}
+      >
+        <Button variant="contained" onClick={showResults}>
+          See song recommendations
+        </Button>
+      </Box>
+      <Typography variant="body1" align="justify">
+        Perhaps start by picking three things you love (for example: power
+        metal, singalong songs, and folk music), move their respective sliders
+        all the way to the right to indicate your love, and press the button to
+        see some song recommendations.
+      </Typography>
+      <Typography variant="body1" align="justify">
+        Next you could try tuning in your likes and dislikes for every single
+        genre, vocal type, and so on, and see what happens! After that I have
+        some fun suggestions: go <strong>beyond genre</strong> by leaving the
+        GENRE sliders untouched, be <strong>positive</strong> by only moving
+        sliders to the right, show off your <strong>negativity</strong> by only
+        moving sliders to the left, or be a <strong>vocal elitist</strong> by
+        only adjusting the vocal sliders.
       </Typography>
       {Object.entries(preferences).map(([qualityName, preference]) => {
         if ((qualityName as QualityName) === "jari") return;
@@ -55,25 +83,16 @@ export default function Filters({
       <Typography variant="body1" align="center">
         That's all of the available preferences for now!
       </Typography>
-      <Typography variant="h4" align="center">
-        Suggestions
-      </Typography>
-      <Typography variant="body1" align="left">
-        <strong>Boundless</strong>: no adjusting genre sliders (they remain
-        neutral)
-      </Typography>
-      <Typography variant="body1" align="left">
-        <strong>Positivity</strong>: only move sliders to the right (only
-        like/love or neutral)
-      </Typography>
-      <Typography variant="body1" align="left">
-        <strong>Negativity</strong>: only move sliders to the left (only
-        dislike/hate or neutral)
-      </Typography>
-      <Typography variant="body1" align="left">
-        <strong>Vocalitist</strong>: adjust the vocal sliders and maybe a couple
-        of others
-      </Typography>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-around",
+        }}
+      >
+        <Button variant="contained" onClick={showResults}>
+          See song recommendations
+        </Button>
+      </Box>
     </Box>
   );
 }
@@ -89,9 +108,7 @@ function Filter({
 }) {
   return (
     <Box flexDirection="column">
-      <Box marginTop="16px" display="flex" justifyContent="center">
-        <FilterLabel qualityInfo={qualityInfo} preference={preference} />
-      </Box>
+      <FilterLabel qualityInfo={qualityInfo} preference={preference} />
       <Slider
         sx={{ width: "80%", margin: "0 10% 0 10%" }}
         valueLabelDisplay="auto"
@@ -168,18 +185,25 @@ function FilterLabel({
   }
   tooltip += " " + qualityInfo.long;
   return (
-    <Tooltip title={tooltip} placement="top" arrow>
-      <Box display="flex" justifyContent="space-between" width="65%">
-        <Box alignContent="center" fontSize="32px">
-          {emoji}
+    <Box
+      marginTop="16px"
+      marginBottom="0"
+      display="flex"
+      justifyContent="center"
+    >
+      <Tooltip title={tooltip} placement="top" arrow>
+        <Box display="flex" justifyContent="space-between" width="65%">
+          <Box alignContent="center" fontSize="32px">
+            {emoji}
+          </Box>
+          <Typography variant="h6" align="center" display="block">
+            {qualityInfo.label}
+          </Typography>
+          <Box alignContent="center" fontSize="32px">
+            {emoji}
+          </Box>
         </Box>
-        <Typography variant="h6" align="center" display="block">
-          {qualityInfo.label}
-        </Typography>
-        <Box alignContent="center" fontSize="32px">
-          {emoji}
-        </Box>
-      </Box>
-    </Tooltip>
+      </Tooltip>
+    </Box>
   );
 }

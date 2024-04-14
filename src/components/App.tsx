@@ -71,7 +71,13 @@ export default function App() {
   if (pageID === "welcome") {
     page = <Welcome />;
   } else if (pageID === "filters") {
-    page = <Filters preferences={preferences} setPreference={setPreference} />;
+    page = (
+      <Filters
+        preferences={preferences}
+        setPreference={setPreference}
+        showResults={() => setPageID("results")}
+      />
+    );
   } else if (pageID === "results") {
     preferenceChanged.current = false;
     songs.current = recommendation(preferences);
@@ -125,12 +131,11 @@ export default function App() {
               <Box>
                 <Button
                   variant="contained"
+                  disabled={pageID === "filters"}
                   sx={{ width: 100 }}
-                  onClick={() =>
-                    setPageID(pageID === "filters" ? "results" : "filters")
-                  }
+                  onClick={() => setPageID("filters")}
                 >
-                  {pageID === "filters" ? "Go!" : "Filters"}
+                  LIKES
                 </Button>
               </Box>
             </Box>

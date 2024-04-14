@@ -258,6 +258,10 @@ function score(preferences: Preferences, song: Song): number {
   for (qualityName in preferences) {
     preference = preferences[qualityName];
     quality = song.qualities[qualityName];
+    if (qualityName === "jari") {
+      score += quality;
+      continue;
+    }
     switch (preference) {
       case Preference.HATE:
         score -= quality * 3;
