@@ -125,12 +125,11 @@ export default function App() {
               <Box>
                 <Button
                   variant="contained"
+                  disabled={pageID === "filters"}
                   sx={{ width: 100 }}
-                  onClick={() =>
-                    setPageID(pageID === "filters" ? "results" : "filters")
-                  }
+                  onClick={() => setPageID("filters") }
                 >
-                  {pageID === "filters" ? "Go!" : "Filters"}
+                  LIKES
                 </Button>
               </Box>
             </Box>
