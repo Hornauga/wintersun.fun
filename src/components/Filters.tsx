@@ -108,9 +108,7 @@ function Filter({
 }) {
   return (
     <Box flexDirection="column">
-      <Box marginTop="16px" display="flex" justifyContent="center">
-        <FilterLabel qualityInfo={qualityInfo} preference={preference} />
-      </Box>
+      <FilterLabel qualityInfo={qualityInfo} preference={preference} />
       <Slider
         sx={{ width: "80%", margin: "0 10% 0 10%" }}
         valueLabelDisplay="auto"
@@ -187,18 +185,25 @@ function FilterLabel({
   }
   tooltip += " " + qualityInfo.long;
   return (
-    <Tooltip title={tooltip} placement="top" arrow>
-      <Box display="flex" justifyContent="space-between" width="65%">
-        <Box alignContent="center" fontSize="32px">
-          {emoji}
+    <Box
+      marginTop="16px"
+      marginBottom="0"
+      display="flex"
+      justifyContent="center"
+    >
+      <Tooltip title={tooltip} placement="top" arrow>
+        <Box display="flex" justifyContent="space-between" width="65%">
+          <Box alignContent="center" fontSize="32px">
+            {emoji}
+          </Box>
+          <Typography variant="h6" align="center" display="block">
+            {qualityInfo.label}
+          </Typography>
+          <Box alignContent="center" fontSize="32px">
+            {emoji}
+          </Box>
         </Box>
-        <Typography variant="h6" align="center" display="block">
-          {qualityInfo.label}
-        </Typography>
-        <Box alignContent="center" fontSize="32px">
-          {emoji}
-        </Box>
-      </Box>
-    </Tooltip>
+      </Tooltip>
+    </Box>
   );
 }
