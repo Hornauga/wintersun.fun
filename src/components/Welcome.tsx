@@ -336,7 +336,8 @@ export default function Welcome() {
         arbitrary qualifiers for music, then listened to and scored each song on
         those. Then, if you tell me you like, say, power metal, I try to use
         those scores to prioritize showing you songs I think you'd like if you
-        like power metal. I've simply attempted to encode my recommendation.
+        like power metal. I've simply attempted to encode my recommendation. Who
+        knows, maybe I'll implement some improvements another time.
       </Typography>
       <Typography variant="h5" align="center">
         What music is included?
