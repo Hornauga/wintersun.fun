@@ -12,6 +12,10 @@ import {
   Wintersun,
   Nightwish,
   Megadeth,
+  Immemorial,
+  Arthemesia,
+  Cadacross,
+  Powerwolf,
 } from "../music/artists";
 import albumEnsiferum from "../music/sources/ensiferum/albumEnsiferum";
 import albumIron from "../music/sources/ensiferum/albumIron";
@@ -25,41 +29,56 @@ export default function Welcome() {
   return (
     <Box>
       <Typography variant="h4" align="center">
-        TL;DR
+        What is this?
       </Typography>
       <Typography variant="body1" align="justify">
-        The band{" "}
+        This is a tool to introduce you to the music of{" "}
         <a href={Wintersun.wiki.toString()} target="_blank">
           {Wintersun.title}
-        </a>{" "}
-        is how{" "}
+        </a>
+        . Whether you never heard of them, are aware of their work, or have
+        attempted to enjoy their work to no avail,{" "}
+        <strong>this tool is for YOU</strong>.
+      </Typography>
+      <Typography variant="h5" align="center">
+        How do I use this tool?
+      </Typography>
+      <Typography variant="body1" align="justify">
+        Press <strong>LIKES</strong> (top right) and tell it what kind of music
+        you would like to hear. Once you have done that, you will receive song
+        recommendations based on your preferences: a bespoke introduction to
+        some of the music{" "}
         <a href={Jari.wiki.toString()} target="_blank">
           {Jari.title}
         </a>{" "}
-        makes music today. The purpose of this project is to bridge the gap
-        between you and Wintersun, because it will enrich your life, and because{" "}
-        <a href={timePackage.toString()} target="_blank">
-          more Wintersun listeners means more Wintersun music
-        </a>
-        !
+        (the mastermind behind Wintersun) has been involved in making over the
+        years.
+      </Typography>
+      <Typography variant="h5" align="center">
+        Why?
       </Typography>
       <Typography variant="body1" align="justify">
-        Press <strong>FILTERS</strong> (top right) and dial in your musical
-        preferences to receive a bespoke introduction to (nearly all of) the
-        music Jari has been involved in making over the years.
-      </Typography>
-      <Typography variant="body1" align="justify">
-        Please consider supporting Wintersun by contributing to{" "}
+        The purpose of this project is to bridge the gap between you and
+        Wintersun, because it will enrich your life, and because more Wintersun
+        listeners means more Wintersun music! Please consider supporting
+        Wintersun by contributing to{" "}
         <a href={timePackage.toString()} target="_blank">
           their crowdfunding campaign
         </a>
         , and you will receive tons of exclusive digital goodies! This is the
-        best possible way to help the band make music right now, and it is only
-        available for a short time, so grab it now! :)
+        best possible way to help the band make music, and it is only available
+        for a short time, so don't hesitate to grab it right now! I promise you
+        it will be worth it :)
       </Typography>
       <EmbedYouTube video={timePackageVideo} />
       <Typography variant="h4" align="center">
-        Abridged Wintersun History
+        The History of Wintersun
+      </Typography>
+      <Typography variant="body1" align="justify">
+        TL;DR: Jari wants to make music. He toiled for years, and people loved
+        his music, but it didn't match his ambitious vision. Now, with the
+        continued support of Wintersun fans, he is finally capable of making the
+        music he always envisioned.
       </Typography>
       <Typography variant="h5" align="center">
         Origin
@@ -274,26 +293,74 @@ export default function Welcome() {
         to produce amazing music!
       </Typography>
       <Typography variant="h4" align="center">
-        About This Project
+        About
+      </Typography>
+      <Typography variant="h5" align="center">
+        Who made this?
       </Typography>
       <Typography variant="body1" align="justify">
-        I am{" "}
+        I did. I am{" "}
         <a href="https://www.linkedin.com/in/ragnarenglish/" target="_blank">
           Ragnar English
         </a>
         . I love Salt Skum and Skyr, my favorite rhetorical device is hyperbole,{" "}
         and I care an awful lot about music, fitness, me(n)tal health, and the
-        wellbeing of my fellow humans.
+        wellbeing of my fellow humans. If you're interested in the source code,
+        you'll find it{" "}
+        <a href="https://github.com/Hornauga/wintersun.fun" target="_blank">
+          here
+        </a>
+        .
+      </Typography>
+      <Typography variant="h5" align="center">
+        Why make this?
       </Typography>
       <Typography variant="body1" align="justify">
         My motivation for making this project is in some way altruistic, because
         I believe your life will be enriched for the addition of Wintersun's
         music. Thus, as a pro bono humanitarian metal missionary, I hope to make
-        you a Wintersun listener by convincing you Jari has made some of the
-        most incredible music you will ever hear. In some way my motivation is
-        selfish, because I myself want more Wintersun music, and more Wintersun
-        listeners means more Wintersun music. I don't want to look back and
-        think I could have done more to support Wintersun, so here I am.
+        you a Wintersun listener by convincing you Jari has made (and will
+        continue to make!) some of the most incredible music you will ever hear.
+      </Typography>
+      <Typography variant="body1" align="justify">
+        In some way my motivation is selfish because I want more Wintersun music
+        for myself, and the best way to ensure more Wintersun music is to fund
+        Wintersun through crowdfunding donations, so here I am trying to get you
+        on board.
+      </Typography>
+      <Typography variant="h5" align="center">
+        How does this work?
+      </Typography>
+      <Typography variant="body1" align="justify">
+        Eeeeeehhhh.... it's not exactly science. I decided on some fairly
+        arbitrary qualifiers for music, then listened to and scored each song on
+        those. Then, if you tell me you like, say, power metal, I try to use
+        those scores to prioritize showing you songs I think you'd like if you
+        like power metal. I've simply attempted to encode my recommendation.
+      </Typography>
+      <Typography variant="h5" align="center">
+        What music is included?
+      </Typography>
+      <Typography variant="body1" align="justify">
+        Most of the readily available Ensiferum and Wintersun work involving
+        Jari (and some less so readily available), and any work sufficiently
+        featuring him (for example as a guest vocalist for{" "}
+        <a href={Powerwolf.wiki.toString()} target="_blank">
+          {Powerwolf.title}
+        </a>
+        , but not his guitar work for{" "}
+        <a href={Cadacross.wiki.toString()} target="_blank">
+          {Cadacross.title}
+        </a>{" "}
+        or Tuska20). Not included (yet) is his work on{" "}
+        <a href={Immemorial.wiki.toString()} target="_blank">
+          {Immemorial.title}
+        </a>{" "}
+        or{" "}
+        <a href={Arthemesia.wiki.toString()} target="_blank">
+          {Arthemesia.title}
+        </a>
+        .
       </Typography>
     </Box>
   );
