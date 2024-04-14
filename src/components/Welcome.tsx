@@ -32,7 +32,7 @@ export default function Welcome() {
         What is this?
       </Typography>
       <Typography variant="body1" align="justify">
-        This is a tool to introduce you to the music of{" "}
+        This is a tool you can use to discover the music of{" "}
         <a href={Wintersun.wiki.toString()} target="_blank">
           {Wintersun.title}
         </a>
