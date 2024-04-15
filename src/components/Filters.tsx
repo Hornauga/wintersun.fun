@@ -67,17 +67,16 @@ export default function Filters({
           );
         }
         return (
-          <>
+          <Box key={qualityName}>
             {categoryHeader}
             <Filter
-              key={qualityName} // I don't know why I suddenly need this
               qualityInfo={qualityInfo}
               preference={preference}
               setPreference={(newPreference: Preference) =>
                 setPreference(qualityName as QualityName, newPreference)
               }
             />
-          </>
+          </Box>
         );
       })}
       <Typography variant="body1" align="center">
