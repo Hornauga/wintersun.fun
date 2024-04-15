@@ -264,7 +264,7 @@ function score(preferences: Preferences, song: Song): number {
     }
     switch (preference) {
       case Preference.HATE:
-        score -= quality * 3;
+        score -= quality * 6;
         break;
       case Preference.DISLIKE:
         score -= quality;
