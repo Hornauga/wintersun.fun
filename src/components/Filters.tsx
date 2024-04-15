@@ -46,13 +46,13 @@ export default function Filters({
         see some song recommendations.
       </Typography>
       <Typography variant="body1" align="justify">
-        Next you could try tuning in your likes and dislikes for every single
-        genre, vocal type, and so on, and see what happens! After that I have
-        some fun suggestions: go <strong>beyond genre</strong> by leaving the
-        GENRE sliders untouched, be <strong>positive</strong> by only moving
+        Next you could try dialing in your exact likes and dislikes for every
+        single genre, vocal type, and so on, and see what happens! After that I
+        have some fun suggestions: go <strong>beyond genre</strong> by leaving
+        the GENRE sliders untouched, be <strong>positive</strong> by only moving
         sliders to the right, show off your <strong>negativity</strong> by only
         moving sliders to the left, or be a <strong>vocal elitist</strong> by
-        only adjusting the vocal sliders.
+        only adjusting the VOCAL sliders.
       </Typography>
       {Object.entries(preferences).map(([qualityName, preference]) => {
         if ((qualityName as QualityName) === "jari") return;
