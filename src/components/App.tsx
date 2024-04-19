@@ -52,7 +52,7 @@ type PageID = "welcome" | "filters" | "results";
 
 export default function App() {
   // The results of filtering
-  const [currentResult, setCurrentResult] = useState(0);
+  const [currentResult, setCurrentResult] = useState(-1);
   var songs = useRef<Song[]>([]);
   var preferenceChanged = useRef<boolean>(true);
 
@@ -61,7 +61,7 @@ export default function App() {
   function setPreference(qualityName: QualityName, preference: Preference) {
     if (preferences[qualityName] === preference) return;
     preferenceChanged.current = true;
-    setCurrentResult(0);
+    setCurrentResult(-1);
     setPreferences({ ...preferences, ...{ [qualityName]: preference } });
   }
 

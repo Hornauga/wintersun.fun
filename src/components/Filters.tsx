@@ -36,7 +36,7 @@ export default function Filters({
         }}
       >
         <Button variant="contained" onClick={showResults}>
-          See song recommendations
+          See top songs
         </Button>
       </Box>
       <Typography variant="body1" align="justify">
@@ -89,7 +89,7 @@ export default function Filters({
         }}
       >
         <Button variant="contained" onClick={showResults}>
-          See song recommendations
+          See top songs
         </Button>
       </Box>
     </Box>
