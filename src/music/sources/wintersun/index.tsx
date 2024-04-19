@@ -123,3 +123,28 @@ export const songSteelOfTheGods: Song = {
     melancholic: 1,
   },
 };
+
+export const songFountainOfLife: Song = {
+  title: "Fountain of Life",
+  release: albumFantasyMetalProject,
+  src: { youtube: "W6cys6aMZX0" },
+  qualities: {
+    jari: 0,
+    black: 0,
+    death: 0,
+    power: 0,
+    thrash: 0,
+    clean: 0,
+    extreme: 0,
+    choirs: 0,
+    singalong: 0,
+    riffs: 0,
+    solos: 0,
+    melodic: 0,
+    energetic: 0,
+    epic: 0,
+    folk: 0,
+    intense: 0,
+    melancholic: 0,
+  },
+};
