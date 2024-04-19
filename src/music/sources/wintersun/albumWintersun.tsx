@@ -68,7 +68,7 @@ export const songWinterMadness: Song = {
 
 export const songBeyondTheDarkSun: Song = {
   release: albumWintersun,
-  title: "Beyond The Dark Sun",
+  title: "Beyond the Dark Sun",
   src: { youtube: "KuG6lJ6xbKk", spotify: "1L3S5vFgsVzweUJnAIfSGM" },
   qualities: {
     // Done
