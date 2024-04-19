@@ -26,7 +26,7 @@ export default function Filters({
       </Typography>
       <Typography variant="body1" align="justify">
         Below you will find sliders you can adjust to indicate your musical
-        preferences. Once you've done that, you can press this button (also at
+        preferences (or what you are currently in the mood for). Once you've done that, you can press this button (also at
         the bottom of the page) to receive song recommendations:
       </Typography>
       <Box
@@ -42,13 +42,11 @@ export default function Filters({
       <Typography variant="body1" align="justify">
         Perhaps start by picking three things you love (for example: power
         metal, singalong songs, and folk music), move their respective sliders
-        all the way to the right to indicate your love, and press the button to
-        see some song recommendations.
+        all the way to the right to indicate your love, and press the button.
       </Typography>
       <Typography variant="body1" align="justify">
         Next you could try dialing in your exact likes and dislikes for every
-        single genre, vocal type, and so on, and see what happens! After that I
-        have some fun suggestions: go <strong>beyond genre</strong> by leaving
+        single genre, vocal type, and so on, and see what happens. After that, you could try one of these challenges: go <strong>beyond genre</strong> by leaving
         the GENRE sliders untouched, be <strong>positive</strong> by only moving
         sliders to the right, show off your <strong>negativity</strong> by only
         moving sliders to the left, or be a <strong>vocal elitist</strong> by
