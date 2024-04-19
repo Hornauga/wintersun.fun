@@ -12,44 +12,49 @@ import OneWithTheShadows from "./OneWithTheShadows";
 import { timePackage, timePackageVideo } from "../../music/misc";
 import { songDevotion } from "../../music/sources/misc/albumNuclearBlastAllstars";
 import { songSaturdaySatan } from "../../music/sources/misc/albumCallOfTheWild";
+import {
+  songBattleAgainstTime,
+  songBeautifulDeath,
+  songBeyondTheDarkSun,
+  songDeathAndTheHealing,
+  songSadnessAndHate,
+  songSleepingStars,
+  songStarchild,
+  songWinterMadness,
+} from "../../music/sources/wintersun/albumWintersun";
 
-const articles: Map<Song, JSX.Element> = new Map();
+const articleWayOfTheFire = <WayOfTheFire />;
+const articleOneWithTheShadows = <OneWithTheShadows />;
+const articleStorm = <Storm />;
 
-// Oops, forgot to use this to select songs... oh well
 export function SongArticle({ song }: { song: Song }): JSX.Element {
-  return articles.get(song) ?? <DefaultArticle song={song} />;
-}
-
-function DefaultArticle({ song }: { song: Song }) {
-  var article = <DefaultTimePackage />;
-  if (
-    "title" in song.release &&
-    ["Ensiferum", "Iron"].includes(song.release.title)
-  )
-    article = <Ensiferum />;
-  else if ("title" in song.release && song.release.title === "Time I")
-    article = <TimeI />;
-  else if (song === songDevotion || song === songSaturdaySatan)
-    article = <Vocals />;
-  else if (
-    [
-      "Winter Madness",
-      "Beyond the Dark Sun",
-      "Battle Against Time",
-      "Starchild",
-    ].includes(song.title)
-  )
-    article = <WayOfTheFire />;
-  else if (["Sadness and Hate", "Beautiful Death"].includes(song.title))
-    article = <Storm />;
-  else if (["Sleeping Stars", "Death and the Healing"].includes(song.title))
-    article = <OneWithTheShadows />;
   return (
     <>
       <SongDisplay song={song}></SongDisplay>
-      {article}
+      {songArticleHelper(song)}
     </>
   );
+}
+
+const articles: Map<string, JSX.Element> = new Map([
+  [songWinterMadness.title, articleWayOfTheFire],
+  [songBeyondTheDarkSun.title, articleWayOfTheFire],
+  [songBattleAgainstTime.title, articleWayOfTheFire],
+  [songStarchild.title, articleWayOfTheFire],
+  [songSleepingStars.title, articleOneWithTheShadows],
+  [songDeathAndTheHealing.title, articleOneWithTheShadows],
+  [songSadnessAndHate.title, articleOneWithTheShadows],
+  [songBeautifulDeath.title, articleStorm],
+]);
+
+function songArticleHelper(song: Song) {
+  if ("title" in song.release) {
+    if (["Ensiferum", "Iron"].includes(song.release.title))
+      return <Ensiferum />;
+    if (song.release.title.startsWith("Time I")) return <TimeI />;
+  }
+  if (song === songDevotion || song === songSaturdaySatan) return <Vocals />;
+  return articles.get(song.title) ?? <DefaultTimePackage />;
 }
 
 function DefaultTimePackage() {
