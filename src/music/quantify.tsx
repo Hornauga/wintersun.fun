@@ -258,26 +258,59 @@ function score(preferences: Preferences, song: Song): number {
   for (qualityName in preferences) {
     preference = preferences[qualityName];
     quality = song.qualities[qualityName];
-    if (qualityName === "jari") {
-      score += quality;
-      continue;
-    }
+    if (preference === Preference.NONE || quality === Quality.NONE) continue; // Does nothing
     switch (preference) {
       case Preference.HATE:
-        score -= quality * 6;
+        switch (quality) {
+          case Quality.SOME:
+            score -= 5;
+            break;
+          case Quality.MORE:
+            score -= 8;
+            break;
+          case Quality.MOST:
+            score -= 13;
+            break;
+        }
         break;
       case Preference.DISLIKE:
-        score -= quality;
-        break;
-      case Preference.NONE:
-        // Does nothing
+        switch (quality) {
+          case Quality.SOME:
+            score -= 3;
+            break;
+          case Quality.MORE:
+            score -= 5;
+            break;
+          case Quality.MOST:
+            score -= 8;
+            break;
+        }
         break;
       case Preference.LIKE:
-        score += quality * 2;
+        switch (quality) {
+          case Quality.SOME:
+            score += 4;
+            break;
+          case Quality.MORE:
+            score += 6;
+            break;
+          case Quality.MOST:
+            score += 9;
+            break;
+        }
         break;
       case Preference.LOVE:
-        // Love beats hate
-        score += quality * 4;
+        switch (quality) {
+          case Quality.SOME:
+            score += 6;
+            break;
+          case Quality.MORE:
+            score += 9;
+            break;
+          case Quality.MOST:
+            score += 14;
+            break;
+        }
         break;
     }
   }

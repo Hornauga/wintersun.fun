@@ -26,8 +26,9 @@ export default function Filters({
       </Typography>
       <Typography variant="body1" align="justify">
         Below you will find sliders you can adjust to indicate your musical
-        preferences (or what you are currently in the mood for). Once you've done that, you can press this button (also at
-        the bottom of the page) to receive song recommendations:
+        preferences (or what you are currently in the mood for). Once you've
+        done that, you can press this button (also at the bottom of the page) to
+        receive song recommendations:
       </Typography>
       <Box
         sx={{
@@ -46,11 +47,12 @@ export default function Filters({
       </Typography>
       <Typography variant="body1" align="justify">
         Next you could try dialing in your exact likes and dislikes for every
-        single genre, vocal type, and so on, and see what happens. After that, you could try one of these challenges: go <strong>beyond genre</strong> by leaving
-        the GENRE sliders untouched, be <strong>positive</strong> by only moving
-        sliders to the right, show off your <strong>negativity</strong> by only
-        moving sliders to the left, or be a <strong>vocal elitist</strong> by
-        only adjusting the VOCAL sliders.
+        single genre, vocal type, and so on, and see what happens. After that,
+        you could try one of these challenges: go <strong>beyond genre</strong>{" "}
+        by leaving the GENRE sliders untouched, be <strong>positive</strong> by
+        only moving sliders to the right, show off your{" "}
+        <strong>negativity</strong> by only moving sliders to the left, or be a{" "}
+        <strong>vocal elitist</strong> by only adjusting the VOCAL sliders.
       </Typography>
       {Object.entries(preferences).map(([qualityName, preference]) => {
         if ((qualityName as QualityName) === "jari") return;
