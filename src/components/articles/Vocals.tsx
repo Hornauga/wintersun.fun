@@ -9,9 +9,9 @@ export default function Vocals() {
   return (
     <>
       <Typography variant="body1" align="justify">
-        If you enjoy Jari's vocals on this track, just wait until you hear them
-        on Time II! This video features them between 0:50 and 2:00; check it
-        out!
+        Jari is only featured as a vocalist here, but if you enjoy his vocals on
+        this track, just wait until you hear them on Time II! This video
+        features them between 0:50 and 2:00; check it out!
       </Typography>
       <EmbedYouTube video={vocalSnippets} />
       <Typography variant="body1" align="justify">
