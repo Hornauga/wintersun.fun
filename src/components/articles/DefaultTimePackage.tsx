@@ -9,9 +9,9 @@ export default function DefaultTimePackage() {
         Time Package Crowdfunding
       </Typography>
       <Typography variant="body1" align="justify">
-        If you enjoy this song, you'll probably enjoy the{" "}
+        If you enjoy this song, you'll probably enjoy{" "}
         <a href={timePackage.toString()} target="_blank">
-          Time Package
+          The Time Package
         </a>
         ! Please consider purchasing it so Wintersun can make even more music
         for you to enjoy!

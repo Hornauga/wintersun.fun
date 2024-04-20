@@ -15,7 +15,7 @@ export default function Ensiferum() {
         <a href={timePackage.toString()} target="_blank">
           Legendary Early Demos from the Time Package
         </a>
-        ! They include tons of similar and previously unreleased music such as
+        ! They include tons of similar and previously unreleased demos such as
         these:
       </Typography>
       <EmbedYouTube video={songSteelOfTheGods} />

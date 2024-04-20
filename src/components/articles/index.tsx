@@ -8,6 +8,7 @@ import WayOfTheFire from "./WayOfTheFire";
 import Storm from "./Storm";
 import OneWithTheShadows from "./OneWithTheShadows";
 import DefaultTimePackage from "./DefaultTimePackage";
+import LegendaryEarlyDemo from "./LegendaryEarlyDemo";
 
 import { songDevotion } from "../../music/sources/misc/albumNuclearBlastAllstars";
 import { songSaturdaySatan } from "../../music/sources/misc/albumCallOfTheWild";
@@ -21,7 +22,13 @@ import {
   songStarchild,
   songWinterMadness,
 } from "../../music/sources/wintersun/albumWintersun";
+import {
+  songFountainOfLife,
+  songRedHorizon,
+  songSteelOfTheGods,
+} from "../../music/sources/wintersun";
 
+const articleVocals = <Vocals />;
 const articleWayOfTheFire = <WayOfTheFire />;
 const articleOneWithTheShadows = <OneWithTheShadows />;
 const articleStorm = <Storm />;
@@ -44,6 +51,11 @@ const articles: Map<string, JSX.Element> = new Map([
   [songDeathAndTheHealing.title, articleOneWithTheShadows],
   [songSadnessAndHate.title, articleOneWithTheShadows],
   [songBeautifulDeath.title, articleStorm],
+  [songDevotion.title, articleVocals],
+  [songSaturdaySatan.title, articleVocals],
+  [songSteelOfTheGods.title, <LegendaryEarlyDemo song={songSteelOfTheGods} />],
+  [songRedHorizon.title, <LegendaryEarlyDemo song={songRedHorizon} />],
+  [songFountainOfLife.title, <LegendaryEarlyDemo song={songFountainOfLife} />],
 ]);
 
 function songArticleHelper(song: Song) {
@@ -52,6 +64,5 @@ function songArticleHelper(song: Song) {
       return <Ensiferum />;
     if (song.release.title.startsWith("Time I")) return <TimeI />;
   }
-  if (song === songDevotion || song === songSaturdaySatan) return <Vocals />;
   return articles.get(song.title) ?? <DefaultTimePackage />;
 }
