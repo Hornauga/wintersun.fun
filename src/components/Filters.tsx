@@ -26,8 +26,9 @@ export default function Filters({
       </Typography>
       <Typography variant="body1" align="justify">
         Below you will find sliders you can adjust to indicate your musical
-        preferences. Once you've done that, you can press this button (also at
-        the bottom of the page) to receive song recommendations:
+        preferences (or what you are currently in the mood for). Once you've
+        done that, you can press this button (also at the bottom of the page) to
+        receive song recommendations:
       </Typography>
       <Box
         sx={{
@@ -36,23 +37,21 @@ export default function Filters({
         }}
       >
         <Button variant="contained" onClick={showResults}>
-          See song recommendations
+          See top songs
         </Button>
       </Box>
       <Typography variant="body1" align="justify">
         Perhaps start by picking three things you love (for example: power
         metal, singalong songs, and folk music), move their respective sliders
-        all the way to the right to indicate your love, and press the button to
-        see some song recommendations.
+        all the way to the right to indicate your love, and press the button.
       </Typography>
       <Typography variant="body1" align="justify">
-        Next you could try tuning in your likes and dislikes for every single
-        genre, vocal type, and so on, and see what happens! After that I have
-        some fun suggestions: go <strong>beyond genre</strong> by leaving the
-        GENRE sliders untouched, be <strong>positive</strong> by only moving
-        sliders to the right, show off your <strong>negativity</strong> by only
-        moving sliders to the left, or be a <strong>vocal elitist</strong> by
-        only adjusting the vocal sliders.
+        After that you could dial in your exact likes and dislikes, but consider
+        trying one of these challenges: go <strong>beyond genre</strong> by
+        leaving the GENRE sliders untouched, be <strong>positive</strong> by
+        only moving sliders to the right, show off your{" "}
+        <strong>negativity</strong> by only moving sliders to the left, or be a{" "}
+        <strong>vocal elitist</strong> by only adjusting the VOCAL sliders.
       </Typography>
       {Object.entries(preferences).map(([qualityName, preference]) => {
         if ((qualityName as QualityName) === "jari") return;
@@ -67,17 +66,16 @@ export default function Filters({
           );
         }
         return (
-          <>
+          <Box key={qualityName}>
             {categoryHeader}
             <Filter
-              key={qualityName} // I don't know why I suddenly need this
               qualityInfo={qualityInfo}
               preference={preference}
               setPreference={(newPreference: Preference) =>
                 setPreference(qualityName as QualityName, newPreference)
               }
             />
-          </>
+          </Box>
         );
       })}
       <Typography variant="body1" align="center">
@@ -90,7 +88,7 @@ export default function Filters({
         }}
       >
         <Button variant="contained" onClick={showResults}>
-          See song recommendations
+          See top songs
         </Button>
       </Box>
     </Box>

@@ -12,6 +12,7 @@ import {
   songWarning,
   songRedHorizon,
   songSteelOfTheGods,
+  songFountainOfLife,
 } from "./sources/wintersun";
 import { songMemory } from "./sources/misc";
 import { songDevotion } from "./sources/misc/albumNuclearBlastAllstars";
@@ -137,8 +138,8 @@ export const qualityInfos: Record<QualityName, QualityInfo> = {
   epic: { category: "other", label: "Epic music", long: "epic music" },
   folk: {
     category: "other",
-    label: "Folk music",
-    long: "folk music",
+    label: "Folky music",
+    long: "folky music",
   },
   intense: { category: "other", label: "Intense music", long: "intense music" },
   melancholic: {
@@ -245,6 +246,7 @@ const allSongs: Song[] = [
   songWarning,
   songRedHorizon,
   songSteelOfTheGods,
+  songFountainOfLife,
   songSaturdaySatan,
   songMemory,
   songDevotion,
@@ -258,26 +260,63 @@ function score(preferences: Preferences, song: Song): number {
   for (qualityName in preferences) {
     preference = preferences[qualityName];
     quality = song.qualities[qualityName];
+    if (preference === Preference.NONE || quality === Quality.NONE) continue; // Does nothing
     if (qualityName === "jari") {
-      score += quality;
+      score += quality; // Only nudge
       continue;
     }
     switch (preference) {
       case Preference.HATE:
-        score -= quality * 3;
+        switch (quality) {
+          case Quality.SOME:
+            score -= 5;
+            break;
+          case Quality.MORE:
+            score -= 8;
+            break;
+          case Quality.MOST:
+            score -= 13;
+            break;
+        }
         break;
       case Preference.DISLIKE:
-        score -= quality;
-        break;
-      case Preference.NONE:
-        // Does nothing
+        switch (quality) {
+          case Quality.SOME:
+            score -= 3;
+            break;
+          case Quality.MORE:
+            score -= 5;
+            break;
+          case Quality.MOST:
+            score -= 8;
+            break;
+        }
         break;
       case Preference.LIKE:
-        score += quality * 2;
+        switch (quality) {
+          case Quality.SOME:
+            score += 4;
+            break;
+          case Quality.MORE:
+            score += 6;
+            break;
+          case Quality.MOST:
+            score += 9;
+            break;
+        }
         break;
       case Preference.LOVE:
-        // Love beats hate
-        score += quality * 4;
+        switch (quality) {
+          case Quality.SOME:
+            score += 6;
+            break;
+          case Quality.MORE:
+            score += 9;
+            break;
+          case Quality.MOST:
+            score += 14;
+            break;
+        }
         break;
     }
   }
@@ -292,5 +331,6 @@ export function recommendation(preferences: Preferences): Song[] {
     score: score(preferences, song),
   }));
   result.sort((a, b) => b.score - a.score);
+  console.log(result);
   return result.map((e) => e.song);
 }

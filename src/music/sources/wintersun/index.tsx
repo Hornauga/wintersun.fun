@@ -10,7 +10,7 @@ export const songWinterAcoustic: Song = {
   src: { youtube: "YJqjdyjg6w4" },
   qualities: {
     // Done
-    jari: 3,
+    jari: 2,
     black: 1,
     death: 0,
     power: 0,
@@ -70,7 +70,7 @@ export const songRedHorizon: Song = {
   src: { youtube: "hYKIONR-abc" },
   qualities: {
     // Done
-    jari: 3,
+    jari: 2,
     black: 2,
     death: 0,
     power: 1,
@@ -104,7 +104,7 @@ export const songSteelOfTheGods: Song = {
   src: { youtube: "4x36OoFYGyE" },
   qualities: {
     // Done
-    jari: 3,
+    jari: 2,
     black: 1,
     death: 0,
     power: 2,
@@ -121,5 +121,31 @@ export const songSteelOfTheGods: Song = {
     folk: 2,
     intense: 3,
     melancholic: 1,
+  },
+};
+
+export const songFountainOfLife: Song = {
+  title: "Fountain of Life",
+  release: albumFantasyMetalProject,
+  src: { youtube: "W6cys6aMZX0" },
+  qualities: {
+    // Done
+    jari: 2,
+    black: 0,
+    death: 0,
+    power: 1,
+    thrash: 1,
+    clean: 0,
+    extreme: 2,
+    choirs: 1,
+    singalong: 0,
+    riffs: 1,
+    solos: 1,
+    melodic: 1,
+    energetic: 1,
+    epic: 1,
+    folk: 1,
+    intense: 1,
+    melancholic: 2,
   },
 };

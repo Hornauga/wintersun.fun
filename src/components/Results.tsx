@@ -1,6 +1,7 @@
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 
+import DraftsIcon from "@mui/icons-material/Drafts";
 import ChevronLeft from "@mui/icons-material/ChevronLeft";
 import ChevronRight from "@mui/icons-material/ChevronRight";
 import FirstPage from "@mui/icons-material/FirstPage";
@@ -8,6 +9,10 @@ import LastPage from "@mui/icons-material/LastPage";
 
 import { SongArticle } from "./articles";
 import { Song } from "../music/things";
+import { Typography } from "@mui/material";
+
+const firstResult = -1;
+const lastResult = 8;
 
 export default function Results({
   songs,
@@ -18,6 +23,12 @@ export default function Results({
   currentResult: number;
   setCurrentResult: React.Dispatch<React.SetStateAction<number>>;
 }) {
+  const article =
+    currentResult === firstResult ? (
+      <OverviewArticle songs={songs} />
+    ) : (
+      <SongArticle song={songs[currentResult]} />
+    );
   return (
     <Box>
       <Box
@@ -33,8 +44,8 @@ export default function Results({
           variant="outlined"
           color="secondary"
           sx={{ width: "16%" }}
-          disabled={currentResult === 0}
-          onClick={() => setCurrentResult(0)}
+          disabled={currentResult === firstResult}
+          onClick={() => setCurrentResult(firstResult)}
         >
           <FirstPage />
         </Button>
@@ -42,20 +53,23 @@ export default function Results({
           variant="outlined"
           color="secondary"
           sx={{ width: "16%" }}
-          disabled={currentResult === 0}
+          disabled={currentResult === firstResult}
           onClick={() => setCurrentResult(currentResult - 1)}
         >
           <ChevronLeft />
         </Button>
-        <Button variant="text" disabled sx={{ width: "16%" }}>
-          {/* TODO: Is this a hack? Yes it is */}
-          {currentResult + 1}/{songs.length}
-        </Button>
+        <Typography align="center" color="secondary" sx={{ width: "16%" }}>
+          {currentResult === firstResult && <DraftsIcon color="secondary" />}
+          <strong>
+            {currentResult > firstResult &&
+              `${currentResult + 1}/${lastResult + 1}`}
+          </strong>
+        </Typography>
         <Button
           variant="outlined"
           color="secondary"
           sx={{ width: "16%" }}
-          disabled={currentResult === songs.length - 1}
+          disabled={currentResult === lastResult}
           onClick={() => setCurrentResult(currentResult + 1)}
         >
           <ChevronRight />
@@ -64,13 +78,34 @@ export default function Results({
           variant="outlined"
           color="secondary"
           sx={{ width: "16%" }}
-          disabled={currentResult === songs.length - 1}
-          onClick={() => setCurrentResult(songs.length - 1)}
+          disabled={currentResult === lastResult}
+          onClick={() => setCurrentResult(lastResult)}
         >
           <LastPage />
         </Button>
       </Box>
-      <SongArticle song={songs[currentResult]} />
+      {article}
     </Box>
+  );
+}
+
+function OverviewArticle({ songs }: { songs: Song[] }) {
+  const topSongs = songs.slice(0, lastResult + 1);
+  return (
+    <>
+      <Typography variant="h4" align="center">
+        Your Top Songs
+      </Typography>
+      {topSongs.map((song, index) => {
+        return (
+          <Typography variant="body1" align="center" key={index}>
+            {index + 1}. {song.title} by{" "}
+            <a href={song.release.artist.wiki.toString()} target="_blank">
+              {song.release.artist.title}
+            </a>{" "}
+          </Typography>
+        );
+      })}
+    </>
   );
 }

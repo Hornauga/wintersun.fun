@@ -13,7 +13,7 @@ export const songMemory: Song = {
     power: 3,
     thrash: 1,
     clean: 3,
-    extreme: 1,
+    extreme: 0,
     choirs: 2,
     singalong: 3,
     riffs: 1,

@@ -44,10 +44,9 @@ export default function Welcome() {
         How do I use this tool?
       </Typography>
       <Typography variant="body1" align="justify">
-        Press <strong>LIKES</strong> (top right) and tell it what kind of music
-        you would like to hear. Once you have done that, you will receive song
-        recommendations based on your preferences: a bespoke introduction to
-        some of the music{" "}
+        Press <strong>LIKES</strong> (top right) and dial in your musical
+        preferences to see your top songs: a bespoke introduction to some of the
+        music{" "}
         <a href={Jari.wiki.toString()} target="_blank">
           {Jari.title}
         </a>{" "}
