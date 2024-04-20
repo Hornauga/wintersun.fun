@@ -138,8 +138,8 @@ export const qualityInfos: Record<QualityName, QualityInfo> = {
   epic: { category: "other", label: "Epic music", long: "epic music" },
   folk: {
     category: "other",
-    label: "Folk music",
-    long: "folk music",
+    label: "Folky music",
+    long: "folky music",
   },
   intense: { category: "other", label: "Intense music", long: "intense music" },
   melancholic: {
