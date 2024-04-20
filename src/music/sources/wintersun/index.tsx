@@ -10,7 +10,7 @@ export const songWinterAcoustic: Song = {
   src: { youtube: "YJqjdyjg6w4" },
   qualities: {
     // Done
-    jari: 3,
+    jari: 2,
     black: 1,
     death: 0,
     power: 0,
@@ -70,7 +70,7 @@ export const songRedHorizon: Song = {
   src: { youtube: "hYKIONR-abc" },
   qualities: {
     // Done
-    jari: 3,
+    jari: 2,
     black: 2,
     death: 0,
     power: 1,
@@ -104,7 +104,7 @@ export const songSteelOfTheGods: Song = {
   src: { youtube: "4x36OoFYGyE" },
   qualities: {
     // Done
-    jari: 3,
+    jari: 2,
     black: 1,
     death: 0,
     power: 2,
