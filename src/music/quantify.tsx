@@ -261,6 +261,10 @@ function score(preferences: Preferences, song: Song): number {
     preference = preferences[qualityName];
     quality = song.qualities[qualityName];
     if (preference === Preference.NONE || quality === Quality.NONE) continue; // Does nothing
+    if (qualityName === "jari") {
+      score += quality; // Only nudge
+      continue;
+    }
     switch (preference) {
       case Preference.HATE:
         switch (quality) {
@@ -327,5 +331,6 @@ export function recommendation(preferences: Preferences): Song[] {
     score: score(preferences, song),
   }));
   result.sort((a, b) => b.score - a.score);
+  console.log(result);
   return result.map((e) => e.song);
 }
