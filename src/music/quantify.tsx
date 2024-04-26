@@ -13,6 +13,7 @@ import {
   songRedHorizon,
   songSteelOfTheGods,
   songFountainOfLife,
+  songTheDragonSong,
 } from "./sources/wintersun";
 import { songMemory } from "./sources/misc";
 import { songDevotion } from "./sources/misc/albumNuclearBlastAllstars";
@@ -247,6 +248,7 @@ const allSongs: Song[] = [
   songRedHorizon,
   songSteelOfTheGods,
   songFountainOfLife,
+  songTheDragonSong,
   songSaturdaySatan,
   songMemory,
   songDevotion,

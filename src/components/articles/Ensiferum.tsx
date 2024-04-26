@@ -5,6 +5,7 @@ import {
   songFountainOfLife,
   songRedHorizon,
   songSteelOfTheGods,
+  songTheDragonSong,
 } from "../../music/sources/wintersun";
 
 export default function Ensiferum() {
@@ -19,6 +20,7 @@ export default function Ensiferum() {
         these:
       </Typography>
       <EmbedYouTube video={songSteelOfTheGods} />
+      <EmbedYouTube video={songTheDragonSong} />
       <EmbedYouTube video={songRedHorizon} />
       <EmbedYouTube video={songFountainOfLife} />
       <Typography variant="body1" align="justify">

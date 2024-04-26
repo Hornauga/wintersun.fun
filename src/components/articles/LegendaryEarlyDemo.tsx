@@ -6,6 +6,7 @@ import {
   songFountainOfLife,
   songRedHorizon,
   songSteelOfTheGods,
+  songTheDragonSong,
 } from "../../music/sources/wintersun";
 
 export default function LegendaryEarlyDemo({ song }: { song: Song }) {
@@ -22,6 +23,7 @@ export default function LegendaryEarlyDemo({ song }: { song: Song }) {
       {song !== songSteelOfTheGods && (
         <EmbedYouTube video={songSteelOfTheGods} />
       )}
+      {song !== songTheDragonSong && <EmbedYouTube video={songTheDragonSong} />}
       {song !== songRedHorizon && <EmbedYouTube video={songRedHorizon} />}
       {song !== songFountainOfLife && (
         <EmbedYouTube video={songFountainOfLife} />
