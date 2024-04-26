@@ -149,3 +149,28 @@ export const songFountainOfLife: Song = {
     melancholic: 2,
   },
 };
+
+export const songTheDragonSong: Song = {
+  title: "The Dragon Song",
+  release: albumFantasyMetalProject,
+  src: { youtube: "mwL5PVR8ODs" },
+  qualities: {
+    jari: 2,
+    black: 0,
+    death: 0,
+    power: 0,
+    thrash: 0,
+    clean: 0,
+    extreme: 0,
+    choirs: 0,
+    singalong: 0,
+    riffs: 0,
+    solos: 0,
+    melodic: 0,
+    energetic: 0,
+    epic: 0,
+    folk: 0,
+    intense: 0,
+    melancholic: 0,
+  },
+};
