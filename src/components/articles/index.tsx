@@ -26,6 +26,7 @@ import {
   songFountainOfLife,
   songRedHorizon,
   songSteelOfTheGods,
+  songTheDragonSong,
 } from "../../music/sources/wintersun";
 
 const articleVocals = <Vocals />;
@@ -54,6 +55,7 @@ const articles: Map<string, JSX.Element> = new Map([
   [songDevotion.title, articleVocals],
   [songSaturdaySatan.title, articleVocals],
   [songSteelOfTheGods.title, <LegendaryEarlyDemo song={songSteelOfTheGods} />],
+  [songTheDragonSong.title, <LegendaryEarlyDemo song={songTheDragonSong} />],
   [songRedHorizon.title, <LegendaryEarlyDemo song={songRedHorizon} />],
   [songFountainOfLife.title, <LegendaryEarlyDemo song={songFountainOfLife} />],
 ]);

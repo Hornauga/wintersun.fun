@@ -13,6 +13,7 @@ import {
   songRedHorizon,
   songSteelOfTheGods,
   songFountainOfLife,
+  songTheDragonSong,
 } from "./sources/wintersun";
 import { songMemory } from "./sources/misc";
 import { songDevotion } from "./sources/misc/albumNuclearBlastAllstars";
@@ -247,6 +248,7 @@ const allSongs: Song[] = [
   songRedHorizon,
   songSteelOfTheGods,
   songFountainOfLife,
+  songTheDragonSong,
   songSaturdaySatan,
   songMemory,
   songDevotion,
@@ -326,11 +328,10 @@ function score(preferences: Preferences, song: Song): number {
 // TODO: we will pass some information on to users
 //export function recommendation(preferences: Preferences): {song: Song, score: number}[] {
 export function recommendation(preferences: Preferences): Song[] {
-  var result = allSongs.map((song) => ({
+  const result = allSongs.map((song) => ({
     song: song,
     score: score(preferences, song),
   }));
   result.sort((a, b) => b.score - a.score);
-  console.log(result);
   return result.map((e) => e.song);
 }
