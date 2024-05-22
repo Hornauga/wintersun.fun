@@ -58,18 +58,38 @@ export default function Welcome() {
       </Typography>
       <Typography variant="body1" align="justify">
         The purpose of this project is to bridge the gap between you and
-        Wintersun, because it will enrich your life, and because more Wintersun
-        listeners means more Wintersun music! Please consider supporting
-        Wintersun by contributing to{" "}
-        <a href={timePackage.toString()} target="_blank">
-          their crowdfunding campaign
+        Wintersun, because more Wintersun listeners means more Wintersun music!
+        Please consider supporting Wintersun by{" "}
+        <a href="https://www.patreon.com/wintersun" target="_blank">
+          becoming a patron
+        </a>{" "}
+        or purchasing their merchandise via{" "}
+        <a href="https://wintersun.bandcamp.com" target="_blank">
+          Bandcamp
         </a>
-        , and you will receive tons of exclusive digital goodies! This is the
-        best possible way to help the band make music, and it is only available
-        for a short time, so don't hesitate to grab it right now! I promise you
-        it will be worth it :)
+        ,{" "}
+        <a
+          href="https://www.kapanen-production-store.de/en/c/wintersun-official-store"
+          target="_blank"
+        >
+          Kapanen-production
+        </a>
+        ,{" "}
+        <a
+          href="https://www.nuclearblast.com/collections/wintersun"
+          target="_blank"
+        >
+          Nuclear Blast
+        </a>
+        , or{" "}
+        <a
+          href="https://fineartamerica.com/profiles/jariwintersun/shop"
+          target="_blank"
+        >
+          Jari's art shop
+        </a>
+        .
       </Typography>
-      <EmbedYouTube video={timePackageVideo} />
       <Typography variant="h4" align="center">
         The History of Wintersun
       </Typography>
