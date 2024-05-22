@@ -10,11 +10,11 @@ export default function WayOfTheFire() {
     <>
       <Typography variant="body1" align="justify">
         If you enjoy this song, perhaps you'll really like "The Way of the Fire"
-        from Time II, included in{" "}
+        from{" "}
         <a href={timePackage.toString()} target="_blank">
-          The Time Package
-        </a>{" "}
-        and featured at 4:49 in this video:
+          the upcoming Time II album
+        </a>
+        , featured at 4:49 in this video:
       </Typography>
       <EmbedYouTube video={fireSnippet} />
     </>
