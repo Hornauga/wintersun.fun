@@ -10,17 +10,13 @@ export default function Vocals() {
     <>
       <Typography variant="body1" align="justify">
         Jari is only featured as a vocalist here, but if you enjoy his vocals on
-        this track, just wait until you hear them on Time II! This video
-        features them between 0:50 and 2:00; check it out!
+        this track, just wait until you hear them on{" "}
+        <a href={timePackage.toString()} target="_blank">
+          the upcoming Time II album
+        </a>
+        ! This video features them between 0:50 and 2:00; check it out!
       </Typography>
       <EmbedYouTube video={vocalSnippets} />
-      <Typography variant="body1" align="justify">
-        Please consider purchasing{" "}
-        <a href={timePackage.toString()} target="_blank">
-          The Time Package
-        </a>{" "}
-        so Jari can continue caressing your cochlear canals!
-      </Typography>
     </>
   );
 }

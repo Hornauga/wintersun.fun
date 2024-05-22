@@ -23,13 +23,6 @@ export default function Ensiferum() {
       <EmbedYouTube video={songTheDragonSong} />
       <EmbedYouTube video={songRedHorizon} />
       <EmbedYouTube video={songFountainOfLife} />
-      <Typography variant="body1" align="justify">
-        Please consider purchasing{" "}
-        <a href={timePackage.toString()} target="_blank">
-          The Time Package
-        </a>{" "}
-        so Wintersun can continue making music for you to enjoy!
-      </Typography>
     </>
   );
 }

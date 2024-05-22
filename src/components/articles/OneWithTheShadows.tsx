@@ -10,11 +10,11 @@ export default function OneWithTheShadows() {
     <>
       <Typography variant="body1" align="justify">
         If you enjoy this song, perhaps you'll really like "One With The
-        Shadows" from Time II, included in{" "}
+        Shadows" from{" "}
         <a href={timePackage.toString()} target="_blank">
-          The Time Package
-        </a>{" "}
-        and featured at 0:34 in this video:
+          the upcoming Time II album
+        </a>
+        , featured at 0:34 in this video:
       </Typography>
       <EmbedYouTube video={snippet} />
     </>

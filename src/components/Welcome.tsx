@@ -1,8 +1,6 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
-import EmbedYouTube from "./EmbedYouTube";
-
 import {
   Jari,
   Kai,
@@ -21,7 +19,7 @@ import albumEnsiferum from "../music/sources/ensiferum/albumEnsiferum";
 import albumIron from "../music/sources/ensiferum/albumIron";
 import albumWintersun from "../music/sources/wintersun/albumWintersun";
 import albumTimeI from "../music/sources/wintersun/albumTimeI";
-import { timePackage, timePackageVideo } from "../music/misc";
+import { timePackage } from "../music/misc";
 import albumTheForestSeasons from "../music/sources/wintersun/albumTheForestSeasons";
 import { forestPackage } from "../music/misc";
 
@@ -58,18 +56,38 @@ export default function Welcome() {
       </Typography>
       <Typography variant="body1" align="justify">
         The purpose of this project is to bridge the gap between you and
-        Wintersun, because it will enrich your life, and because more Wintersun
-        listeners means more Wintersun music! Please consider supporting
-        Wintersun by contributing to{" "}
-        <a href={timePackage.toString()} target="_blank">
-          their crowdfunding campaign
+        Wintersun, because more Wintersun listeners means more Wintersun music!
+        Please consider supporting Wintersun by{" "}
+        <a href="https://www.patreon.com/wintersun" target="_blank">
+          becoming a patron
+        </a>{" "}
+        or purchasing their merchandise via{" "}
+        <a href="https://wintersun.bandcamp.com" target="_blank">
+          Bandcamp
         </a>
-        , and you will receive tons of exclusive digital goodies! This is the
-        best possible way to help the band make music, and it is only available
-        for a short time, so don't hesitate to grab it right now! I promise you
-        it will be worth it :)
+        ,{" "}
+        <a
+          href="https://www.kapanen-production-store.de/en/c/wintersun-official-store"
+          target="_blank"
+        >
+          Kapanen-production
+        </a>
+        ,{" "}
+        <a
+          href="https://www.nuclearblast.com/collections/wintersun"
+          target="_blank"
+        >
+          Nuclear Blast
+        </a>
+        , or{" "}
+        <a
+          href="https://fineartamerica.com/profiles/jariwintersun/shop"
+          target="_blank"
+        >
+          Jari's art shop
+        </a>
+        .
       </Typography>
-      <EmbedYouTube video={timePackageVideo} />
       <Typography variant="h4" align="center">
         The History of Wintersun
       </Typography>
@@ -252,44 +270,45 @@ export default function Welcome() {
       </Typography>
       <Typography variant="body1" align="justify">
         Although the crowdfunding funds weren't sufficient to complete the
-        Wintersun studio, Jari put those funds to work rather than have them sit
-        around depreciating in value. He invested the money into equipment and
-        facilities which will eventually become part of the Wintersun studio,
-        and would make making Wintersun music easier until such time. These
-        resources coupled with technological advances meant the production of
-        further Wintersun albums could progress, and soon Jari found that he was
-        capable of realizing his vision for Time II. Not only that, but he could
-        go back and do the same for Time I, finally realizing his original and
-        true vision for the Time project, or in fact any Wintersun album.
+        Wintersun studio, Jari put those funds to work. He invested the money
+        into equipment and facilities which will eventually become part of the
+        Wintersun studio, and would make making Wintersun music easier until
+        such time. These resources coupled with technological advances meant the
+        production of further Wintersun albums could progress, and soon Jari
+        found that he was capable of realizing his vision for Time II. Not only
+        that, but he could go back and do the same for Time I, finally realizing
+        his original and true vision for the Time project, or in fact any
+        Wintersun album.
       </Typography>
       <Typography variant="body1" align="justify">
         With Time I and II both complete and slated for release in August 2024,
         and still wishing to progress towards their goal of having a studio to
         make upcoming albums possible, Wintersun applied the same approach as
-        with their previous album and made a new (ongoing!) crowdfunding
-        campaign for their latest product:{" "}
+        with their previous album and made a second crowdfunding campaign for
+        their latest product:{" "}
         <a href={timePackage.toString()} target="_blank">
           The Time Package
         </a>
-        ! Not only does this digital package include the definitive versions of
-        both Time I and Time II and tons of goodies, but Jari added something
-        not a single fan anticipated.
+        !
       </Typography>
       <Typography variant="body1" align="justify">
-        See, prior to Wintersun's debut, Jari composed and recorded multiple
-        demo songs, and even a full fantasy themed demo album which he had
-        always hoped to record with Wintersun. Some of the songs had already
-        made their way onto the debut album and Time, but some had not, and
-        others simply weren't a fit for Wintersun (for example, being "too power
-        metal"). But thing is, Wintersun are already working on a few albums to
-        follow Time, leaving no time in the near future to make anything of
-        these demos. Given this, Jari decided to mix and master ALL of these
-        demos and release them as part of the crowdfunding!
+        Not only did this digital package include the definitive versions of
+        both Time I and Time II and tons of goodies, but Jari added something no
+        fan anticipated: the legendary early demos. Prior to Wintersun's debut,
+        Jari composed and recorded multiple demo songs, and even a full fantasy
+        themed demo album which he had always hoped to record with Wintersun.
+        Some of the songs had already made their way onto the debut album and
+        Time, but some had not, and others simply weren't a fit for Wintersun
+        (for example, being "too power metal"). As Wintersun were already
+        working on a few albums to follow Time, there was no time in the near
+        future to make anything of these demos. Given this, Jari decided to mix
+        and master ALL of them and release them as part of the crowdfunding
+        package.
       </Typography>
       <Typography variant="body1" align="justify">
-        That's where the story is today. Don't miss this amazing package, and
-        the rare opportunity to be able to directly support Wintersun's effort
-        to produce amazing music!
+        The crowdfunding achieved its goal and beat the numbers of the prior
+        campaign. Contributors and other fans alike now await the end of August
+        2024 to enjoy the rewards.
       </Typography>
       <Typography variant="h4" align="center">
         About

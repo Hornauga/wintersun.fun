@@ -13,11 +13,12 @@ export default function LegendaryEarlyDemo({ song }: { song: Song }) {
   return (
     <>
       <Typography variant="body1" align="justify">
-        This song is a previously unreleased demo that is available with{" "}
+        This song is a previously unreleased demo that will become available
+        with{" "}
         <a href={timePackage.toString()} target="_blank">
           The Legendary Early Demos from the Time Package
         </a>
-        , which includes tons of similar and previously unreleased music such as
+        , which included tons of similar and previously unreleased music such as
         these:
       </Typography>
       {song !== songSteelOfTheGods && (
@@ -28,14 +29,6 @@ export default function LegendaryEarlyDemo({ song }: { song: Song }) {
       {song !== songFountainOfLife && (
         <EmbedYouTube video={songFountainOfLife} />
       )}
-      <Typography variant="body1" align="justify">
-        So if you enjoy this music, you'll probably love{" "}
-        <a href={timePackage.toString()} target="_blank">
-          The Time Package
-        </a>
-        . Please consider purchasing it so Wintersun can continue making music
-        for you to enjoy!
-      </Typography>
     </>
   );
 }
