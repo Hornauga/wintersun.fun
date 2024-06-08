@@ -2,7 +2,7 @@ import Typography from "@mui/material/Typography";
 import { timePackage, timePackageMusicClips } from "../../music/misc";
 import EmbedYouTube from "../EmbedYouTube";
 
-var vocalSnippets = structuredClone(timePackageMusicClips);
+const vocalSnippets = structuredClone(timePackageMusicClips);
 vocalSnippets.src.youtube += "?start=34";
 
 export default function Vocals() {

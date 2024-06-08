@@ -2,7 +2,7 @@ import Typography from "@mui/material/Typography";
 import { timePackage, timePackageMusicClips } from "../../music/misc";
 import EmbedYouTube from "../EmbedYouTube";
 
-var fireSnippet = structuredClone(timePackageMusicClips);
+const fireSnippet = structuredClone(timePackageMusicClips);
 fireSnippet.src.youtube += "?start=289";
 
 export default function WayOfTheFire() {

@@ -18,7 +18,7 @@ export default function Filters({
   setPreference: (qualityName: QualityName, preference: Preference) => void;
   showResults: () => void;
 }) {
-  var categoryLast: QualityCategory | null = null;
+  let categoryLast: QualityCategory | null = null;
   return (
     <Box>
       <Typography variant="body1" align="center">
@@ -56,7 +56,7 @@ export default function Filters({
       {Object.entries(preferences).map(([qualityName, preference]) => {
         if ((qualityName as QualityName) === "jari") return;
         const qualityInfo = qualityInfos[qualityName as QualityName];
-        var categoryHeader;
+        let categoryHeader;
         if (qualityInfo.category !== categoryLast) {
           categoryLast = qualityInfo.category;
           categoryHeader = (
@@ -147,9 +147,9 @@ function FilterLabel({
   qualityInfo: QualityInfo;
   preference: Preference;
 }) {
-  var tooltip = "";
-  var emoji = "";
-  //var emoji2 = ""; // Emoji we could use in future
+  let tooltip = "";
+  let emoji = "";
+  //let emoji2 = ""; // Emoji we could use in future
   switch (preference) {
     case Preference.HATE:
       tooltip += "I HATE";

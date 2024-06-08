@@ -53,8 +53,8 @@ type PageID = "welcome" | "filters" | "results";
 export default function App() {
   // The results of filtering
   const [currentResult, setCurrentResult] = useState(-1);
-  var songs = useRef<Song[]>([]);
-  var preferenceChanged = useRef<boolean>(true);
+  const songs = useRef<Song[]>([]);
+  const preferenceChanged = useRef<boolean>(true);
 
   // Filter preference states and their setter
   const [preferences, setPreferences] = useState<Preferences>(makePreferences);
@@ -67,7 +67,7 @@ export default function App() {
 
   // Page selection
   const [pageID, setPageID] = useState<PageID>("welcome");
-  var page;
+  let page;
   if (pageID === "welcome") {
     page = <Welcome />;
   } else if (pageID === "filters") {

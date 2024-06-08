@@ -2,7 +2,7 @@ import Typography from "@mui/material/Typography";
 import { timePackage, timePackageMusicClips } from "../../music/misc";
 import EmbedYouTube from "../EmbedYouTube";
 
-var snippet = structuredClone(timePackageMusicClips);
+const snippet = structuredClone(timePackageMusicClips);
 snippet.src.youtube += "?start=34";
 
 export default function OneWithTheShadows() {

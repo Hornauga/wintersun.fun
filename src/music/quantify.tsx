@@ -257,8 +257,8 @@ const allSongs: Song[] = [
 // TODO: This isn't exactly science,
 //       but maybe we can improve our recommendation
 function score(preferences: Preferences, song: Song): number {
-  var score = 0;
-  var qualityName: QualityName, preference: Preference, quality: Quality;
+  let score = 0;
+  let qualityName: QualityName, preference: Preference, quality: Quality;
   for (qualityName in preferences) {
     preference = preferences[qualityName];
     quality = song.qualities[qualityName];
