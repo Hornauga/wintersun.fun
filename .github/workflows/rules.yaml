@@ -1,4 +1,0 @@
-name: Pull Request Requirements
-
-conditions:
-  - status: ["Test Pull Request"]
