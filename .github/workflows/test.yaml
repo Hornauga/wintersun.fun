@@ -1,0 +1,29 @@
+name: Check Pull Request
+
+on:
+  pull_request:
+    branches: [main]
+    type: [opened]
+  workflow_dispatch:
+
+jobs:
+  checks:
+    name: Standard TypeScript checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Check formatting w/ prettier
+        run: npx prettier --check .
+
+      - name: Run linter
+        run: npm run lint
+
+      - name: Run remaining static analysis via build
+        run: npm run build
