@@ -67,24 +67,17 @@ export default function Welcome() {
         </a>
         ,{" "}
         <a
-          href="https://www.kapanen-production-store.de/en/c/wintersun-official-store"
+          href="https://www.backstagerockshop.com/collections/wintersun"
           target="_blank"
         >
-          Kapanen-production
+          their official merchandise shop
         </a>
-        ,{" "}
+        , or{" "}
         <a
           href="https://www.nuclearblast.com/collections/wintersun"
           target="_blank"
         >
           Nuclear Blast
-        </a>
-        , or{" "}
-        <a
-          href="https://fineartamerica.com/profiles/jariwintersun/shop"
-          target="_blank"
-        >
-          Jari's art shop
         </a>
         .
       </Typography>
