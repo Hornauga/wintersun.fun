@@ -13,12 +13,11 @@ export default function LegendaryEarlyDemo({ song }: { song: Song }) {
   return (
     <>
       <Typography variant="body1" align="justify">
-        This song is a previously unreleased demo that will become available
-        with{" "}
+        This song is a an older demo that was released as part of{" "}
         <a href={timePackage.toString()} target="_blank">
-          The Legendary Early Demos from the Time Package
+          The Legendary Early Demos of the Time Package
         </a>
-        , which included tons of similar and previously unreleased music such as
+        , which included tons of similarly previously unreleased music such as
         these:
       </Typography>
       {song !== songSteelOfTheGods && (
