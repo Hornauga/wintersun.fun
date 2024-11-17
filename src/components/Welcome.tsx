@@ -19,6 +19,7 @@ import albumEnsiferum from "../music/sources/ensiferum/albumEnsiferum";
 import albumIron from "../music/sources/ensiferum/albumIron";
 import albumWintersun from "../music/sources/wintersun/albumWintersun";
 import albumTimeI from "../music/sources/wintersun/albumTimeI";
+import albumTimeII from "../music/sources/wintersun/albumTimeII";
 import { timePackage } from "../music/misc";
 import albumTheForestSeasons from "../music/sources/wintersun/albumTheForestSeasons";
 import { forestPackage } from "../music/misc";
@@ -299,9 +300,13 @@ export default function Welcome() {
         package.
       </Typography>
       <Typography variant="body1" align="justify">
-        The crowdfunding achieved its goal and beat the numbers of the prior
-        campaign. Contributors and other fans alike now await the end of August
-        2024 to enjoy the rewards.
+        The crowdfunding achieved its goal, beating the numbers of the prior
+        campaign, and{" "}
+        <a href={albumTimeII.wiki.toString()} target="_blank">
+          {albumTimeII.title}
+        </a>{" "}
+        was released in August 2024 in a watershed event: we now live in a
+        post-Time world.
       </Typography>
       <Typography variant="h4" align="center">
         About

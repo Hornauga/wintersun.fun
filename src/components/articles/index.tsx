@@ -4,9 +4,7 @@ import SongDisplay from "./SongDisplay";
 import Ensiferum from "./Ensiferum";
 import TimeI from "./TimeI";
 import Vocals from "./Vocals";
-import WayOfTheFire from "./WayOfTheFire";
-import Storm from "./Storm";
-import OneWithTheShadows from "./OneWithTheShadows";
+import TimeIIRecommendation from "./TimeIIRecommendation";
 import DefaultTimePackage from "./DefaultTimePackage";
 import LegendaryEarlyDemo from "./LegendaryEarlyDemo";
 
@@ -23,6 +21,14 @@ import {
   songWinterMadness,
 } from "../../music/sources/wintersun/albumWintersun";
 import {
+  //  songFieldsOfSnow,
+  songTheWayOfTheFire,
+  songOneWithTheShadows,
+  //  songOminousClouds,
+  songStorm,
+  //  songSilverLeaves,
+} from "../../music/sources/wintersun/albumTimeII";
+import {
   songFountainOfLife,
   songRedHorizon,
   songSteelOfTheGods,
@@ -30,9 +36,16 @@ import {
 } from "../../music/sources/wintersun";
 
 const articleVocals = <Vocals />;
-const articleWayOfTheFire = <WayOfTheFire />;
-const articleOneWithTheShadows = <OneWithTheShadows />;
-const articleStorm = <Storm />;
+//const articleFieldsOfSnow = <TimeIIRecommendation song={songFieldsOfSnow} />;
+const articleTheWayOfTheFire = (
+  <TimeIIRecommendation song={songTheWayOfTheFire} />
+);
+const articleOneWithTheShadows = (
+  <TimeIIRecommendation song={songOneWithTheShadows} />
+);
+//const articleOminousClouds = <TimeIIRecommendation song={songOminousClouds} />;
+const articleStorm = <TimeIIRecommendation song={songStorm} />;
+//const articleSilverLeaves = <TimeIIRecommendation song={songSilverLeaves} />;
 
 export function SongArticle({ song }: { song: Song }): JSX.Element {
   return (
@@ -44,10 +57,10 @@ export function SongArticle({ song }: { song: Song }): JSX.Element {
 }
 
 const articles: Map<string, JSX.Element> = new Map([
-  [songWinterMadness.title, articleWayOfTheFire],
-  [songBeyondTheDarkSun.title, articleWayOfTheFire],
-  [songBattleAgainstTime.title, articleWayOfTheFire],
-  [songStarchild.title, articleWayOfTheFire],
+  [songWinterMadness.title, articleTheWayOfTheFire],
+  [songBeyondTheDarkSun.title, articleTheWayOfTheFire],
+  [songBattleAgainstTime.title, articleTheWayOfTheFire],
+  [songStarchild.title, articleTheWayOfTheFire],
   [songSleepingStars.title, articleOneWithTheShadows],
   [songDeathAndTheHealing.title, articleOneWithTheShadows],
   [songSadnessAndHate.title, articleOneWithTheShadows],

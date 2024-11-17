@@ -7,6 +7,7 @@ import * as albumTheForestSeasons from "./sources/wintersun/albumTheForestSeason
 import * as albumTheForestSeasonsInstrumental from "./sources/wintersun/albumTheForestSeasonsInstrumental";
 import * as albumTimeI from "./sources/wintersun/albumTimeI";
 import * as albumTimeIInstrumental from "./sources/wintersun/albumTimeIInstrumental";
+import * as albumTimeII from "./sources/wintersun/albumTimeII";
 import {
   songWinterAcoustic,
   songWarning,
@@ -211,6 +212,12 @@ const allSongs: Song[] = [
   albumTimeIInstrumental.songSonsOfWinterAndStars,
   albumTimeIInstrumental.songLandOfSnowAndSorrow,
   //albumTimeIInstrumental.songDarknessAndFrost,
+  albumTimeII.songFieldsOfSnow,
+  albumTimeII.songTheWayOfTheFire,
+  albumTimeII.songOneWithTheShadows,
+  albumTimeII.songOminousClouds,
+  albumTimeII.songStorm,
+  albumTimeII.songSilverLeaves,
   albumTimeIInstrumental.songTime,
   albumIron.songFerrumAeternum,
   albumIron.songIron,
